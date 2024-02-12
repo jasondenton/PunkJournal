@@ -1,0 +1,31 @@
+/$-macro GUNCODE(weapon)$//$if weapon.subkind != 'melee'$/~\textit{/@weapon.wkind@/}/$endif$//$endmacro-$/
+
+/$-macro WPREFIX(tohit,needs_cn)$/
+/$if needs_cn$/CN/$endif$//$if tohit>0$//@"+%02d"|format(tohit)@//$endif$/
+/$endmacro-$/
+
+/$-macro FNFF_Gun(wp, ammunition, needs_cn)$/
+/$set nsa=namespace(df=0)$/
+/$-if wp.autofire > 0$/ or /@WPREFIX(wp.auto_tohit,needs_cn)@//AF/@wp.autofire@//$endif-$/, /@wp.magazine_size@//MAG/$-if wp.attachments$//$set nsa.df=1$/ - /@wp.attachments@//$endif-$/
+/$ for (knd, loads) in ammunition.items()$/
+/$if knd != wp.ammo_type$//$continue$//$endif$/
+/$ for load in loads $/
+/$if 'basic ammo' in load.keywords$//$continue$//$endif$/
+/$if nsa.dfa==0$/ - /$set nsa.dfa=1$//$else$/, /$endif$/
+/@load.count@/ /@load.name@/
+/$ endfor $/
+/$ endfor $/
+/$endmacro-$/
+
+/$-macro FNFF_Melee(wp)$//$if wp.armor_pierce$/, Ignores 1/2 armor./$endif$//$endmacro-$/
+
+/$- macro FNFF_Unarmed(style, needs_cn) $/
+\noindent\textbf{/@style.name@/}: /@WPREFIX(style.tohit,needs_cn)@///@style.damage@/d6, ROF 2/$if style.ap$/, Bypass 1/2 armor./$endif$//$endmacro-$/
+
+/$ macro FNFF_Weapon(wp, a, needs_cn) -$/
+\noindent\textbf{/@wp.name@/}: /@GUNCODE(wp)@/ /@WPREFIX(wp.tohit,needs_cn)@///@wp.damage@//$if wp.rof > 1$/, ROF /@wp.rof@//$endif$//$if wp.subkind == 'melee'$//@FNFF_Melee(wp)@//$else$//@FNFF_Gun(wp, a)@//$endif$/\\
+/$for swp in wp.sub_weapons$/
+
+/@FNFF_Weapon(swp, a, needs_cn)@/
+/$endfor$/
+/$endmacro-$/

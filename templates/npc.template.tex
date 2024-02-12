@@ -1,0 +1,100 @@
+\documentclass[8pt, twocolumn]{article}
+\usepackage[xetex, /@sheet.paper_size@/paper, inner=0.5in, outer=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{cyberpunk}
+\usepackage{fancyhdr}
+\usepackage{makecell}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0.2pt}
+\pagestyle{empty}
+\hypersetup{
+  pdfcreator={xelatex},
+  pdfauthor={Punk Journal},
+  pdftitle={ /@name@/ },
+  pdfsubject={},
+  pdfkeywords={Cyberpunk, Cyberpunk RED},
+  bookmarks=false,
+  linkcolor=cyberred,
+  urlcolor=cyberred,
+  citecolor=black,
+  colorlinks=true,
+}
+%\setlength{\parskip}{0.5em}
+%\setlength{\parindent}{0em}
+
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
+\setlist[enumerate]{leftmargin=*, noitemsep, topsep=0pt}
+\begin{document}
+{\Large {\color{cyberred} /@name|markdown@/} \hfill /@title@/}
+
+/$if portrait$/
+\includegraphics[width=\columnwidth]{/@portrait@/}
+/$endif$/
+
+\begin{tabularx}{\linewidth}{LrLrLrLrLr}
+\hline
+\rowcolor{color_tabledark}
+BD & \cvalue{/@stats.Body@/} &
+DX & \cvalue{/@stats.Dexterity@/} &
+CL & \cvalue{/@stats.Cool@/} &
+TH & \cvalue{/@stats.Technique@/} &
+IN & \cvalue{/@stats.Intelligence@/}  \\ 
+
+MV & \cvalue{/@stats.Move@/} &
+RF & \cvalue{/@stats.Reflexes@/} &
+WL & \cvalue{/@stats.Willpower@/} &
+EM & \cvalue{/@stats.Empathy@/} &
+LK & \cvalue{/@stats.Luck@/} \\ 
+\end{tabularx}
+\small
+\begin{tabularx}{\linewidth}{lrlrLr}
+\rowcolor{color_tabledark}
+Initative & \cvalue{+/@initiative@/} /$if cybermeta.speedware == 'S'$/ (S)/$endif$/
+& Death~Save & \cvalue{/@deathsave@/} & Armor~Penalty & \cvalue{/@armor_penalty@/}\\ 
+Brawling  & \cvalue{/@skills.Brawling.effective@/}  & 
+Evasion   & \cvalue{/@skills.Evasion.effective@/} &
+Athletics & \cvalue{/@skills.Athletics.effective@/} \\
+\rowcolor{color_tabledark}
+Resist T/D & \cvalue{/@skills['Resist Torture/Drugs'].effective@/} &
+Endurance & \cvalue{/@skills.Evasion.effective@/} &
+Concentration & \cvalue{/@skills.Concentration.effective@/} \\ 
+\end{tabularx}
+\begin{tabularx}{\linewidth}{lrlrLrLr}
+HP &  \cvalue{/@hitpoints@/}  & Wnd & \cvalue{/@woundthreshold@/} &
+Head SP & \cvalue{/@head_armor.sp@/} & Body SP & \cvalue{/@body_armor.sp@/} \\
+\hline
+\end{tabularx}
+\normalsize
+
+\textbf{Skills}: /$set ns=namespace(df=0)$//$for role in roles$//$if ns.didfirst == 1$/, /$endif$//@"\\textit{%s} {\cvalue+%d}"|format(role.name,role.value)@//$-set ns.didfirst=1-$//$-endfor-$//$-for (k,sk) in skills.items()-$//$-if sk.npcshow-$//$if ns.didfirst == 1$/, /$endif$//@"%s {\cvalue+%d}"|format(sk.name,sk.effective)@//$-set ns.didfirst=1-$//$-endif-$//$-endfor-$/
+
+/$if cybermeta.concise_list | length > 0$/
+\par\textbf{Cyberware}: /$for c in cybermeta.concise_list$//$if not loop.first$/, /$endif$//@c@//$endfor$/
+/$endif$/
+
+\par /$ include 'npc_gear.template.tex'$/
+
+\par /$ include 'npc_fnff.template.tex'$/
+
+\par /$ include 'npc_cyberdeck.template.tex'$/
+
+\hrulefill
+
+\par /@notes | markdown@/
+
+\hrulefill
+
+\small
+\renewcommand{\baselinestretch}{.3}
+\noindent\href{https://rpgtools.info/cyberpunk/journal}{Punk Journal} is unofficial content provided under the
+\href{https://rtalsoriangames.com/homebrew-content-policy/}{Homebrew Content Policy} of
+\href{https://talsorianstore.com/}{R. Talsorian Games} and is not approved or
+endorsed by \href{https://talsorianstore.com/}{R. Talsorian Games}. This content 
+references materials that are the property of \href{https://talsorianstore.com/}{
+R. Talsorian Games} and its licensees.
+\normalsize
+\end{document}
+

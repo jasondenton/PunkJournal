@@ -1,0 +1,59 @@
+- name: Antibiotic
+  cost: -1
+  notex: |-
+    A dose of antibiotic allows a target who is already healing to heal an additonal 
+    2HP/day for a week. May be taken once a week.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Rapidetox
+  cost: -1
+  notex: |-
+    A dose of Rapidetox immediately ends the effects of a drug, posion, or intoxicant.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Speedheal
+  cost: -1
+  notex: Instantly restores BODY+WILL HP to the target. May be taken once per day.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Stim
+  cost: -1
+  notex: Allows a user to ignore penalties for being seriously wounded for 1 hour. May be
+    taken once per day.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Surge
+  cost: -1
+  notex: Allows the user to forgo sleep for 24 hours. Usable once per week.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Sedative
+  cost: -1
+  notex: Puts the target to sleep.
+  weight: 0.01
+  keywords: drug, pharma
+- name: Veritas
+  cost: -1
+  notex: Places the target in a suggestive state.
+  weight: 0.01
+  keywords: drug, pharma 
+- name: Black Lace
+  cost: 50
+  weight: 0.001
+  keywords: drug
+- name: Blue Glass
+  cost: 20
+  weight: 0.001
+  keywords: drug
+- name: Boost
+  cost: 50  
+  weight: 0.001
+  keywords: drug
+- name: Smash
+  cost: 10  
+  weight: 0.001
+  keywords: drug
+- name: Synthcoke
+  cost: 20  
+  weight: 0.001
+  keywords: drug

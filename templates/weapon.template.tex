@@ -1,0 +1,29 @@
+/$-macro FNFF_Gun(wp)$/
+\textit{/@wp.wkind@/}  +/@"%02d"|format(wp.tohit)@///@wp.damage@//$if wp.rof > 1$/, ROF /@wp.rof@//$endif$/
+/$-if wp.autofire > 0$/ or +/@"%02d"|format(wp.auto_tohit)@//AF/@wp.autofire@//$endif-$/\\ 
+/@wp.ammo_name@/,  /@wp.magazine_size@//MAG/$-if wp.attachments$/\\
+/@wp.attachments@//$endif-$/
+
+/$endmacro-$/
+
+/$- macro FNFF_Melee(wp) $/
+\textit{/@wp.wkind@/ Melee Weapon} +/@"%02d"|format(wp.tohit)@///@wp.damage@//$if wp.rof > 1$/, ROF /@wp.rof@//$endif$/\\
+/$if wp.armor_pierce$/Ignores half the defender's armor./$endif$/
+/$endmacro-$/
+
+/$ macro FNFF_Weapon(wp) -$/
+\begin{minipage}{\columnwidth}
+\textbf{/@wp.name@/}\\
+/$if wp.subkind == 'melee'$//@FNFF_Melee(wp)@//$else$//@FNFF_Gun(wp)@//$endif$/
+/$-if wp.notes$/
+\begin{itemize}
+/$for nt in wp.notes $/\item /@nt|markdown@//$endfor$/
+\end{itemize}
+/$endif-$/
+\end{minipage}
+/$for swp in wp.sub_weapons$/
+
+/@FNFF_Weapon(swp)@/
+/$endfor$/
+
+/$ endmacro -$/

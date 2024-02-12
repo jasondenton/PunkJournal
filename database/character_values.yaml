@@ -1,0 +1,316 @@
+- aliases: int
+  keywords: stat
+  name: Intelligence
+  abbreviation: IN
+  sort: 14
+- aliases: will
+  keywords: stat
+  name: Willpower
+  abbreviation: WL
+  sort: 16
+- keywords: stat
+  name: Cool
+  abbreviation: CL
+  sort: 17
+- aliases: emp
+  keywords: stat
+  name: Empathy
+  abbreviation: EM
+  sort: 18
+- keywords: stat
+  name: Luck
+  abbreviation: LK
+  start_min: 0
+  min: 0
+  sort: 25
+- aliases: tech
+  keywords: stat
+  name: Technique
+  abbreviation: TH
+  sort: 15
+- aliases: ref
+  keywords: stat
+  name: Reflexes
+  abbreviation: RF
+  sort: 12
+- keywords: stat
+  name: Body
+  abbreviation: BD
+  sort: 10
+- aliases: dex
+  keywords: stat
+  name: Dexterity
+  abbreviation: DX
+  sort: 13
+- keywords: stat
+  name: Move
+  abbreviation: MV
+  sort: 11
+- keywords: skill, basic, in_combat_block
+  start_min: 2
+  default: 2
+  name: Concentration
+  stat: willpower
+- keywords: skill
+  name: Conceal/Reveal object
+  stat: intelligence
+- keywords: skill
+  name: Lip Reading
+  stat: intelligence
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Perception
+  stat: intelligence
+- keywords: skill
+  name: Tracking
+  stat: intelligence
+- keywords: skill, basic, in_combat_block
+  start_min: 2
+  default: 2
+  name: Athletics
+  stat: dexterity
+- keywords: skill
+  name: Contortionist
+  stat: dexterity
+- keywords: skill
+  name: Dance
+  stat: dexterity
+- keywords: skill, in_combat_block
+  name: Endurance
+  stat: willpower
+- keywords: skill, in_combat_block
+  name: Resist Torture/Drugs
+  aliases: resist torture, resist drugs, resist drugs/Torture, resist, resist drugs and torture, resist torture/drug
+  stat: willpower
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Stealth
+  stat: dexterity
+- keywords: skill
+  name: Drive Land Vehicle
+  stat: reflexes
+- keywords: skill, hard
+  name: Pilot Air Vehicle
+  stat: reflexes
+- keywords: skill
+  name: Pilot Sea Vehicle
+  stat: reflexes
+- keywords: skill
+  name: Riding
+  stat: reflexes
+- keywords: skill
+  name: Accounting
+  stat: intelligence
+- keywords: skill
+  name: Animal Handling
+  stat: intelligence
+- keywords: skill
+  name: Bureaucracy
+  stat: intelligence
+- keywords: skill
+  name: Business
+  stat: intelligence
+- keywords: skill
+  name: Composition
+  stat: intelligence
+- keywords: skill
+  name: Criminology
+  stat: intelligence
+- keywords: skill
+  name: Cryptography
+  stat: intelligence
+- keywords: skill
+  name: Deduction
+  stat: intelligence
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Education
+  stat: intelligence
+- keywords: skill
+  name: Gamble
+  stat: intelligence
+- keywords: skill
+  name: Library Search
+  stat: intelligence
+- keywords: skill
+  name: Language
+  option: true
+  stat: intelligence
+  rename: 'Language: {option}'
+  option_hint: 'Language name'
+- keywords: skill
+  name: Local Expert
+  option: true
+  stat: intelligence
+  rename: 'Local Expert: {option}'
+  option_hint: 'Neighborhood'
+- keywords: skill
+  name: Science
+  option: true
+  stat: intelligence
+  rename: 'Science: {option}'
+  option_hint: 'Field'
+- keywords: skill
+  name: Tactics
+  stat: intelligence
+- keywords: skill
+  name: Wilderness Survival
+  stat: intelligence
+- keywords: skill, basic, in_combat_block
+  start_min: 2
+  default: 2
+  name: Brawling
+  aliases: brawl
+  stat: dexterity
+- keywords: skill, basic, in_combat_block
+  start_min: 2
+  default: 2
+  name: Evasion
+  stat: dexterity
+- keywords: skill, hard
+  name: Martial Arts
+  option: true
+  stat: dexterity
+  rename: 'Martial Arts: {option}'
+  option_hint: 'fighting style'
+- aliases: melee, melee weapons
+  keywords: skill
+  name: Melee Weapon
+  stat: dexterity
+- keywords: skill
+  name: Acting
+  stat: cool
+- keywords: skill
+  name: Play Instrument
+  option: true
+  acting: cool
+  stat: technique
+  rename: 'Play Instrument: {option}'
+  option_hint: 'Instrument name'
+- keywords: skill
+  name: Singing
+  stat: technique
+- keywords: skill
+  name: Archery
+  stat: reflexes
+- keywords: skill, hard
+  name: Autofire
+  stat: reflexes
+- aliases: hand gun
+  keywords: skill
+  name: Handgun
+  aliases: handguns, hand gun, hand guns
+  stat: reflexes
+- keywords: skill, hard
+  name: Heavy Weapons
+  stat: reflexes
+- keywords: skill
+  name: Shoulder Arms
+  stat: reflexes
+- keywords: skill
+  name: Bribery
+  stat: cool
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Conversation
+  stat: empathy
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Human Perception
+  stat: empathy
+- keywords: skill
+  name: Interrogation
+  stat: cool
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: Persuasion
+  stat: cool
+- keywords: skill
+  name: Personal Grooming
+  stat: cool
+- keywords: skill
+  name: Streetwise
+  stat: cool
+- keywords: skill
+  name: Trading
+  stat: cool
+- aliases: wardrobe & style, wardrobe
+  keywords: skill
+  name: Wardrobe and Style
+  stat: cool
+- keywords: skill
+  name: Air Vehicle Tech
+  stat: technique
+- keywords: skill
+  name: Basic Tech
+  stat: technique
+- keywords: skill
+  name: Cybertech
+  stat: technique
+- keywords: skill
+  name: Demolitions
+  stat: technique
+- aliases: electronics, security
+  keywords: skill, hard
+  name: Electronics/Security Tech
+  stat: technique
+- keywords: skill, basic
+  start_min: 2
+  default: 2
+  name: First Aid
+  stat: technique
+- keywords: skill
+  name: Forgery
+  stat: technique
+- keywords: skill
+  name: Land Vehicle Tech
+  stat: technique
+- aliases: paint, draw, scuplt, art
+  keywords: skill
+  name: Paint/Draw/Sculpt
+  stat: technique
+- keywords: skill, hard
+  name: Paramedic
+  stat: technique
+- aliases: photography
+  keywords: skill
+  name: Photography/Film
+  stat: technique
+- keywords: skill
+  name: Pick Lock
+  stat: technique
+- keywords: skill
+  name: Pick Pocket
+  stat: technique
+- keywords: skill
+  name: Sea Vehicle Tech
+  stat: technique
+- aliases: weapon tech, weapons tech, weapontech
+  keywords: skill
+  name: Weaponstech
+  stat: technique
+- keywords: drone
+  aliases: Hit Points
+  abbreviation: HP
+  start_min: 0
+  start_max: 99999
+  min: 0
+  max: 99999
+  name: HP
+  sort: 100
+- keywords: drone
+  aliases: Stopping Power
+  abbreviation: SP 
+  start_min: 0
+  start_max: 99999
+  min: 0
+  max: 99999
+  name: SP
+  abbreviation: SP 
+  sort: 101

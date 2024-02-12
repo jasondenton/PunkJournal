@@ -1,0 +1,1284 @@
+- ammo_class: medium pistol
+  aliases:
+    - poor quality medium pistol
+  concealable: true
+  cost: 20
+  damage_dice: 2
+  display_name: Dai Lung Streetmaster
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Medium Pistol
+  name: Poor Medium Pistol
+  quality: poor
+  rof: 2
+  skill: handgun
+  weight: 2
+  wkind: Pistol
+- aliases:
+  - standard Medium Pistol
+  - standard quality medium pistol
+  ammo_class: medium pistol
+  concealable: true
+  cost: 50
+  damage_dice: 2
+  display_name: Federated Arms X-9mm
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Medium Pistol
+  name: Medium Pistol
+  quality: standard
+  rof: 2
+  skill: handgun
+  weight: 2
+  wkind: Pistol
+- ammo_class: medium pistol
+  aliases:
+    - excellent quality medium pistol
+  concealable: true
+  cost: 100
+  damage_dice: 2
+  display_name: Militech "Avenger"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Medium Pistol
+  name: Excellent Medium Pistol
+  quality: excellent
+  rof: 2
+  skill: handgun
+  weight: 2
+  wkind: Pistol
+- ammo_class: heavy pistol
+  aliases:
+    - poor quality heavy pistol 
+  concealable: true
+  cost: 50
+  damage_dice: 3
+  display_name: Dia Lung Magnum
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Pistol
+  name: Poor Heavy Pistol
+  quality: poor
+  rof: 2
+  skill: handgun
+  weight: 3
+  wkind: Pistol
+- aliases:
+  - standard Heavy Pistol
+  - standard quality heavy pistol
+  ammo_class: heavy pistol
+  concealable: true
+  cost: 100
+  damage_dice: 3
+  display_name: Mustang Arms "Mark III"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Pistol
+  name: Heavy Pistol
+  quality: standard
+  rof: 2
+  skill: handgun
+  weight: 3
+  wkind: Pistol
+- ammo_class: heavy pistol
+  aliases:
+    - excellent quality heavy pistol
+  concealable: true
+  cost: 500
+  damage_dice: 3
+  display_name: Nova "Cityhunter"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Pistol
+  name: Excellent Heavy Pistol
+  quality: excellent
+  rof: 2
+  skill: handgun
+  weight: 3
+  wkind: Pistol
+- ammo_class: very heavy pistol
+  aliases:
+    - poor quality very heavy pistol
+  concealable: false
+  cost: 50
+  damage_dice: 4
+  display_name: Federated Arms "Super Chief"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Very Heavy Pistol
+  name: Poor Very Heavy Pistol
+  quality: poor
+  rof: 1
+  skill: handgun
+  weight: 3.5
+  wkind: Pistol
+  option: optional
+- aliases:
+  - standard Very Heavy Pistol
+  ammo_class: very heavy pistol
+  concealable: false
+  cost: 100
+  damage_dice: 4
+  display_name: Sternmeyer P-35
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Very Heavy Pistol
+  name: Very Heavy Pistol
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 3.5
+  wkind: Pistol
+  option: optional
+- ammo_class: very heavy pistol
+  aliases:
+    - excellent quality very heavy pistol
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  display_name: Militech "Boomer Buster"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Very Heavy Pistol
+  name: Excellent Very Heavy Pistol
+  quality: excellent
+  rof: 1
+  skill: handgun
+  weight: 3.5
+  wkind: Pistol
+  option: optional
+- aliases:
+  - poor smg
+  - poor quality smg 
+  - port quality submachine gun 
+  ammo_class: medium pistol
+  autofire: 3
+  concealable: true
+  cost: 50
+  damage_dice: 2
+  display_name: Federated Arms Tech-Assault III
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Submachine Gun
+  name: Poor Submachine Gun
+  quality: poor
+  rof: 1
+  skill: handgun
+  weight: 3
+  wkind: SMG
+- aliases:
+  - standard smg
+  - standard Submachine Gun
+  - standard quality smg 
+  - standard quality submachine gun
+  - smg
+  ammo_class: medium pistol
+  autofire: 3
+  concealable: true
+  cost: 100
+  damage_dice: 2
+  display_name: Militech "Mini-Gat"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Submachine Gun
+  name: Submachine Gun
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 3
+  wkind: SMG
+- aliases:
+  - excellent smg
+  - excellent quality smg 
+  - excellent quality submachine gun 
+  ammo_class: medium pistol
+  autofire: 3
+  concealable: true
+  cost: 500
+  damage_dice: 2
+  display_name: Arasaka "Minami 10"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Submachine Gun
+  name: Excellent Submachine Gun
+  quality: excellent
+  rof: 1
+  skill: handgun
+  weight: 3
+  wkind: SMG
+- aliases:
+  - poor heavy smg
+  - poor quality heavy smg 
+  - poor quality heavy submachine gun
+  ammo_class: heavy pistol
+  autofire: 3
+  concealable: false
+  cost: 50
+  damage_dice: 3
+  display_name: Chadran Arms "City Reaper"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Submachine Gun
+  name: Poor Heavy Submachine Gun
+  quality: poor
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: SMG
+- aliases:
+  - standard quality heavy smg
+  - standard quality Heavy Submachine Gun
+  - standard heavy smg
+  - standard Heavy Submachine Gun
+  - heavy smg
+  ammo_class: heavy pistol
+  autofire: 3
+  concealable: false
+  cost: 100
+  damage_dice: 3
+  display_name: Sternmeyer SMG-21
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Submachine Gun
+  name: Heavy Submachine Gun
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: SMG
+- aliases:
+  - excellent heavy smg
+  - excellent quality heavy smg 
+  - excellent quality heavy submachine gun 
+  ammo_class: heavy pistol
+  autofire: 3
+  concealable: false
+  cost: 500
+  damage_dice: 3
+  display_name: Militech "Viper"
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Submachine Gun
+  name: Excellent Heavy Submachine Gun
+  quality: excellent
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: SMG
+- ammo_class: shotgun
+  aliases:
+    - poor quality shotgun
+  concealable: false
+  cost: 100
+  damage_dice: 5
+  display_name: GunMart "Home Defender"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shotgun mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Shotgun
+  name: Poor Shotgun
+  quality: poor
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Shotgun
+- aliases:
+  - standard Shotgun
+  - standard quality Shotgun
+  ammo_class: shotgun
+  concealable: false
+  cost: 500
+  damage_dice: 5
+  display_name: Arasaka "Rapid Assault"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shotgun mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Shotgun
+  name: Shotgun
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Shotgun
+- ammo_class: shotgun
+  aliases:
+    - excellent quality shotgun
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  display_name: Militech "Bulldog"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shotgun mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Shotgun
+  name: Excellent Shotgun
+  quality: excellent
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Shotgun
+- ammo_class: rifle
+  aliases:
+    - poor quality assault rifle
+  autofire: 4
+  concealable: false
+  cost: 100
+  damage_dice: 5
+  display_name: Chadran Arms "Jungle Reaper"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Assault Rifle
+  name: Poor Assault Rifle
+  quality: poor
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Assault Rifle
+- aliases:
+  - standard Assault Rifle
+  - standard quality assault rifle
+  ammo_class: rifle
+  autofire: 4
+  concealable: false
+  cost: 500
+  damage_dice: 5
+  display_name: Militech "Ronin"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Assault Rifle
+  name: Assault Rifle
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Assault Rifle
+- ammo_class: rifle
+  aliases:
+    - excellent quality assault rifle
+  autofire: 4
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  display_name: Militech "Dragon"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Assault Rifle
+  name: Excellent Assault Rifle
+  quality: excellent
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Assault Rifle
+- aliases: 
+    - poor quality sniper rifle
+  ammo_class: rifle
+  concealable: false
+  cost: 100
+  damage_dice: 5
+  display_name: GunMart "Snipe-Star"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Sniper Rifle
+  name: Poor Sniper Rifle
+  quality: poor
+  rof: 1
+  skill: shoulder arms
+  weight: 6
+  wkind: Sniper Rifle
+- aliases:
+  - standard Sniper Rifle
+  - standard quality sniper rifle
+  ammo_class: rifle
+  concealable: false
+  cost: 500
+  damage_dice: 5
+  display_name: Nomad "Long Rifle"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Sniper Rifle
+  name: Sniper Rifle
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 6
+  wkind: Sniper Rifle
+- ammo_class: rifle
+  aliases:
+    - excellent quality sniper rifle
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  display_name: Arasaka WSSA Sniper System
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Sniper Rifle
+  name: Excellent Sniper Rifle
+  quality: excellent
+  rof: 1
+  skill: shoulder arms
+  weight: 6
+  wkind: Sniper Rifle
+- ammo_class: arrows
+  concealable: false
+  cost: 50
+  damage_dice: 4
+  display_name: GunMart "Sherwood"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Poor Bow
+  quality: poor
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Bow
+- aliases:
+  - standard Bow
+  ammo_class: arrows
+  concealable: false
+  cost: 100
+  damage_dice: 4
+  display_name: Eagletech "Tomcat"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Bow
+  quality: standard
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Bow
+- ammo_class: arrows
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  display_name: Eagletech "Bearcat"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Excellent Bow
+  quality: excellent
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Bow
+- ammo_class: bolts
+  concealable: false
+  cost: 50
+  damage_dice: 4
+  display_name: GunMart "Hunter"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Poor Crossbow
+  quality: poor
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Crossbow
+- aliases:
+  - standard Crossbow
+  ammo_class: bolts
+  concealable: false
+  cost: 100
+  damage_dice: 4
+  display_name: Eagletech "Striker"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Crossbow
+  quality: standard
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Crossbow
+- ammo_class: bolts
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  display_name: Eagletech "Scorpion"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged
+  magazine: 1
+  name: Excellent Crossbow
+  quality: excellent
+  rof: 1
+  skill: archery
+  weight: 2
+  wkind: Crossbow
+- ammo_class: grenade
+  concealable: false
+  cost: 100
+  damage_dice: 6
+  display_name: Towa Manufacturing Type-G
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Grenade Launcher
+  name: Poor Grenade Launcher
+  quality: poor
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Grenade Launcher
+- aliases:
+  - standard Grenade Launcher
+  ammo_class: grenade
+  concealable: false
+  cost: 500
+  damage_dice: 6
+  display_name: Militech "Mini-Grenade"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Grenade Launcher
+  name: Grenade Launcher
+  quality: standard
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Grenade Launcher
+- ammo_class: grenade
+  concealable: false
+  cost: 1000
+  damage_dice: 6
+  display_name: Tsunami Arms Type-19
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Grenade Launcher
+  name: Excellent Grenade Launcher
+  quality: excellent
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Grenade Launcher
+- ammo_class: rocket
+  concealable: false
+  cost: 100
+  damage_dice: 8
+  display_name: Towa Manufacturing Type-R
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Rocket Launcher
+  name: Poor Rocket Launcher
+  quality: poor
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Rocket Launcher
+- aliases:
+  - standard Rocket Launcher
+  ammo_class: rocket
+  concealable: false
+  cost: 500
+  damage_dice: 8
+  display_name: Militech "Urban"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Rocket Launcher
+  name: Rocket Launcher
+  quality: standard
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Rocket Launcher
+- ammo_class: rocket
+  concealable: false
+  cost: 1000
+  damage_dice: 8
+  display_name: Militech "Hotshot"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive
+  mag_class: Rocket Launcher
+  name: Excellent Rocket Launcher
+  quality: excellent
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Rocket Launcher
+- name: Air Pistol
+  skill: handgun
+  damage_dice: 0
+  magazine: 12
+  ammo_class: paint
+  rof : 2
+  hands: 1
+  concealable: true
+  cost: 100
+  weight: 2
+  keywords: weapon, ranged, exotic
+  wkind: Pistol
+- name: Constitution Arms Hurricane Assault Weapon
+  skill: shoulder arms 
+  damage_dice: 4
+  magazine: 16
+  ammo_class: shotgun
+  rof: 2
+  hands: 2
+  concealable: false 
+  cost: 5000 
+  weight: 4
+  keywords: weapon, ranged, noaimed, bod11, exotic
+  holds:
+  - ranged weapon mod
+  - shotgun mod
+  - shoulder arms mod
+  wkind: Shotgun
+- name: Dartgun
+  aliases: dart gun
+  skill: handgun
+  damage_dice: 0
+  magazine: 8
+  ammo_class : darts
+  rof : 1
+  hands: 1
+  concealable: false
+  cost: 100
+  weight: 3.5
+  keywords: weapon, ranged, exotic
+  wkind: Pistol
+- name: Flamethrower
+  skill: heavy weapons
+  magazine: 4
+  damage_dice: 3
+  weight: 4
+  cost: 500
+  rof: 1
+  hands: 2
+  keywords: weapon, ranged, exotic, noaimed, nocrit
+  ammo_class: flamer 
+  concealable: false
+  note: Target is ignited; taking 4 damage at the end of each turn until they spen an action to put themselves out.   
+  wkind: Flamethrower
+- name: Malorian Arms 3516
+  skill: handgun
+  damage_dice: 5
+  mag_class: Very Heavy Pistol
+  ammo_class : very heavy pistol
+  rof : 1
+  hands: 1
+  concealable: false
+  cost: 10000
+  weight: 4
+  quality: excellent
+  keywords: weapon, ranged, exotic
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  max_container_size: 2
+  has_smartlink: True
+  value: 10000
+  wkind: Pistol
+- name: Microwaver
+  skill: handgun
+  damage_dice: 0
+  magazine: 8
+  ammo_class : battery
+  rof : 1
+  hands: 1
+  concealable: false
+  cost: 500 
+  weight: 3.5
+  keywords: weapon, ranged, exotic
+  card: An Exotic Very Heavy Pistol. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Cybertech Check. If they fail, the GM chooses two pieces of their cyberware or carried electronics to become inoperable for a minute. Cyberlimbs that are rendered inoperable act as their meat counterparts do when they have been dismembered, but they still hang loosely. See Critical Injuries. Ammunition is costless, as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots.
+  note: Deals no damage. Targets must make a DV15 cybertech check or two pieces of cyberwear or carried electronics become inoperable for a minute.
+  wkind: Pistol
+- name: Militech "Cowboy" U-56 Grenade Launcher
+  aliases:  Militech Cowboy U-56 Grenade Launcher, U-56 Grenade Launcher,  Militech Cowboy
+  cost: 5000
+  weight: 6
+  skill: heavy weapons
+  damage_dice: 6
+  magazine: 4
+  ammo_class: grenade 
+  rof: 2
+  hands: 2
+  concealable: false
+  keywords: weapon, ranged, explosive, exotic, bod11, reload 2
+  wkind: Grenade Launcher
+- name: Rhinemetall EMG-86 Railgun
+  aliases: Railgun
+  cost: 5000
+  weight: 6
+  skill: heavy weapons
+  damage_dice: 6
+  magazine: 4
+  ammo_class: rifle
+  rof: 1
+  hands: 2
+  concealable: false
+  keywords: weapon, ranged, sp11, exotic, bod11, reload 2
+  wkind: Assault Rifle
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+- name: Shrieker
+  skill: handgun
+  damage_dice: 0
+  magazine: 8
+  ammo_class : battery
+  rof : 1
+  hands: 1
+  concealable: false
+  cost: 500
+  weight: 3.5
+  keywords: weapon, ranged, exotic
+  card: Whenever a user fires this weapon without some form of ear protection, they suffer the Damaged Ear Critical Injury. Instead of dealing damage, on a hit it forces the target to try to beat a DV15 Resist Torture/Drugs Check. If they fail, they suffer the Damaged Ear Critical Injury. Ammunition is costless as it runs off of easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots.
+  note: User must wear ear protection. Target must make a DV 15 resist torture/drugs check or suffer the critical ear injury.
+  wkind: Pistol
+- name: Stun Gun
+  aliases: stun pistol
+  skill: handgun
+  damage_dice: 3
+  magazine: 8
+  ammo_class : battery
+  rof: 2
+  hands: 1
+  concealable: true
+  cost: 100
+  weight: 3
+  keywords: weapon, ranged, stun, noablate, exotic, nocrit
+  card: An Exotic Heavy Pistol. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor. Ammunition is costless as it runs off easily rechargeable (1 hour) battery packs that need to be replaced after 8 shots.
+  wkind: Pistol
+- name: Tsunami Arms Helix
+  skill: autofire
+  damage_dice: 2
+  magazine: 40
+  ammo_class : rifle
+  rof : 1
+  hands: 2
+  concealable: false
+  cost: 5000
+  autofire: 5
+  keywords: suppressive fire
+  weight: 4
+  keywords: weapon, ranged, bod11, exotic, onlyauto
+  wkind: Assault Rifle
+  note: Fires 20 rounds per attack.
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  mag_class: Assault Rifle
+- name: Shotgun Underbarrel
+  cost: 500
+  weight: 0.4
+  install_in: shoulder arms mod
+  concealable: false 
+  needs_slots: 2
+  magazine: 1
+  skill: heavy weapons
+  damage_dice: 3
+  ammo_class: shotgun
+  rof: 1
+  hands: 2
+  keywords: weapon, ranged, underbarrel, ranged weapon attachment
+  quality: standard
+  wkind: Shotgun
+- name: Grenade Launcher Underbarrel
+  cost: 500
+  weight: 0.4
+  install_in: shoulder arms mod
+  concealable: false 
+  needs_slots: 2
+  magazine: 1
+  skill: heavy weapons
+  damage_dice: 6
+  ammo_class: grenade 
+  rof: 1
+  hands: 2
+  keywords: weapon, ranged, underbarrel, ranged weapon attachment
+  quality: standard
+  wkind: Greande Launcher
+- ammo_class: rifle
+  autofire: 4
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  display_name: Machine Gun
+  hands: 2
+  max_container_size: 0
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  keywords: weapon, ranged, multiple, onlyauto, driver fire, vehicle upgrade
+  magazine: 30
+  name: Onboard Machine Gun
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 10
+  wkind: Assault Rifle
+  install_in: vehicle
+  upgrade_class: gGaAwW
+- name: Onboard Flamethrower
+  display_name: Flamethrower
+  skill: heavy weapons
+  max_container_size: 0
+  magazine: 4
+  damage_dice: 3
+  weight: 10
+  cost: 1000
+  rof: 1
+  hands: 2
+  keywords: weapon, ranged, exotic, noaimed, nocrit, multiple, driver fire, vehicle upgrade
+  ammo_class: flamer 
+  concealable: false
+  note: Target is ignited; taking 4 damage at the end of each turn until they spen an action to put themselves out. 
+  wkind: Flamethrower
+  upgrade_class: gGaAwW
+  install_in: vehicle
+- ammo_class: rocket
+  concealable: false
+  cost: 5000
+  damage_dice: 8
+  display_name: Rocket Pod
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive, driver, multiple, heavy, vehicle upgrade
+  magazine: 3
+  name: Onboard Rocket Pod
+  quality: standard
+  rof: 1
+  skill: heavy weapons
+  weight: 15
+  wkind: Rocket Launcher
+  upgrade_class: GAW
+  install_in: vehicle
+- ammo_class: rifle
+  autofire: 4
+  concealable: false
+  cost: 100
+  damage_dice: 5
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged, exotic
+  magazine: 20
+  mag_class: Assault Rifle
+  name: Stolbovoy ST-5 Assault Rifle
+  alias: Stolbovoy ST-5
+  quality: poor
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Assault Rifle
+  note:
+    - May fire non-basic ammunition.
+    - Firing when jammed clears the jam and has a 50% of firing normally.
+- aliases:
+  - Teen Dream
+  ammo_class: medium pistol
+  autofire: 3
+  concealable: true
+  cost: 20
+  damage_dice: 2
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  magazine: 10
+  keywords: weapon, ranged
+  mag_class: Submachine Gun
+  name: Teen Dreem
+  quality: poor
+  rof: 1
+  skill: handgun
+  weight: 3
+  wkind: SMG
+  note:
+    - Can auto or suppressive fire with only 2 rounds loaded.
+    - Auto or supressive fire melts the barrel beyond repair.
+- aliases:
+  - Arasaka Assault Rifle
+  ammo_class: rifle
+  autofire: 4
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  name: Arasaka WAA Bullup Assault Weapon
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  - magazine
+  keywords: weapon, ranged, exotic
+  mag_class: Assault Rifle
+  magazine: 30
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 4
+  wkind: Assault Rifle
+  has_smartlink: True
+  note:
+    - May fire non-basic ammunition.
+- aliases:
+  - Multiple Ammunition pistol
+  - Multiple Ammo pistol
+  ammo_class: very heavy pistol
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  keywords: weapon, ranged, exotic
+  magazine: 5
+  name: Constitutional Arms Multiple Ammunition pistol
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 3.5
+  wkind: Pistol
+  note:
+    - Load and select different kinds of ammunition.
+- name: Kendachi Dragon Flamethrower 
+  skill: heavy weapons
+  magazine: 2
+  damage_dice: 3
+  weight: 3
+  cost: 1000
+  rof: 1
+  hands: 1
+  keywords: weapon, ranged, exotic, noaimed, nocrit
+  ammo_class: flamer 
+  concealable: false
+  note: Target is ignited; taking 4 damage at the end of each turn until they spen an action to put themselves out.   
+  wkind: Flamethrower
+- aliases:
+  - Hellbringer
+  ammo_class: very heavy pistol
+  concealable: false
+  cost: 1000
+  damage_dice: 5
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  keywords: weapon, ranged, exotic
+  magazine: 3
+  name: Magnum Opus Hellbringer
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 3.5
+  wkind: Pistol
+  note: Jams after being fired with BODY < 10.
+- aliases:
+  - sub-flechette gun
+  - subflechette gun
+  - Malorian Arms Subflechette gun
+  ammo_class: flechette
+  autofire: 4
+  concealable: false
+  cost: 5000
+  damage_dice: 3
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged, exotic
+  mag_class: Heavy Submachine Gun
+  magazine: 25
+  name: Malorian Arms Sub-Flechette Gun
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: SMG
+  has_smartlink: True
+- aliases:
+  - Crusher, Miltech Crusher
+  ammo_class: shotgun
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  keywords: weapon, ranged, exotic
+  magazine: 6
+  name: Militech Crusher
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: Pistol
+  note: Can only fire shotgun shells.
+- aliases:
+  - Pneumatic Bolt Gun
+  ammo_class: arrows
+  concealable: false
+  cost: 500
+  damage_dice: 4
+  hands: 2
+  holds:
+  - ranged weapon mod
+  - shoulder arms mod
+  keywords: weapon, ranged, exotic
+  magazine: 8
+  name: Nomad Pneumatic Bolt Gun
+  quality: standard
+  rof: 1
+  skill: shoulder arms
+  weight: 6
+  wkind: Sniper Rifle
+- aliases:
+  - 757 Cityhunter
+  - Cityhunter
+  - City Hunter
+  ammo_class: heavy pistol
+  concealable: true
+  cost: 1000
+  damage_dice: 3
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  keywords: weapon, ranged, exotic
+  magazine: 18
+  name: Nova Model 757 Cityhunter
+  quality: standard
+  rof: 2
+  skill: handgun
+  weight: 3
+  wkind: Pistol
+  has_smartlink: True
+- aliases:
+  - ARS-5 Submachine Gun
+  - ARS-5 SMG
+  ammo_class: heavy pistol
+  autofire: 3
+  concealable: false
+  cost: 1000
+  damage_dice: 3
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged
+  mag_class: Heavy Submachine Gun
+  name: Mustang Arms ARS-5 Submachine Gun
+  quality: standard
+  rof: 1
+  skill: handgun
+  weight: 4
+  wkind: SMG
+  has_smartlink: True
+  note: 
+    - Reduce penalties from darkness, smog, fog to 0.
+    - +1 to hit targets 51/m or more away with single or aimed shot.
+- aliases:
+  - MicroCutie
+  ammo_class: medium pistol
+  concealable: true
+  cost: 1000
+  damage_dice: 2
+  display_name: MicroCutie
+  hands: 1
+  holds:
+  - ranged weapon mod
+  - pistol mod
+  - magazine
+  keywords: weapon, ranged, exotic
+  mag_class: Medium Pistol
+  magazine: 10
+  name: MicroCutie by HelloCutie
+  quality: excellent
+  rof: 2
+  skill: handgun
+  weight: 2
+  wkind: Pistol
+  note: |-
+    Take an action to active Hypurrburst. Requires at least 4 bullets,
+    and is ROF 1. Drains all bullets in a single shot doing 4d6 damage.
+- ammo_class: heavy pistol
+  concealable: true
+  cost: 1000
+  damage_dice: 3
+  hands: 1
+  keywords: weapon, ranged, exotic
+  magazine: 2
+  name:  Militech Tactical Umbrella
+  quality: poor
+  rof: 2
+  skill: handgun
+  weight: 3
+  wkind: Pistol
+  note: 
+    - Doubles as a an excellent quality heavy melee weapon. DX + Melee + 1 to hit, 3d6 damage, ROF1.
+    - May load non-basic ammunition.
+    - When held, protects armor from acid rain. The wearer gets +2 to resist the effects of blood rain.
+  allowed_upgrades: []
+
+- name: Biotechnica Enviro-Launcher
+  aliases:
+  -  enviro-launcher
+  ammo_class: rocket
+  concealable: false
+  cost: 500
+  damage_dice: 8
+  display_name: Militech "Urban"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive, exotic
+  mag_class: Rocket Launcher
+  quality: standard
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Rocket Launcher
+  note:
+    - May only be fired once.
+    - Fires only basic (armor-piercing) rockets.
+    - As an action, twist the handle to start the launcher decomposing. Takes an hour to completely decompose.
+- name: Towa Pocket Launcher
+  aliases:
+  -  pocket launcher
+  ammo_class: rocket
+  concealable: True
+  cost: 500
+  damage_dice: 8
+  display_name: Militech "Urban"
+  hands: 2
+  holds:
+  - ranged weapon mod
+  keywords: weapon, ranged, explosive, exotic
+  mag_class: Rocket Launcher
+  quality: poor
+  rof: 1
+  skill: heavy weapons
+  weight: 4
+  wkind: Rocket Launcher
+  note:
+    - Only concealable when unloaded.
+    - Fires only basic (armor-piercing) rockets.

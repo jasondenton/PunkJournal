@@ -1,0 +1,286 @@
+forms: 
+  - name: Medium Pistol
+    cost: 10
+    count: 10
+    weight: 0.005
+    keywords: ammunition
+    display_name: '9mm {kind} bullets'
+    entry_name: '{kind} Medium Pistol Bullets'
+    ammo_class: medium pistol
+    available: bullets
+  - name: Heavy Pistol
+    cost: 10
+    count: 10
+    weight: 0.006
+    keywords: ammunition
+    display_name: '11mm {kind} bullets'
+    ammo_class:  heavy pistol 
+    available: bullets
+    entry_name: '{kind} Heavy Pistol Bullets'
+  - name: Very Heavy Pistol
+    cost: 10
+    count: 10
+    weight: 0.007
+    keywords: ammunition
+    entry_name: '{kind} Very Heavy Pistol Bullets'
+    display_name: '12mm {kind} bullets'
+    ammo_class: very heavy pistol
+    available: bullets
+  - name: Rifle
+    cost: 10
+    count: 10
+    weight: 0.007
+    keywords: ammunition
+    entry_name: '{kind} Rifle Bullets'
+    display_name: '7.62 {kind} bullets'
+    available: bullets
+    ammo_class: rifle
+  - name: Slugs
+    cost: 10
+    count: 10
+    weight: 0.025
+    keywords: ammunition
+    ammo_class: shotgun
+    available: slugs
+    entry_name: '{kind} Shotgun Slugs'
+    display_name: '{kind} Shotgun Slugs'
+  - name: Shells
+    cost: 10
+    count: 10
+    weight: 0.025
+    keywords: ammunition, shells
+    ammo_class: shotgun
+    available: shells
+    entry_name: '{kind} Shotgun Shells'
+    display_name: '{kind} Shotgun Shells'
+  - name: Arrows
+    cost: 10
+    count: 10
+    weight: 0.03
+    keywords: ammunition
+    available: arrows
+    entry_name: '{kind} Arrows'
+    display_name: '{kind} Arrows'
+    ammo_class: arrows
+  - name: Bolts
+    cost: 10
+    count: 10
+    weight: 0.03
+    keywords: ammunition
+    available: arrows
+    entry_name: '{kind} Bolts'
+    display_name: '{kind} Bolts'
+    ammo_class: bolts
+  - name: Darts
+    cost: 10
+    count: 10
+    weight: 0.03
+    keywords: ammunition
+    available: arrows
+    entry_name: '{kind} Darts'
+    display_name: '{kind} Darts'
+    ammo_class: darts
+  - name: Grenade
+    count: 1
+    cost: 100
+    weight: 0.5
+    keywords: ammunition
+    available: grenade 
+    entry_name: '{kind} Grenade'
+    display_name: '{kind} Grenades'
+    ammo_class: grenade
+  - name: Rocket
+    count: 1
+    alias: armor-piercing rocket
+    cost: 100
+    weight: 1
+    keywords: ammunition
+    available: rocket
+    entry_name: '{kind} Rocket'
+    display_name: '{kind} Rockets'
+    ammo_class: rocket
+kinds:
+  - name: ''
+    sort: 1
+    cost: 10
+    available:
+      - arrows
+      - bullets
+      - slugs
+      - shells 
+    keywords: 'basic ammo' 
+  - name: Armor-piercing
+    sort: 2
+    cost: 100
+    card: When using this ammunition, you ablate armor by 2 instead of 1 whenever you would ablate armor.
+    note: Abalates armor by 2.
+    available:
+      - arrows
+      - grenade
+      - bullets
+      - slugs
+      - rocket 
+  - name: Biotoxin
+    cost: 500
+    sort: 8
+    card: When using this ammunition, you deal no damage with your attack. Anyone meat hit by your attack must instead attempt to beat a DV15 Resist Torture/Drugs Check. Anyone who fails is dealt 3d6 damage directly to their HP. Their armor is not ablated because it was not interacted with.
+    note: Beat DV15 resist torture/drugs or take 3d6 damage directly to HP.
+    available:
+      - arrows
+      - grenade
+  - name: EMP
+    cost: 500
+    sort: 10
+    card: When using this ammunition, you deal no damage with your attack. Anyone hit by your attack must instead attempt to beat a DV15 Cybertech Check. If they fail, the GM chooses 2 pieces of their Cyberware or carried electronics to become inoperable for 1 minute. Cyberlimbs that are rendered inoperable act as their meat counterparts do when they have been dismembered, but they still hang loosely. See Critical Injuries on pg. 187 
+    note: Beat DV15 Cybertech check or 2 pieces of cyberwear become inoperable for 1 minute.
+    available:
+      - grenade
+  - name: Expansive
+    sort: 3
+    cost: 100
+    card: When using this ammunition, whenever you cause the Foreign Object Critical Injury, the victim rolls again on the Critical Injury table (see pg. 187) until they roll a Critical Injury that isn't Foreign Object. The victim then suffers that Critical Injury as well. This second injury deals no Bonus Damage.
+    note: Foreign object critical injuries cause a second, different injury for no additonal damage.
+    available:
+      - arrows
+      - bullets
+      - slugs
+  - name: Flashbang
+    sort: 10
+    cost: 100
+    card: When using this ammunition, you deal no damage with your attack. Anyone hit by your attack must instead attempt to beat a DV15 Resist Torture/Drugs Check. Anyone who fails suffers the Damaged Eye and Damaged Ear Critical Injuries (see pg. 188) for the next minute. You do not take the Bonus Damage from the Critical Injuries.
+    note: Targets must beat DV15 resist torture/drugs or suffer the damaged eye and ear critical injuries for the next minute. No damage is done.
+    available: 
+      - grenade 
+  - name: Incendiary
+    sort: 4
+    cost: 100
+    card: When using this ammunition, whenever you deal damage to a target through their armor, you ignite the target. Until your target spends an Action to put themselves out, they take 2 damage directly to their HP whenever they end their Turn. Multiple instances of this effect cannot stack.
+    note: When damaged, the target takes 2 points of damage at the end of their turn until they spend an action to put themselves out. Does not stack.
+    available:
+      - arrows
+      - grenade
+      - bullets
+      - shells
+  - name: Posion
+    cost: 100
+    sort: 7
+    card: When using this ammunition, you deal no damage with your attack. Anyone meat hit by your attack must instead attempt to beat a DV13 Resist Torture/Drugs Check. Anyone who fails is dealt 2d6 damage directly to their HP. Their armor is not ablated because it was not interacted with.
+    note: Beat DV13 resist torture/drugs or take 2d6 damage directly to HP.
+    available:
+      - arrows
+      - grenade
+  - name: Rubber
+    cost: 10
+    sort: 6
+    card: Damage dealt using this ammunition cannot cause a Critical Injury. Additionally, attacks made with this ammunition cannot ablate armor. If damage dealt by this ammunition would reduce a target with more than 1 HP to less than 0 HP, they are instead left at 1 HP. Rubber Ammunition counts as Basic Ammunition for the purposes of use with Exotic Weapons.
+    note: No critical injuries. No armor ablation. Cannot reduce target below 1 HP.
+    available:
+      - arrows
+      - slugs
+      - bullets
+    keywords: stun, noablate
+  - name: Sleep
+    cost: 500
+    sort: 11
+    card: When using this ammunition, you deal no damage with your attack. Anyone meat hit by your attack must instead attempt to beat a DV13 Resist Torture/Drugs Check. Anyone who fails is now Prone (see pg. 169) and Unconscious for 1 minute or until they are woken by taking damage, or by someone else using an Action that touches them.
+    note: Target must beat DV13 resist torture/drugs or call unconcious and prone for one minute.
+    available:
+      - arrows
+      - grenade
+  - name: Smart
+    sort: 5
+    cost: 500
+    note: 
+      - On a miss, make a second attack at 10+d10. 
+      - Requires targeting scope cyberware.
+    available: 
+      - arrows
+      - bullets
+      - rocket
+  - name: Smoke
+    sort: 12
+    cost: 50
+    note: Obscure a 10mX10m area for 1 minutes; -4 penalty for obscurement. 
+    available: 
+      - grenade 
+  - name: Teargas
+    sort: 9
+    cost: 50
+    note: Targets must beat DV13 resist torture/drugs or suffer the damaged eye and ear critical injuries for the next minute. No damage is done.
+    available: 
+      - grenade
+indiv:
+  - name: Paint Ball
+    cost: 10
+    count: 10
+    weight: 0.005
+    keywords: ammunition
+    display_name: 'paint ball'
+    ammo_class: paint
+    sort: 12
+    cost: 10
+    note: 'Deals no damage. Cannot cause a critical injury.'
+    card: 'Deals no damage. Cannot cause a critical injury.'
+  - name: Acid Paint Ball
+    cost: 10
+    count: 10
+    weight: 0.005
+    keywords: ammunition
+    display_name: 'acid paint ball'
+    ammo_class: paint
+    sort: 13
+    cost: 10
+    note: 'Deals no damage. Cannot cause a critical injury. Abalates armor by 1 point.'
+    card: 'Deals no damage. Cannot cause a critical injury. Abalates armor by 1 point.'
+  - name: Flamethrower Fuel
+    cost: 10
+    count: 100
+    weight: 0.05
+    keywords: ammunition
+    display_name: 'Flamethrower Fuel'
+    ammo_class: flamer
+    sort: 14
+    cost: 100
+  - name: Battery Pack 
+    cost: 50
+    weight: 0.5
+    keywords: ammunition
+    ammo_class: battery
+    count: 1
+    display_name : 'Battery Pack'
+  - name: Spike Strip
+    cost: 10
+    weight: 1
+    keywords: ammunition
+    ammo_class: spike strip
+    count: 1
+    display_name : 'Spike Strip'
+    note: Drop from a propery equipped vehicle
+  - name: Flechette Rounds
+    count: 10
+    weight: 0.005
+    keywords: ammunition
+    display_name: 'Flechette Rounds'
+    ammo_class: flechette
+    sort: 15
+    cost: 100
+    note: 'Abalates armor by 4.'
+  - name: Trounds
+    cost: 10
+    count: 18
+    weight: 0.005
+    keywords: ammunition
+    display_name: 'Trounds'
+    ammo_class: trounds
+  - name: Smart Trounds
+    cost: 500
+    count: 18
+    weight: 0.005
+    keywords: ammunition
+    display_name: 'Smart Trounds'
+    ammo_class: trounds
+    note: 
+      - On a miss, make a second attack at 10+d10.
+      - Requires targeting scope cyberware.
+
+

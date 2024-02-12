@@ -1,0 +1,32 @@
+/$ macro Just_Item(itm, offset) -$/       
+/$for x in range(0,offset)$/\ /$endfor$//@itm.name|make_hfit(25-offset)|escape@/
+/$- endmacro $/
+
+/$ macro Inventory_OptList(itm, offset) -$/
+/$for opt in itm.contents$/
+/@Inventory_Complex_Item(opt, offset+3)@//$endfor$/
+/$- endmacro $/
+
+/$ macro Inventory_Complex_Item(itm, offset) -$/
+& /@Just_Item(itm, offset)@/ & \\
+/@Inventory_OptList(itm, offset)@/
+/$- endmacro $/
+
+/$ macro Inventory_Entry(itm) -$/
+\cvalue{ /$if itm.count>9999$/MANY/$else$//@"%4d"|format(itm.count)@//$endif$/ }&
+/@Just_Item(itm, 0)@/&
+\cvalue{ /$if itm.weight>999$/HVY/$else$//@"%6.2f"|format(itm.weight)@//$endif$/ }\\
+/@Inventory_OptList(itm, 0)@/
+/$- endmacro $/
+
+
+
+/$ macro Just_Item_Inline(itm) -$//@itm.name|escape@//$- endmacro $/
+
+/$ macro Inventory_OptList_Inline(itm) -$//$if itm.contents|length > 0$/ (/$for opt in itm.contents$//@Inventory_Complex_Item_Inline(opt)@//$if not loop.last$/, /$endif$//$endfor$/)/$endif$//$- endmacro -$/
+
+/$ macro Inventory_Complex_Item_Inline(itm) -$//@Just_Item_Inline(itm)@//@Inventory_OptList_Inline(itm)@//$- endmacro $/
+
+/$ macro Inventory_Entry_Inline(itm) -$//$if itm.count>9999$/MANY /$elif itm.count > 1$/{\cvalue /@itm.count@/} /$endif$//@Inventory_Complex_Item_Inline(itm)@//$- endmacro $/
+
+

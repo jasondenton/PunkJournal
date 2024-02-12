@@ -1,0 +1,36 @@
+\hspace{-.5cm}\begin{tabularx}{1.05\linewidth}{LrLrLrLr}
+\hline
+\rowcolor{color_tabledark} BODY & \cvalue{ /@stats.Body@/ } &
+COOL & \cvalue{ /@stats.Cool@/ } &
+LUCK & \cvalue{ /@stats.Luck@/ } \\ 
+DEX &\cvalue{ /@stats.Dexterity@/ } &
+REF & \cvalue{ /@stats.Reflexes@/ } &
+MOVE &\cvalue{ /@stats.Move@/ } \\ 
+\rowcolor{color_tabledark}INT & \cvalue{ /@stats.Intelligence@/ } &
+TECH &\cvalue{ /@stats.Technique@/ } &
+WILL & \cvalue{ /@stats.Willpower@/ } \\ 
+EMP & \cvalue{ /@stats.Empathy@/ } &
+HM & \cvalue{ /@current_humanity@/ } & 
+MXHM & \cvalue{  /@max_humanity@/ } \\ \hline
+\end{tabularx}
+\vspace{12pt}
+
+\rowcolors{2}{color_boxtext}{white}
+\hspace{-.6cm}\begin{tabularx}{1.1\linewidth}{Lrcr}
+\headercell{SKILL} & \headercell{\small LVL} & 
+\headercell{\small MOD} & \headercell{\small TL} \\
+
+/$ for (k,sk) in skills.items() $/
+/$ if sk.show $/
+/@"%s (%s)"|format(sk.name,sk.stat)|make_hfit(25)@/ & \cvalue{ /@"%02d"|format(sk.value)@/ } & 
+/$if sk.chip$/\includegraphics[width=8pt,height=8pt]{chip.eps}/$endif$/
+/$for i in range(sk.tool)$/\includegraphics[width=8pt,height=8pt]{tools.eps}/$endfor$/
+/$for i in range(sk.cyberware)$/\includegraphics[width=8pt,height=8pt]{cyberware.eps}/$endfor$/
+/$for i in range(sk.role_boost)$/\includegraphics[width=8pt,height=8pt]{hat.eps}/$endfor$/
+&\cvalue{ /@"%02d"|format(sk.effective)@/ }\\
+/$ endif $/
+/$ endfor $/
+\end{tabularx}
+
+\vfill\null
+Availble IP: /@ip_log.available@/

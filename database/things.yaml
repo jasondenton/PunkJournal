@@ -1,0 +1,36 @@
+- name: tiny thing
+  cost: -1
+  option: true
+  weight: 0.1
+  keywords: thing, gear
+  option_hint: Thing name
+- name: small thing
+  cost: -1
+  option: true
+  weight: 0.5
+  keywords: thing, gear
+  option_hint: Thing name
+- name: medium thing
+  cost: -1
+  option: true
+  weight: 1
+  keywords: thing, gear
+  option_hint: Thing name
+- name: large thing
+  cost: -1
+  option: true
+  weight: 5
+  keywords: thing, gear
+  option_hint: Thing name
+- name: very large thing
+  cost: -1
+  option: true
+  weight: 20
+  keywords: thing, gear
+  option_hint: Thing name
+- name: stationary thing
+  cost: -1
+  option: true
+  weight: 100
+  keywords: thing, stationary, gear
+  option_hint: Thing name

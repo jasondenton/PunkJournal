@@ -1,0 +1,50 @@
+/$from 'gear_macros.template.tex' import Inventory_Entry $/
+
+/$ macro Gear_Notes(itm) -$/
+/$if itm.notes|length>0 and ('weapon' not in itm.keywords and 
+	'armor' not in itm.keywords) and 'ammunition' not in itm.keywords$/
+\begin{minipage}{\columnwidth}
+\noindent\textbf{ /@itm.name@/ }\ \ /$for n in itm.notes$//@n@/ /$endfor$/
+\end{minipage}
+/$endif$/
+/$- endmacro $/
+
+\centerline{\large GEAR }
+\noindent \textbf{Cash}: /@"%8.2f"|format(bank_balance)@/eb
+
+%\centerline{\textbf{Carried: /@"%6.2f"|format(carried_weight)@/ kg}}
+\begin{gearblock}{Carried: /@"%6.2f"|format(carried_weight)@/ kg}
+/$ for itm in carried_inventory $/
+/@Inventory_Entry(itm)@/
+/$ endfor $/
+\end{gearblock}
+
+/$if home_inventory $/
+\vspace*{8pt}\null
+%\centerline{ \textbf{At Home} }
+\begin{gearblock}{At Home}
+/$ for itm in home_inventory $/
+/@Inventory_Entry(itm)@/
+/$ endfor $/
+\end{gearblock}
+/$endif$/
+
+/$ for (nm,loc) in other_locations.items()$/
+\vspace*{8pt}\null
+%\centerline{ \textbf{ /@nm|capitalize@/ } }
+\begin{gearblock}{/@nm|capitalize@/}
+/$ for itm in loc $/
+/@Inventory_Entry(itm)@/
+/$ endfor $/
+\end{gearblock}
+/$ endfor $/
+\vspace*{12pt}\null
+
+\centerline{Gear Notes}
+/$ for itm in worn $/
+/@Gear_Notes(itm)@/
+/$ endfor $/
+
+/$ for itm in carried_inventory $/
+/@Gear_Notes(itm)@/
+/$ endfor $/

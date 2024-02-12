@@ -1,0 +1,91 @@
+- name: Charismatic Impact
+  role: Rockerboy
+- name: Combat Awareness
+  role: Solo
+- name: Interface
+  role: Netrunner
+- name: Credibility
+  role: Media
+- name: Teamwork
+  aliases: Team work
+  role: Exec
+- name: Backup
+  role: Lawman
+- name: Operator
+  role: Fixer
+  improves:
+    - trading
+- name: Moto
+  role: Nomad
+  improves:
+    - drive land vehicle
+    - pilot air vehicle
+    - pilot sea vehicle
+    - air vehicle tech
+    - land vehicle tech 
+    - sea vehicle tech 
+- name: Maker
+  role: Tech
+- name: Field Expertise
+  role: Tech
+  improves:
+    - basic tech
+    - cybertech
+    - electronics/security tech
+    - Weaponstech
+    - air vehicle tech
+    - land vehicle tech 
+    - sea vehicle tech 
+  keywords:
+    - role sub
+  parent: Maker
+- name: Upgrade Expertise
+  role: Tech
+  keywords:
+    - role sub
+  parent: Maker
+- name: Invention Expertise
+  role: Tech
+  keywords:
+    - role sub
+  parent: Maker
+- name: Fabrication Expertise
+  role: Tech
+  keywords:
+    - role sub
+  parent: Maker
+- name: Medicine
+  role: Medtech
+- name: Surgery
+  role: Medtech
+  keywords:
+    - role sub
+  parent: Medicine
+- name: Surgery_proxy_XX
+  display_name: Surgery
+  keywords:
+    - skill
+  stat: technique
+  role_boost: []
+  cyberware: 0 
+  tool: 0
+  chip: False
+  notes: []
+- name: Pharmaceuticals
+  role: Medtech
+  keywords:
+    - role sub  
+  parent: Medicine
+- name: Cryosystems Operation
+  role: Medtech
+  keywords:
+    - role sub 
+  parent: Medicine
+- keywords: skill
+  name: Medical Tech
+  stat: technique
+  role_boost: []
+  cyberware: 0 
+  tool: 0
+  chip: False
+  notes: []

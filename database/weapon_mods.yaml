@@ -1,0 +1,30 @@
+- name: Smartgun Link
+  keywords: ranged weapon attachment
+  cost: 500
+  weight: 0.3
+  needs_slots: 2
+  install_in: ranged weapon mod
+- name: Drum magazine
+  cost: 500
+  weight: 1
+  keywords: magazine, ranged weapon attachment
+  install_in: magazine 
+  mag_kind : 2
+- name: Extended Magazine
+  cost: 100
+  weight: 1
+  keywords: magazine, ranged weapon attachment
+  install_in: magazine
+  mag_kind: 1 
+- name: Infrared Nightvision Scope
+  cost: 500
+  weight: 1
+  install_in: ranged weapon mod
+  keywords: scope, ranged weapon attachment
+  note: Reduce penalties from darkness, smog, fog to 0.
+- name: Sniping Scope
+  cost: 500
+  weight: 1
+  install_in: ranged weapon mod
+  keywords: scope, ranged weapon attachment
+  note: +1 to hit targets 51/m or more away with single or aimed shot.

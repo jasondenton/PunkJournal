@@ -1,0 +1,13 @@
+\centerline{\large Humanity}
+\textbf{Humanity:} /@current_humanity@/ / /@max_humanity@/ 
+
+/$ for block in humanity_record|chunk(38,40) $/
+\begin{humanityblock}
+/$ for entry in block $/
+/@entry.date@/ & /@entry.memo|escape|make_hfit(22)@/ & 
+\cvalue{ /@"%4d"|format(entry.current_loss)@/ } & \cvalue{ /@"%4d"|format(entry.current_humanity)@/ } &
+\cvalue{ /@"%4d"|format(entry.max_loss)@/ } & \cvalue{ /@"%4d"|format(entry.max_humanity)@/ }\\
+/$ endfor $/
+\end{humanityblock}
+\vfill\null
+/$endfor$/

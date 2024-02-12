@@ -1,0 +1,8 @@
+The data in this directory is derived from Cyberpunk RED and it's DLCs, by R. Talsorian Games. It is unofficial content provided under R. Talsorian Games homebrew content policy.
+
+The Data in this directory is unofficial content provided under the [Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by R. Talsorian Games. This content references materials that are the property of and its licensees.
+
+The contents of this directory are explicitly not covered by the GLPv3, which covers the rest of the Punk Journal Software.
+
+R. Talsorian Games: https://talsorianstore.com/
+RTG Homebrew Policy: https://rtalsoriangames.com/homebrew-content-policy/

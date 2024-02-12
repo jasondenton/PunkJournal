@@ -1,0 +1,20 @@
+\centerline{\large ROLE/$if roles|length >1$/S/$endif$/ }
+\small
+/$ for role in roles $/
+\begin{minipage}{\columnwidth}
+\centerline{\textbf{/@role.role | capitalize@/ - /@role.name@/ /@role.value@/}}
+
+/@role | inplace(role.text) | markdown@/
+
+/$for ssk in role.subs $//$if ssk.value > 0 $/
+\vspace*{6pt}\null
+
+\noindent\textbf{  /@ssk.name@/ /@ssk.value@/ }
+/@ssk | inplace(ssk.text) | markdown@/
+/$endif$//$endfor$/
+\hrulefill
+\end{minipage}
+
+\vfill\null
+/$ endfor $/
+\normalsize

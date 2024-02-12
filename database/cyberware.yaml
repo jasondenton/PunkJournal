@@ -1,0 +1,1079 @@
+- name: Biomonitor
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion
+  humanity: 0
+  weight: 0
+- name: Chemskin
+  aliases: Chem Skin
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion, obvious
+  humanity: 0
+  weight: 0
+- name: EMP Threading
+  cost: 10
+  install_in: fashionware 
+  keywords: fashionware, fashion, multiple, obvious
+  humanity: 0
+  weight: 0
+- name: Light Tattoo
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion, multiple
+  humanity: 0
+  weight: 0
+  option: true
+  option_hint: '? location'
+  rename: 'Light Tattoo - {option}'
+- name: Shift Tacts
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion, obvious
+  humanity: 0
+  weight: 0
+- name: Skinwatch
+  aliases: skin watch
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion
+  humanity: 0
+  weight: 0
+- name: Techhair
+  aliases: Tech Hair
+  cost: 100
+  install_in: fashionware 
+  keywords: fashionware, fashion, obvious
+  humanity: 0
+  weight: 0
+- name: AudioVox
+  cost: 500
+  install_in: internal
+  keywords: cyberware, enhance
+  humanity: 1
+  weight: 0
+  boost: audio vox
+  card: Voice synthesizer. Adds +2 to Acting and Play Instrument when singing.
+- name: Contraceptive Implant
+  cost: 10
+  install_in: internal
+  keywords: cyberware
+  humanity: 0
+  weight: 0
+- name: Enhanced Antibodies
+  cost: 500
+  install_in: internal
+  keywords: cyberware
+  humanity: 0.5
+  weight: 0
+  card: After stabilization, user heals BODY x 2 for each day spent resting.
+  note: Heal 2x BODY for each day of rest.
+- name: Cybersnake
+  cost: 1000
+  install_in: internal
+  keywords: cyberware, weapon, melee
+  humanity: 4
+  weight: 0
+  concealable: True
+  rof: 1
+  damage_dice: 4
+  skill: melee
+  quality: standard
+  hands: 0
+  wkind: melee
+- name: Gills
+  cost: 1000
+  install_in: internal
+  keywords: cyberware, obvious
+  humanity: 2
+  weight: 0
+  card: You can breathe underwater.
+  note: Allows breathing underwater.
+- name: Grafted Muscle and Bone Lace
+  cost: 1000
+  install_in: internal
+  keywords: cyberware, multiple
+  humanity: 4
+  weight: 0 
+- name: Independent Air Supply
+  cost: 1000
+  install_in: internal
+  keywords: cyberware
+  humanity: 0.5
+  weight: 0
+  card: Provides 30 minutes of oxygen. Takes 1 hour to refill from ambient atmosphere.
+  note: A 30 minute supply of oxygen; refills in 1 hour.
+- name: Midnight Lady Sexual Implant
+  cost: 100
+  install_in: internal
+  keywords: cyberware
+  humanity: 2
+  weight: 0
+- name: Mr. Studd Sexual Implant
+  aliases: mr studd sexual implant
+  cost: 100
+  install_in: internal
+  keywords: cyberware
+  humanity: 2
+  weight: 0
+- name: Nasal Filters
+  cost: 100
+  install_in: internal
+  keywords: cyberware
+  humanity: 0.5
+  weight: 0
+  card: You are immune to effects of toxic gases, fumes, and similar dangers.
+  note: Grants immuninity to dangerous gases.
+- name: Radar / Sonar Implant
+  cost: 1000
+  install_in: internal
+  keywords: cyberware
+  humanity: 2
+  weight: 0
+  card: Scans terrain within 50m/yds. Cannot scan through cover.
+  note: Scan terrain out to 50m. Blocked by cover.
+- name: Toxin Binders
+  cost: 100 
+  install_in: internal 
+  keywords: cyberware, enhance 
+  humanity: 0.5
+  weight: 0 
+  boost: toxin binders
+  card: Adds +2 to Resist Torture/Drugs.
+  note: +2 bonus to Resist Tortue/Drugs (included).
+- name: Vampyres
+  cost: 500
+  install_in: internal 
+  keywords: cyberware 
+  humanity: 4
+  weight: 0
+  skill: melee weapon
+  damage_dice: 1
+  rof: 2
+  hands: 0
+  concealable: true
+  quality: excellent
+  wkind: light
+  note: Can deliver posion or biotoxin.
+- name: Hidden Holster
+  cost: 500
+  install_in: external
+  keywords: cyberware, multiple
+  humanity: 2
+  weight: 0
+  card: Can store weapon capable of concealment inside body.
+  note: Holds one concealable weapon.
+- name: Skin Weave
+  cost: 500
+  install_in: external
+  keywords: cyberware, armor, body, helmet
+  humanity: 2
+  weight: 0
+  sp: 7
+  sort: 500
+  allowed_upgrades:
+    - armor
+    - complexity
+- name: Subdermal Armor
+  cost: 1000
+  install_in: external
+  keywords: cyberware, armor, body, helmet, obvious
+  humanity: 4
+  weight: 0
+  sp: 11
+  sort: 500
+  allowed_upgrades:
+    - armor
+    - complexity
+- name: Subdermal Pocket
+  cost: 100
+  install_in: external
+  keywords: cyberware, multiple
+  humanity: 1
+  weight: 0
+- name: Neural Link
+  aliases: neurallink
+  cost: 500
+  install_in: neuralware
+  keywords: cyberware
+  enables: True
+  humanity: 2
+  weight: 0
+  needs_slots: 0
+  allowed_upgrades:
+    - slots 
+    - complexity
+- name: Braindance Recorder
+  cost: 500
+  install_in: neuralware
+  keywords: cyberware
+  humanity: 2
+  weight: 0
+- name: Chipware Socket
+  cost: 500
+  keywords: cyberware, multiple
+  install_in: neuralware
+  humanity: 2
+  weight: 0
+  holds: 
+    - chipware
+  max_container_size: 1
+  allowed_upgrades: 
+    - slots
+    - complexity
+- name: Kerenzikov Speedware
+  aliases: Kerenzikov 
+  cost: 500
+  keywords: cyberware, speedware
+  install_in: neuralware
+  humanity: 4
+  weight: 0
+  note: Adds +2 to your initative (included).
+- name: Sandevistan Speedware
+  aliases: Sandevistan
+  cost: 500
+  keywords: cyberware, speedware
+  install_in: neuralware
+  humanity: 2
+  weight: 0
+  note: Once per hour, spend an action to add +3 to your initative for 1 minute.
+- name: Cyberware Chemical Analyzer
+  cost: 500
+  keywords: cyberware, chipware
+  install_in: chipware
+  humanity: 1
+  weight: 0
+  note: Compare chemical sample to a database of known samples.
+  pass_notes: False
+- name: Olfactory Boost
+  cost: 100
+  keywords: cyberware, chipware
+  install_in: chipware
+  humanity: 2
+  weight: 0
+  note: Allows tracking by smell.
+  pass_notes: False
+- name: Pain Editor
+  cost: 1000
+  keywords: cyberware, chipware
+  install_in: chipware
+  humanity: 4
+  weight: 0
+  note: Ignore penalties for being Seriously Wounded.
+  pass_notes: False
+- name: Tactile Boost
+  cost: 100
+  keywords: cyberware, chipware
+  install_in: chipware
+  humanity: 2
+  weight: 0
+  note: Detect motion within 20m by feeling the vibration.
+  pass_notes: False
+- name: Skill Chip
+  cost: 500
+  option: True
+  option_hint: 'Skill name'
+  keywords: cyberware, multiple, skill chip, chipware
+  install_in: chipware
+  humanity: 2
+  weight: 0
+  display_name: 'Skill Chip: {option}' 
+  pass_notes: False
+- name: Interface Plugs
+  cost: 500
+  option: True
+  keywords: cyberware, multiple
+  install_in: neuralware
+  humanity: 2
+  weight: 0
+  rename: 'Interface Plugs - {option}'
+  option_hint: '? location'
+- name: Cyberaudio Suite 
+  aliases: cyberaudio 
+  cost: 500
+  humanity: 2
+  weight: 0
+  install_in: cyberaudio
+  enables: True
+  keywords: cyberware
+  needs_slots: 0
+  allowed_upgrades:
+    - slots 
+    - complexity
+- name: Amplified Hearing
+  cost: 500
+  humanity: 1
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware, enhance
+  boost: amplified hearing
+  note: +2 bonus to perception checks involving hearing (included).
+- name: Cyberware Audio Recorder
+  aliases: Cyberaudio audio recorder, Cyber audio recorder
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  display_name: Audio Recorder
+  note: Record audio to agent or memory chip.
+- name: Cyberware Bug Detector
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  display_name: Bug Detector
+  note: Detect bugs within 2m.
+- name: Cyberaudio Homing Tracer
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  note: Follow tracers from up to a mile away.
+- name: Internal Agent
+  cost: 500
+  humanity: 1
+  weight: 0
+  install_in: cyberaudio
+  boost: agent 
+  keywords: cyberware, tool
+- name: Level Damper
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  note: Immune to loud noises.
+- name: Cyberware Radio Communicator
+  aliases: Cyber Radio Communicator
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  note: Range 1 mile.
+  full_name: Cyberware Radio Communicator
+- name: Cyberware Radio Scanner / Music Player
+  aliases: Cyber Radio Scanner / Music Player
+  aliases: cyber audio scanner, Cyberware Radio Scanner/Music Player
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  display_name: Radio Scanner / Music Player
+  full_name: Cyberware Radio Scanner / Music Player
+- name: Radar Detector
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  note: Detect radar beams within 100m.
+- name: Cyberware Scrambler Descrambler
+  cost: 500
+  humanity: 0.5
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware
+  note: Encrypt your communications.
+  display_name: Scrambler Descrambler
+- name: Voice Stress Analyzer
+  cost: 500
+  humanity: 1
+  weight: 0
+  install_in: cyberaudio
+  keywords: cyberware, enhance
+  boost: voice stress
+- name: Cybereye 
+  cost: 100
+  enables: True
+  install_in: cybereye
+  humanity: 2
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware
+  rename: Cybereye
+  needs_slots: 0
+  allowed_upgrades:
+    - slots 
+    - complexity
+  full_name: '{option} Cybereye'
+- name: Medical Grade Cybereye 
+  cost: 50
+  enables: True
+  install_in: cybereye
+  humanity: 0
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware, medical_grade
+  rename: Medical Grade Cybereye
+  needs_slots: 0
+  allowed_upgrades:
+    - complexity
+  full_name: '{option} Medical Grade Cybereye'
+- name: Anti-Dazzle
+  cost: 200
+  install_in: cybereye
+  humanity: 1
+  weight: 0
+  keywords: cyberware, paired
+  option: optional
+  rename: Anti-Dazzle
+  note: Protects against flashes of light.
+- name: Chyron
+  cost: 100
+  humanity: 0.5
+  install_in: cybereye 
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware
+  option: true 
+  display_name: Chyron
+- name: Color Shift
+  cost: 100
+  humanity: 0.5
+  install_in: cybereye 
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware
+  display_name: Color Shift
+- name: Cybereye Dartgun
+  cost: 500
+  humanity: 0.5
+  install_in: cybereye 
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware, weapon, ranged, exotic
+  needs_slots: 3
+  display_name: Cybereye Dartgun
+  skill: handgun
+  damage_dice: 0
+  magazine: 1
+  ammo_class : darts
+  rof : 1
+  hands: 0
+  concealable:  True
+  wkind: Eye
+  quality: standard 
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Image Enhance
+  cost: 1000
+  humanity: 2
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware, paired, enhance
+  option: optional
+  display_name: Image Enhance
+  boost: image enhance
+  note: +2 bonus to Perception, Lip Reading, and Conceal/Reveal Object (included).
+- name: Low Light/Infrared/UV
+  aliases: Low Light / Infrared / UV, Low Light, Infrared, UV, low light/ir/uv
+  cost: 1000
+  humanity: 2
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware, paired
+  needs_slots: 2
+  option: optional
+  option_hint: 'Eye location'
+  display_name: Low Light / Infrared / UV 
+  note: Ignore darkness/fog penalties.
+- name: MicroOptics
+  cost: 100
+  humanity: 0.5
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware 
+  option: true
+  option_hint: 'Eye location'
+  display_name: MicroOptics
+  note: Up to 400x magnification.
+- name: MicroVideo
+  cost: 500
+  humanity: 0.5
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware
+  needs_slots: 2
+  option: true 
+  option_hint: 'Eye location'
+  display_name: MicroVideo
+  note: Record to agent or memory chip.
+- name: Radiation Detector
+  cost: 1000
+  humanity: 1
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware
+  option: true 
+  option_hint: 'Eye location'
+  display_name: Radiation Detector
+- name: Targeting Scope
+  cost: 500
+  humanity: 1
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware
+  option: true 
+  option_hint: 'Eye location'
+  display_name: 'Targeting Scope'
+  note: +1 to aimed shots.
+- name: TeleOptics
+  cost: 500
+  humanity: 1
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware
+  option: true 
+  display_name: 'TeleOptics'
+  option_hint: 'Eye location'
+  note: +1 to aimed shot beyond 50m. See detail up to 800m.
+- name: Virtuality
+  cost: 200
+  humanity: 1
+  install_in: cybereye 
+  weight: 0
+  keywords: cyberware, paired
+  option: optional
+  option_hint: 'Paired eye location'
+  display_name: Virtuality
+- name: MultiOptic Mount
+  aliases: multi-optic mount
+  humanity: 4
+  cost: 1000
+  weight: 0
+  install_in: borgware
+  keywords: borgware, obvious
+- name: Sensor Array
+  humanity: 4
+  cost: 1000
+  weight: 0
+  keywords: borgware, obvious
+  install_in: borgware
+  needs_slots: 0
+- name: Cyberarm
+  cost: 500
+  humanity: 2
+  weight: 0
+  install_in: cyberarm
+  enables: true
+  keywords: cyberware, obvious
+  option: true
+  option_hint: 'Arm location'
+  display_name: Cyberarm
+  needs_slots: 0
+  allowed_upgrades:
+    - slots 
+    - complexity
+  full_name: '{option} Cyberarm'
+- name: Medical Grade Cyberarm
+  cost: 50
+  humanity: 0
+  weight: 0
+  install_in: cyberarm
+  enables: true
+  keywords: cyberware, medical_grade, meat, obvious
+  option: true
+  option_hint: 'Arm location'
+  display_name: Medical Grade Cyberarm
+  needs_slots: 0
+  allowed_upgrades: 
+    - complexity
+  full_name: '{option} Medical Grade Cyberarm'
+- name: Standard Hand
+  aliases: Cyber Hand
+  cost: 100
+  weight: 0
+  humanity: 0.5
+  display_name: Cyber Hand
+  install_in: cyberarm
+  keywords: cyberware, standard, pad, meat
+  option: true
+  option_hint: 'Arm location'
+  needs_slots: 0
+- name: Big Knucks
+  cost: 100
+  humanity: 1
+  weight: 0
+  keywords: cyberware, weapon, melee, meat
+  install_in: cyberarm
+  skill: melee weapon
+  damage_dice: 2
+  rof: 2
+  concealable: true
+  option: true
+  option_hint: 'Arm location'
+  hands: 1
+  display_name: Big Knucks
+  quality: standard
+  wkind: Medium
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Rippers
+  cost: 500
+  humanity: 1
+  weight: 0
+  keywords: cyberware, weapon, melee, meat
+  install_in: cyberarm
+  skill: melee weapon
+  damage_dice: 2
+  rof: 2
+  hands: 1
+  concealable: true
+  option: true
+  option_hint: 'Arm location'
+  display_name: Rippers
+  quality: standard
+  wkind: Medium
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Grapple Hand
+  cost: 100
+  humanity: 1
+  weight: 0
+  install_in: cyberarm 
+  keywords: cyberware
+  option: true
+  option_hint: 'Arm location'
+  display_name: Grapple Hand
+  note: Fires hand attached to 30m of cable.
+- name: Scratchers
+  cost: 100
+  humanity: 0.5
+  weight: 0
+  keywords: cyberware, weapon, melee, meat
+  install_in: cyberarm
+  skill: melee weapon
+  damage_dice: 2
+  rof: 2
+  hands: 1
+  concealable: true
+  option: true
+  option_hint: 'Arm location'
+  display_name: Scratchers
+  quality: standard
+  wkind: Light
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Wolvers
+  cost: 500
+  humanity: 2
+  weight: 0
+  keywords: cyberware, weapon, melee, meat
+  install_in: cyberarm
+  skill: melee weapon
+  damage_dice: 3
+  rof: 2
+  hands: 1
+  concealable: true
+  option: true
+  option_hint: 'Arm location'
+  display_name: Wolvers
+  quality: standard
+  wkind: Heavy
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Slice N Dice
+  cost: 500
+  humanity: 1
+  weight: 0
+  keywords: cyberware, weapon, melee, meat
+  install_in: cyberarm
+  skill: melee weapon
+  damage_dice: 2
+  rof: 2
+  hands: 1
+  concealable: true
+  option: true
+  option_hint: 'Arm location'
+  display_name: Slice N Dice
+  quality: standard
+  wkind: Medium
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Tool Hand
+  cost: 100
+  humanity: 1
+  weight: 0
+  keywords: cyberware, meat
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Tool Hand
+- name: Subdermal Grip
+  cost: 100
+  humanity: 1
+  weight: 0
+  keywords: cyberware, multiple, meat
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Subdermal Grip
+- name: Popup Shield
+  cost: 500
+  humanity: 2
+  weight: 0
+  keywords: cyberware, shield
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  needs_slots: 3
+  display_name: Popup Shield
+  hit_points: 10
+- name: Cyberarm Medscanner
+  cost: 500
+  humanity: 2
+  weight: 0
+  keywords: cyberware, tool
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  boost: medscanner
+  needs_slots: 2
+  display_name: Medscanner
+  boost: medscanner
+  note: +2 bonus to first aid and paramedic (included).
+- name: Cyberarm Techscanner
+  cost: 500
+  humanity: 2
+  weight: 0
+  keywords: cyberware, tool
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  needs_slots: 2
+  display_name: Techscanner
+  boost: techscanner
+  note: +2 bonus to some TECH skills (included).
+- name: Shoulder Cam
+  aliases: Shouldercam
+  cost: 500
+  humanity: 2
+  weight: 0
+  keywords: cyberware
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  needs_slots: 2
+  display_name: Shouldercam
+- name: Cyberarm Hardened Shielding
+  aliases: hardened shielding (cyber arm)
+  cost: 1000
+  humanity: 1
+  weight: 0
+  keywords: cyberware
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Hardened Shielding
+- name: Cyberarm Plastic Covering
+  aliases: Plastic Covering (cyber arm)
+  cost: 100
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering, obvious
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Plastic Covering
+  needs_slots: 0
+- name: Cyberarm Realskinn Covering
+  aliases: Realskinn Covering (cyber arm)
+  cost: 500
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Realskinn Covering
+  needs_slots: 0
+- name: Cyberarm Superchrome Covering
+  aliases: Superchrome covering (cyber arm)
+  cost: 1000
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering, obvious
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Superchrome Covering  
+  needs_slots: 0
+- name: Cyberleg Hardened Shielding
+  aliases: hardened shielding (cyber leg)
+  cost: 1000
+  humanity: 1
+  weight: 0
+  keywords: cyberware
+  install_in: cyberleg
+  option: true
+  option_hint: 'Leg location'
+  display_name: Hardened Shielding
+- name: Cyberleg Plastic Covering
+  aliases: Plastic Covering (cyber leg)
+  cost: 100
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering
+  install_in: cyberleg
+  option: true
+  option_hint: 'Leg location'
+  display_name: Plastic Covering
+  needs_slots: 0
+- name: Cyberleg Realskinn Covering
+  aliases: Realskinn Covering (cyber leg)
+  cost: 500
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering
+  install_in: cyberleg
+  option: true
+  option_hint: 'Leg location'
+  display_name: Realskinn Covering
+  needs_slots: 0
+- name: Cyberleg Superchrome Covering
+  aliases: Superchrome Covering (cyber leg)
+  cost: 1000
+  humanity: 0
+  weight: 0
+  keywords: cyberware, covering
+  install_in: cyberleg
+  option: true
+  option_hint: 'Leg location'
+  display_name: Superchrome Covering
+  needs_slots: 0
+- name: Popup Grenade Launcher
+  cost: 500
+  weight: 4
+  skill: heavy weapons
+  damage_dice: 6
+  magazine: 1
+  ammo_class: grenade 
+  has_smartlink: False
+  rof: 1
+  hands: 1
+  concealable: true
+  max_container_size: 2
+  install_in: cyberarm
+  keywords: cyberware, weapon, ranged
+  option: true
+  option_hint: 'Arm location'
+  humanity: 2
+  hands: 1
+  display_name: Popup Grenade Launcher
+  quality: standard
+  wkind: Grenade Launcher
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Quick Change Mount
+  aliases: Quickchange Mount
+  cost: 100
+  humanity: 2
+  weight: 0
+  keywords: cyberware
+  install_in: cyberarm
+  option: true
+  option_hint: 'Arm location'
+  display_name: Quick Change Mount
+- name: Spare Cyberarm
+  cost: 500
+  weight: 3
+  holds: placeholder
+  keywords: gear
+- name: Artificial Shoulder Mount
+  cost: 1000
+  weight: 0
+  install_in: borgware
+  humanity: 4
+  keywords: borgware, obvious
+- name: Cyberarm Cyberdeck
+  cost: 500
+  weight: 0
+  humanity: 1
+  install_in: cyberarm
+  needs_slots: 3
+  keywords: cyberware
+  option: true
+  option_hint: 'Arm location'
+  pass_notes: false
+- name: Popup Melee Weapon
+  cost: 500
+  weight: 0
+  humanity: 2
+  install_in: cyberarm
+  needs_slots: 2
+  keywords: cyberware
+  option: true
+  option_hint: 'Arm location'
+  max_container_size: 1
+- name: Popup Ranged Weapon
+  cost: 500
+  weight: 0
+  humanity: 2
+  install_in: cyberarm
+  needs_slots: 2
+  keywords: cyberware
+  option: true
+  option_hint: 'Arm location'
+  max_container_size: 1
+- name: Cyberleg
+  cost: 100
+  weight: 0
+  humanity: 1
+  install_in: cyberleg 
+  option: true 
+  option_hint: 'Leg location'
+  keywords: cyberware, obvious
+  enables: true 
+  needs_slots: 0
+  allowed_upgrades:
+    - slots 
+    - complexity
+  full_name: '{option} Cyberleg'
+- name: Medical Grade Cyberleg
+  cost: 50
+  weight: 0
+  humanity: 0
+  install_in: cyberleg 
+  option: true 
+  option_hint: 'Leg location'
+  keywords: cyberware, medical_grade, meat, obvious
+  enables: true
+  needs_slots: 0
+  allowed_upgrades:
+    - complexity
+  full_name: '{option} Medical Grade Cyberarm'
+- name: Standard Foot
+  aliases: Cyber Foot
+  cost: 100
+  weight: 0
+  humanity: 0.5
+  display_name: Cyber Foot
+  install_in: cyberleg
+  keywords: cyberware, standard, pad, meat
+  option: true
+  option_hint: 'Leg location'
+  needs_slots: 0
+- name: Grip Feet
+  aliases: Grip Foot
+  cost: 1000
+  weight: 0
+  humanity: 2
+  install_in: cyberleg
+  keywords: cyberware, paired 
+  note: No movement penalty when climbing.
+  option: 'optional'
+  option_hint: 'Leg location'
+- name: Jump Booster
+  cost: 1000
+  weight: 0
+  humanity: 2
+  install_in: cyberleg
+  keywords: cyberware, paired 
+  needs_slots: 2
+  note: No movement penalty when jumping.
+  option: 'optional'
+  option_hint: 'Leg location'
+- name: Skate Feet
+  aliases: Skate Foot
+  cost: 1000
+  weight: 0
+  humanity: 2
+  install_in: cyberleg
+  keywords: cyberware, paired 
+  option: 'optional'
+  option_hint: 'Leg Location'
+  note: When taking the run action, move an additional 6m.
+- name: Talon Foot
+  cost: 500
+  weight: 0
+  humanity: 1
+  install_in: cyberleg
+  option: true 
+  option_hint: 'Leg location'
+  damage_dice: 1
+  rof: 2
+  keywords: cyberware, meat, melee, weapon
+  hands: 0
+  quality: standard
+  skill: melee weapon
+  concealable: true
+  wkind: Light
+  allowed_upgrades:
+    - quality
+    - complexity
+- name: Web Feet
+  aliases: Web Foot
+  cost: 1000
+  weight: 0
+  humanity: 2
+  install_in: cyberleg, paired
+  keywords: cyberware 
+  note: No movement penalty when swimming.
+  option: 'optional'
+  option_hint: 'Leg location'
+- name: Implanted Linear Frame Sigma
+  aliases: implanted linear frame ∑ (sigma)
+  cost: 1000
+  humanity: 4
+  weight: 0
+  install_in: borgware 
+  keywords: borgware, linear frame, obvious
+  frame_level: 1
+- name: Implanted Linear Frame Beta
+  aliases: implanted linear frame β (beta)
+  cost: 5000
+  humanity: 4
+  weight: 0
+  install_in: borgware 
+  keywords: borgware, linear frame, obvious
+  frame_level: 2
+- name: Chipware Compartment
+  cost: 100
+  humanity: 1
+  install_in: cybereye 
+  weight: 0
+  option: true
+  option_hint: 'Eye location'
+  keywords: cyberware
+  needs_slots: 3
+  max_container_size: 4
+  holds: 
+    - chipware
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

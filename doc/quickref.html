@@ -1,0 +1,385 @@
+<h2>Command Reference</h2>
+
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Initial Build Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				CHARACTER NAME
+			</td>
+			<td>
+				<p>The first command in the file is always the character's name.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				ROLE NAME
+			</td>
+			<td><p>
+				Select a starting role for the character using the name of that role as a command.
+				Multi-class a character by improving the new role ability, subject to available IP 
+				and the multi-classing rules.</p>
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				&lt;stat name&gt; &lt;number&gt; 
+				&lt;skill name&gt; &lt;number&gt; 
+			</td>
+			<td><p>
+				During character creation, points are allocated to skills and stats by
+				entering the name of the stat or skill
+				followed by the number of points to assign to it. After creation, use the
+				improve command to raise skill ranks.
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Inventory Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				$xxxx.xx memo<br/>
+				-$xxxx.xx memo
+			</td>
+			<td>
+				<p>Add or subtract funds from the character's bank account.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				buy [#] &lt;item&gt;
+			</td>
+			<td>
+				<p>Buy an item with cash, adding it to the <i>carried</i> location
+				in the character's inventory.
+	 			The transaction is reflected in the character's bank ledger.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				found [#] &lt;item&gt;
+			</td>
+			<td>
+				<p>Add an item to the characters inventory.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				sell [#] &lt;item&gt;<br/>
+				sell [#] &lt;item&gt; from  &lt;location&gt;
+			</td>
+			<td>
+				<p>Sell items from the character's inventory. The transaction 
+				is reflected in the character's bank ledger. Defaults to selling
+				from the <i>carried</i> location if no location is given.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				drop [#] &lt;item&gt;<br/>
+				drop [#] &lt;item&gt; from  &lt;location&gt;
+			</td>
+			<td>
+				<p>Remove an item from the characters inventory.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				loot [#] &lt;item&gt;
+			</td>
+			<td>
+				<p>Sell items which are not in the character's inventory. 
+					Used to convert found/looted/scavenged items into cash
+					rather than keeping them. The transaction 
+				is reflected in the character's bank ledger.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				move [#] &lt;item&gt; to &lt;location&gt;<br/>
+				move [#] &lt;item&gt; from &lt;location&gt;<br/>
+				move [#] &lt;item&gt; from &lt;location&gt; to &lt;location&gt;
+			</td>
+			<td><p>Move items between locations in the character's inventory.
+			When both locations are not given, the missing location is assumed to
+			be <i>carried</i>.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Item Customization Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				tag &lt;item&gt; as &lt;tag&gt;
+			</td>
+			<td>
+				<p>Tags one of the given items with the given tag, and makes it
+				unique from all other copies of that item. Tagged items may
+				have other items attached to them, or used as locations to
+				install cyberware. Once an item has been tagged, you must
+				use that tag instead of the item name when refering to
+				it in other commands such as move or drop.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				attach &lt;item&gt; to &lt;tagged item&gt;
+			</td>
+			<td>
+				<p>Attaches one item to another. Used to install
+					weapon modifications in guns, software and hardware
+					in cyberdecks, and upgrades in vehicles. Also
+					used to plae items in cyberware weapon holders, 
+					and body weight suits.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				upgrade &lt;upgrade type&gt; on &lt;tagged item&gt;<br/>
+				$upgrade &lt;upgrade type&gt; on &lt;tagged item&gt;
+			</td>
+			<td><p>Use the Tech's ability to upgrade a piece of equipment. 
+				Allowed values for upgrade type are <strong>armor</strong>, 
+				<strong>slots</strong>, <strong>conceal</strong>,
+				<strong>complexity</strong>  and <strong>quality</strong>.</p>
+
+				<p>Use of the <tt>upgrade</tt> command does not affect the
+					character's bank balance. Use of the <tt>$upgrade</tt>
+				command charges the character the cost of upgrade.</p>
+
+				<p>The character does not have to be a Tech to use these commands,
+					since Techs can pass upgraded items to other characters.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Level-up Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				session &lt;IP gained&gt; &lt;memo&gt;
+			</td>
+			<td>
+				<p>Add improvement points to a character. Use the 
+				memo field to describe the job or mission.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				improve &lt;skill&gt;
+			</td>
+			<td>
+				<p>Raise a skill, role-ability, or role specialty.
+				Requires the character have sufficient IP, or
+				unused role specializations.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				humanity &lt;amount&gt; &lt;memo&gt;
+			</td>
+			<td>
+				<p>Adds the given amount to the character's current humanity.
+				Use a negative amount to reduce current humanity.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Cyberware Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				slot &lt;chipware&gt;
+			</td>
+			<td><p>
+				Slot the given piece of chipware into an open chip socket.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				remove &lt;cyberware&gt;<br/>
+				remove &lt;cyberware&gt;:&lt;location&gt;
+			</td>
+			<td><p>Remove a piece of installed cyberware. The removal
+				is reflected on the characters humanity log.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				swap &lt;arm location&gt; arm for &lt;tag&gt;
+			</td>
+			<td><p>
+				Swap an installed cyberarm with the quick mount option
+				for a spare cyberarm that has the given tag. The old
+				cyberarm becomes a spare cyberarm with the same tag.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Role Specific Commands</td>
+		</tr>	
+		<tr>
+			<td class="command">
+				grease &lt;language&gt;
+			</td>
+			<td><p>
+				Allows a character to claim a free language that was granted by the
+				fixer's role ability.</p>
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				haggle [#] &lt;item&gt;
+			</td>
+			<td><p>
+				Use the fixer's ability to haggle to get the lowest possible price for
+				the given number of items.</p>
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				learn &lt;formula&gt;
+			</td>
+			<td><p>
+				Learns a formula granted by a role specialization, is the character
+				has one available to learn.</p>
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				make &lt;item&gt;
+			</td>
+			<td><p>
+				Use this command to have the character make a new item, incurring the costs 
+				of doing so. The character must have the appropriate role specialization.
+				Usable by both Techs and MedTechs.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				moto &lt;vehicle&gt;<br/>
+				moto &lt;vehicle upgrade&gt;
+			</td>
+			<td><p>
+				This command allows a Nomad to acquire the vehicles and vehicle upgrades
+				allowed by their role ability. Upgrades are not placed on vehicles
+				automatically, vehicle must be tagged and upgrades attached to them.
+				If a previous choice allows for additional gear to be obtain, that gear
+				can also be added with the <tt>moto</tt> command.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<table>
+	<tbody class="qref">
+		<tr>
+			<td colspan="2" class="center groupheader">Additional Commands</td>
+		</tr>
+		<tr>
+			<td class="command">
+				date &lt;yyyy-mm-dd&gt;
+			</td>
+			<td><p>
+				Set the date that will be recorded in character logs such
+				as the bank ledger, humanity log, and build log.</p>
+
+			<p>By default the date is set to 2044-12-01 at the beginning of 
+				character building and then set to 2045-01-01 when the initial build
+				ends (when PJ encounters a line of dashes, see above).</p>
+			</td>
+		</tr>
+
+		<tr>
+			<td class="command">
+				title &lt;character title&gt;
+			</td>
+			<td><p>
+				Set the character's title, which appears in the upper right hand corner
+				to the first page of the sheet. If no title is set, the title defaults
+				to the character's role or roles. Setting this does not affect the <i>Role</i>
+				section of the character sheet.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				-----------------
+			</td>
+			<td><p>
+				End character creation, and checks to make sure the character
+			is a legal starting character. Sets the date to 2045-01-01.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				=================
+			</td>
+			<td><p>
+				End of character commands, and the beginning of the notes section.
+				Notes may be taken in 
+				<a href="https://www.markdownguide.org/cheat-sheet/">Markdown 
+				syntax</a>. Footnotes and images are not allowed.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				npc
+			</td>
+			<td><p>
+				Process this character in NPC mode. Removes restrictions on 
+			total points assigned to stats, skills, and role abilities. Provides unlimited funds to buy equipment and unlimited IP for advancement. Character sheet will default
+			to one page concise sheet.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				mook
+			</td>
+			<td><p>
+				Process this character in Mook mode. Removes restrictions on 
+			total points assigned to stats, skills, and role abilities. Skill assignments are treated as the total of the skill plus its controlling stat. Provides unlimited funds to buy equipment and unlimited IP for advancement. Character sheet will default
+			to one page concise sheet.</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="command">
+				animal
+			</td>
+			<td><p>
+				Process this character in Animal mode. Similar to NPC mode,
+				but stats are not limited to the 2-8 range. Character will have access
+				to natural weapons and armor. Character sheet will default
+				to one page concise sheet.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

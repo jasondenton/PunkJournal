@@ -1,0 +1,51 @@
+/$from 'weapon.template.tex' import FNFF_Weapon $/
+
+/$macro Vehicle(v)$/
+\begin{minipage}{\columnwidth}
+\centerline{\textbf{ /@v.name@/ } }
+Seats: /@v.seats@/ /$if v.rooms > 0$/Rooms: /@v.rooms@//$endif$/\\
+MOVE: /@v.move@/ Top Speed: /@v.speed@/\\
+SDP: /@v.sdp@/ Body SP: /@v.body_sp@/ Glass SP: /@v.glass_sp@/\\
+
+/$for upgrade in v.contents$/
+/$if upgrade.notes | length > 0$/\textbf{ /@upgrade.name@/ }: /$for n in upgrade.notes$//@n@/ /$endfor$/\\/$endif$/
+/$endfor$/
+
+
+/$for weapon in v.weapons$/
+/@FNFF_Weapon(weapon)@/
+/$endfor$/
+\hrulefill
+\end{minipage}
+\vfill\null
+/$endmacro$/
+
+/$if vehicles$/
+\begin{multicols*}{3}[\noindent {\Large \color{cyberred}{Vehicles}}]
+
+/$if vehicles.garage  $/
+\centerline{\large GARAGE}
+/$for v in vehicles.garage$/
+/@Vehicle(v)@/
+/$endfor$/
+\vfill\null
+/$endif$/
+
+/$if vehicles.hanger $/
+\centerline{\large HANGER}
+/$for v in vehicles.hanger$/
+/@Vehicle(v)@/
+/$endfor$/
+\vfill\null
+/$endif$/
+
+/$if vehicles.marina $/
+\centerline{\large MARINA}
+/$for v in vehicles.marina$/
+/@Vehicle(v)@/
+/$endfor$/
+\vfill\null
+/$endif$/
+
+\end{multicols*}
+/$endif$/

@@ -1,0 +1,91 @@
+/$ macro Software(sft) $/
+\begin{minipage}{\columnwidth}
+\noindent \textbf{ /@sft.name@/ }(\textit{/@sft.subkind@/})\\
+/$ if 'homebrew' not in sft.keywords$/
+Attack /@sft.attack@/ - Defense /@sft.defense@/ - Rez /@sft.rez@/\\
+/$ if sft.subkind == 'Black Ice' $/
+Perception /@sft.perception@/ - Speed /@sft.speed@/\\
+/$endif$/
+/$endif$/
+Function: /$for note in sft.notes $//@note|markdown@//$endfor$/
+\end{minipage}
+/$ endmacro $/
+
+/$ macro Hardware(hrd) $/
+\begin{minipage}{\columnwidth}
+\noindent \textbf{ /@hrd.name@/: } /$for note in hrd.notes $//@note|markdown@//$endfor$/
+\end{minipage}
+/$ endmacro $/
+
+/$ if cyberdecks|length > 0 $/
+
+\begin{multicols*}{3}
+\centerline{\large Net Running Crib Sheet}
+\small
+\textbf{Scanner} allows a runner to search for an
+access point. The better the interface check, the further away an access point
+can be spotted. \textit{Requires a Meat Action}.
+
+\textbf{Jack In} allows a runner to enter a net architecture.
+
+\textbf{Jack Out} allows a runner to safely exit the architecture.
+
+\textbf{Activate/Deactivate Program} runs/terminates a program 
+in the runners cyberdeck. No programs are running when the runner first jacks in.
+Attack programs deactivate after use. Each program may be
+activated once per meat round.
+
+\textbf{Movement} through the architecture does not require
+an action. The runner may go as far as they dare until they are blocked.
+
+\textbf{Back Door} attempts to crack passwords preventing
+further progress through the architecture.
+
+\textbf{Copying Files} that have been encountered in the architecture
+does not require an action.
+
+\textbf{Eye Dee} attempts to identify the contents of a found file.
+May require beating a certain DV to determine file contents.
+
+\textbf{Pathfinder} reveals a number of floors
+up to the check result. Blocked by an obstruction with a higher DV.
+Automatically reveals activity of previous runners, unless
+they took the \textit{Cloak} action.
+
+\textbf{Cloak} hides activity in an architecture. The check for \textit{Pathfinder}
+must beat the \textit{Cloak} check or the activity remains hidden.
+
+\textbf{Zap} a program or runner in the architecture. Make
+an opposed check against the runners Interface ability or the programs defense.
+If successful, deal 1d6 damage as appropriate.
+
+\textbf{Slide} to an adjacent floor to flee Black-ICE.
+If the runner beats the ICE's perception, the ICE stays does not follow.
+Runner may \textit{Slide} once per turn, but not past obstructions.
+
+\textbf{Virus} is used to leave up to two permanent changes in the architecture. 
+Usable at the lowest level of the architecture.
+/$if sheet.paper_size != 'a4'$/
+\vfill\null
+\columnbreak
+/$endif$/
+
+\centerline{\large CYBERDECKS}
+/$ for deck in cyberdecks $/
+\noindent\textbf{ /@deck.name@/ }\\
+/$if deck.ability$/
+/@deck.ability@/
+
+/$endif$/
+/$ for hrd in deck.hardware $/
+/@Hardware(hrd)@/
+/$endfor$//$ for sft in deck.software $/
+/@Software(sft)@/
+/$endfor$/
+\hrulefill
+\vspace*{6pt}
+
+/$ endfor $/
+\normalsize
+\end{multicols*}
+/$endif$/

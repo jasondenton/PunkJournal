@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -d .venv ]; then
+	mkpyenv.sh
+fi
+
+source .venv/bin/activate
+source pjournal.env
+
+python3 src/cmdline.py $@
+deactivate
+

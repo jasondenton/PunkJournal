@@ -1,0 +1,17 @@
+- name: Control Node
+  option: True 
+  option_hint: 'What the node controls'
+  keywords: netarch
+  dv : False
+  color : '#f59e25'
+- name: Password
+  option: False
+  keywords: netarch
+  dv: True
+  color: '#f52525'
+- name: File
+  option: True 
+  option_hint: 'File Contents'
+  keywords: netarch
+  dv : False
+  color : '#0c2ea8'

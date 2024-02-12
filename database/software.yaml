@@ -1,0 +1,114 @@
+- name: Eraser
+  cost: 20
+  install_in: cyberdeck
+  keywords: software, multiple, booster
+  rez: 7
+  icon: A pink glob exuding tiny sap bubbles.
+  note: Add +2 to cloak checks.
+- name: See Ya
+  cost: 20
+  rez: 7
+  keywords: software, multiple, booster
+  icon: Shimmering silver magnifying glass spinning slowly in place.
+  note: Add +2 to pathfinder checks.
+- name: Speedy Gonzalvez
+  cost: 100
+  rez: 7
+  keywords: software, multiple, booster
+  icon: A trail of dust appearing behind the Netrunner as they move.
+  note: Add +2 to speed.
+- name: Worm
+  cost: 50
+  rez: 7
+  keywords: software, multiple, booster
+  icon: A golden mechanical worm with neon green eyes.
+  note: Add +2 to backdoor checks.
+- name: Armor
+  cost: 50
+  rez: 7
+  keywords: software, multiple, defender
+  icon: Transparent golden armor worn by the Netrunner.
+  note: Reduce brain damage by 4. Only 1 copy at once, use once per run.
+- name: Flak
+  cost: 50
+  rez: 7
+  keywords: software, multiple, defender
+  icon: Transparent golden armor worn by the Netrunner.
+  keywords: software, multiple, defender
+  note: Lower the attack of all Non-Black ICE attack programs to 0. Only 1 copy at once, use once per run.
+- name: Shield
+  cost: 20
+  rez: 7
+  keywords: software, multiple, defender
+  icon: A cloud of blinding, glowing, multi-colored lights swirling around the Netrunner.
+  keywords: software, multiple, defender
+  note: Stops Non-Black ICE from dealing brain damage, then derezzes. Only 1 copy at once, use once per run.
+- name: Banhammer
+  aliases: ban hammer
+  cost: 50
+  attack: 1
+  icon: A giant glowing white sledgehammer wielded by the Netrunner.
+  keywords: software, multiple, attacker, anti-program
+  note: Do 2d6 REZ damage, plus 1d6 if the program is Non-Black ICE.
+- name: Sword
+  cost: 50
+  attack: 1
+  icon: Glowing energy katana appearing from the Netrunner's hand.
+  keywords: software, multiple, attacker
+  note: Do 2d6 REZ damage, plus 1d6 if the program is Black ICE.
+- name: DeckKRASH
+  cost: 100
+  icon: Cartoon stick of dynamite thrown by the Netrunner.
+  note: Force enemy netrunner to jack out.
+  keywords: software, multiple, attacker, anti-program
+- name: Hellbolt
+  cost: 100
+  attack: 2
+  icon: Bolt of crimson fire launched from the Netrunner's hand.
+  keywords: software, multiple, attacker, anti-personal
+  note: Deal 2d6 damage to the runners brain. Causes cyberdeck and clothes to catch fire.
+- name: Nervescrub
+  cost: 100
+  icon: Chrome ball thrown by the Netrunner that sparks with electricity.
+  keywords: software, multiple, attacker, anti-personal
+  note: Lower runners INT, REF, DEX by 1d6 for an hour.
+- name: Poison Flatline
+  cost: 100
+  icon: Beam of neon green light shot from the Netrunner's finger.
+  note: Destroy a random non-black ICE program on opponents cyberdeck.
+  keywords: software, multiple, attacker, anti-personal
+- name: Superglue
+  cost: 100
+  attack: 2
+  icon: A mass of sticky red goop fired from the Netrunner's hand.
+  note: Enemy cannot move deeper into architecture or jack out safely. Usable once per run.
+  keywords: software, multiple, attacker, anti-personal
+- name: Vrizzbolt
+  cost: 50
+  attack: 1
+  icon: A double helix comprised of flickering neon light appearing from the Netrunner's finger.
+  note: Deals 1d6 brain damage to the runner and reduces the number of net actions they may take on their next turn by 1 (minimum 2).
+  keywords: software, multiple, attacker, anti-personal
+- name: Homebrew Program
+  cost: -1
+  option: true
+  weight: 5
+  keywords: thing, gear
+  option_hint: program name
+  keywords: software, multiple, homebrew
+  rename: '{option}'
+  note: Homebrew program.
+- name: Homebrew Black-Ice
+  cost: -1
+  option: true
+  weight: 5
+  keywords: thing, gear
+  option_hint: program name
+  keywords: software, multiple, black-ice, homebrew
+  needs_slots: 2
+  rename: '{option}'
+  note: Homebrew Black-Ice.
+
+
+
+

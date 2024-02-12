@@ -1,0 +1,14 @@
+\renewcommand{\columnseprulecolor}{\color{money}}
+\begin{multicols*}{2}[
+\centerline{\large Bank Statement} 
+\centerline{Available Balance: /@"%.2f"|format(bank_balance)@/ }]
+/$ for block in bank_ledger|chunk(38) $/
+\begin{bankblock}
+/$ for entry in block $/
+/@entry.date@/ & /@entry.memo|make_hfit(25)|escape@/ & 
+\cvalue{ /@"%.2f"|format(entry.amount)@/ } & \cvalue{ /@"%.2f"|format(entry.balance)@/ }\\ \hline
+/$ endfor $/
+\end{bankblock}
+/$endfor$/
+\end{multicols*}
+\renewcommand{\columnseprulecolor}{\color{cyberred}}

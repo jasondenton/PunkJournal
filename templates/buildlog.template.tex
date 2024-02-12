@@ -1,0 +1,22 @@
+\centerline{\large Build Log}
+\noindent IP Available : /@ip_log.available@/\\
+
+\noindent \textbf{Initial Build}\\
+\begin{tabularx}{\columnwidth}{LrLr}
+/$ for cv in ip_log.initial_build $/
+/@cv.0.0 | make_hfit(25)@/ & \cvalue{ /@cv.0.1@/ }& /@cv.1.0 | make_hfit(25)@/ & \cvalue{ /@cv.1.1@/ }\\
+/$ endfor $/
+\end{tabularx}
+\vspace*{8pt}
+
+/$ for block in ip_log.log|chunk(16,40) $/
+\noindent\begin{buildblock}
+/$ for entry in block $/
+/@entry.date@/ 
+& /@entry.memo|make_hfit(25)@/ 
+& \cvalue{ /@"%4d"|format(entry.amount)@/ } 
+& \cvalue{ /@"%4d"|format(entry.balance)@/ }\\
+/$ endfor $/
+\end{buildblock}
+\vfill\null
+/$ endfor $/

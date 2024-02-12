@@ -1,0 +1,163 @@
+- name: Excellent Cyberdeck
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 1000
+  max_container_size: 9
+  quality: excellent
+  holds: cyberdeck
+  display_name: Raven Microcyb Condor
+- name: Cyberdeck
+  alias: standard cyberdeck
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 500
+  max_container_size: 7
+  holds: cyberdeck
+  display_name: Zetatech Parraline 8200
+- name: Poor Cyberdeck
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 100
+  max_container_size: 5
+  quality: poor
+  holds: cyberdeck
+  display_name: EBM PNI 410
+- name: Backup Drive
+  cost: 100
+  weight: 0.5
+  install_in: cyberdeck
+  keywords: hardware 
+  needs_slots: 2
+  card: While installed on a Cyberdeck, a Backup Drive "saves" Non-Black ICE Attacker, Defender, or Booster Programs that are destroyed by pulling them into the Backup Drive the instant before they meet their end. As a Meat Action, a Netrunner can re-install all Programs "saved" by the Backup Drive onto their deck, if they have the slots for them. If removed from a Cyberdeck, the Backup Drive erases its contents automatically. Restored Programs with once-per-Netrun restrictions and the like are restored in the exact state they were saved in, so you can't kill your own Armor to refresh it. 
+  note: Programs that would be destroyed are instead backed up just before being destroyed. As an action, they may be redployed in whatever state they where previously in.
+- name: DNA Lock
+  cost: 100
+  install_in: cyberdeck
+  keywords: hardware 
+  needs_slots: 2
+  card: A Cyberdeck with a DNA Lock can be locked and unlocked using a thumbprint, iris scan, blood sample, or any other biometric method desired. The method varies depending on the model of the DNA Lock. A locked Cyberdeck cannot be accessed without either its biometric key or a DV 17 Electronics/Security Tech Check.
+  note: This cyberdeck is protected by a bio-metric lock.
+- name: Hardened Circuitry
+  cost: 100
+  install_in: cyberdeck
+  keywords: hardware 
+  card: A Cyberdeck with Hardened Circuitry cannot be rendered temporarily disabled, rendered inoperable, or destroyed by EMP effects like pulses, or Non-Black ICE Program Effects.
+  note: This cyberdeck is immune to EMP effects.
+- name: Insulated Wiring
+  cost: 100
+  install_in: cyberdeck
+  keywords: hardware 
+  card: A Cyberdeck with Insulated Wiring cannot catch fire or cause the user's clothing to catch fire as the result of a Program effect.
+  note: Programs may not cause this cyberdeck or its user to catch fire.
+- name: KRASH Barrier
+  cost: 100
+  install_in: cyberdeck 
+  needs_slots: 2
+  card: A Cyberdeck with a KRASH Barrier is immune to any Program Effect that force the Netrunner to Jack Out, safely or unsafely. 
+  note: You may not be forcibly jacked out when running with this cybedeck.
+  keywords: hardware
+- name: Range Upgrade
+  aliases:
+    - Range Extender
+  cost: 100
+  install_in: cyberdeck
+  keywords: hardware 
+  card: A Cyberdeck with a Range Upgrade can connect to an access point from up to 8m away.
+  note: Connect from up to 8m away.
+
+- name: Kirama Advanced Deck
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 500
+  max_container_size: 5
+  quality: standard
+  holds: cyberdeck
+  note:
+    - Treat an unsafe jackout as a safe jackout when using this deck.
+- name: MicroTech Scout
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 500
+  max_container_size: 5
+  holds: cyberdeck
+  note:
+    - Immediately after jacking in, get a free use of Pathfinder.
+- name: Raven Microcyb Phoenix
+  alias: Phoenix
+  weight: 1.5
+  keywords: cyberdeck
+  cost: 1000
+  max_container_size: 6
+  quality: standard
+  holds: cyberdeck
+  note:
+    - If you jack out safely, all destroyed programs are restored.
+- name: Raven Microcyb Kestrel 2
+  alias: Kestrel 2, Kestrel
+  weight: 1.5
+  keywords: cyberdeck, splitslots
+  cost: 1000
+  max_container_size: 99
+  hardware_slots: 0
+  software_slots: 7
+  quality: standard
+  holds: cyberdeck
+  ability: Run up to 2 installed Speedy Gonzalvez programs without a net action when you first jack in.
+- name: Raven Microcyb Hummingbird
+  alias: Hummingbird
+  weight: 1.5
+  keywords: cyberdeck, splitslots
+  cost: 1000
+  max_container_size: 99
+  hardware_slots: 2
+  software_slots: 0
+  quality: standard
+  holds: cyberdeck
+  ability: You have one additional NET action.
+- name: Zetatech Parraline 6000
+  alias: Hummingbird
+  weight: 1.5
+  keywords: cyberdeck, splitslots
+  cost: 1000
+  max_container_size: 99
+  hardware_slots: 6
+  software_slots: 3
+  quality: standard
+  holds: cyberdeck
+
+- name: Aerie
+  cost: 500
+  weight: 0.5
+  install_in: cyberdeck
+  keywords: hardware 
+  needs_slots: 2
+  note: Your Raven Black-ICE programs destroy defender programs rather than derezzing them.
+
+- name: Homebrew Small Hardware
+  cost: -1
+  install_in: cyberdeck
+  keywords: hardware, homebrew
+  needs_slots: 1
+  option: true
+  rename: '{option}'
+  note: Homebrew hardware mod taking up 1 slot.
+  option_hint: hardware name
+- name: Homebrew Medium Hardware
+  cost: -1
+  install_in: cyberdeck
+  keywords: hardware, homebrew
+  needs_slots: 2
+  option: true
+  rename: '{option}'
+  note: Homebrew hardware mod taking up 2 slots.
+  option_hint: hardware name
+- name: Homebrew Large Hardware
+  cost: -1
+  install_in: cyberdeck
+  keywords: hardware, homebrew
+  needs_slots: 3
+  option: true
+  rename: '{option}'
+  note: Homebrew hardware mod taking up 3 slots.
+  option_hint: hardware name
+

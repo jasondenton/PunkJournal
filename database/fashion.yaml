@@ -1,0 +1,936 @@
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Bottoms
+  value: 2.0
+  weight: 0.35
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Top
+  value: 1.0
+  weight: 0.3
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Jacket
+  value: 2.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Footwear
+  value: 2.0
+  weight: 1
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Jewelry
+  value: 17.0
+  weight: 0.03
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Glasses
+  value: 0
+  weight: 0.01
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Contact Lenses
+  aliases: Bag Lady Chic Contacts
+  value: 0
+  weight: 0
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bag Lady Chic Hat
+  value: 1.0
+  weight: 0.1
+- package:
+  - Bag Lady Chic top
+  - Bag Lady Chic bottoms
+  - Bag Lady Chic footwear
+  - Bag Lady Chic jacket
+  - Bag Lady Chic mirrorshades
+  - Bag Lady Chic jewelry
+  cost: 0
+  name: Bag Lady Chic outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Bag Lady Chic top
+  - Bag Lady Chic top
+  - Bag Lady Chic top
+  - Bag Lady Chic top
+  - Bag Lady Chic bottoms
+  - Bag Lady Chic bottoms  
+  - Bag Lady Chic footwear
+  - Bag Lady Chic hat
+  cost: 0
+  name: Bag Lady Chic closet
+  weight: 0
+  sendto: Closet
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Bottoms
+  value: 5.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Top
+  value: 2.0
+  weight: 0.3
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Jacket
+  value: 5.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Footwear
+  value: 2.0
+  weight: 1
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Jewelry
+  value: 42.5
+  weight: 0.03
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Glasses
+  value: 0
+  weight: 0.01
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Contact Lenses
+  aliases: Gang Colors Contacts
+  value: 0
+  weight: 0
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Gang Colors Hat
+  value: 1.0
+  weight: 0.1
+- package:
+  - Gang Colors top
+  - Gang Colors bottoms
+  - Gang Colors footwear
+  - Gang Colors jacket
+  - Gang Colors mirrorshades
+  - Gang Colors jewelry
+  cost: 0
+  name: Gang Colors outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Gang Colors top
+  - Gang Colors top
+  - Gang Colors top
+  - Gang Colors top
+  - Gang Colors bottoms
+  - Gang Colors bottoms
+  - Gang Colors footwear
+  - Gang Colors hat
+  cost: 0
+  name: Gang Colors closet
+  weight: 0
+  sendto: Closet
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Bottoms
+  value: 5.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Top
+  value: 2.0
+  weight: 0.3
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Jacket
+  value: 5.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Footwear
+  value: 2.0
+  weight: 1
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Jewelry
+  value: 42.5
+  weight: 0.03
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Glasses
+  value: 0
+  weight: 0.01
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Contact Lenses
+  aliases: Generic Chic Contacts
+  value: 0
+  weight: 0
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Generic Chic Hat
+  value: 1.0
+  weight: 0.1
+- package:
+  - Generic Chic top
+  - Generic Chic bottoms
+  - Generic Chic footwear
+  - Generic Chic jacket
+  - Generic Chic mirrorshades
+  - Generic Chic jewelry
+  cost: 0
+  name: Generic Chic outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Generic Chic top
+  - Generic Chic top
+  - Generic Chic top
+  - Generic Chic top
+  - Generic Chic bottoms
+  - Generic Chic bottoms
+  - Generic Chic footwear
+  - Generic Chic hat
+  cost: 0
+  name: Generic Chic closet
+  weight: 0
+  sendto: Closet
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Bottoms
+  value: 5.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Top
+  value: 2.0
+  weight: 0.3
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Jacket
+  value: 5.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Footwear
+  value: 5.0
+  weight: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Jewelry
+  value: 85.0
+  weight: 0.03
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Glasses
+  value: 0
+  weight: 0.01
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Contact Lenses
+  aliases: Bohemian Contacts
+  value: 0
+  weight: 0
+- cost: 10
+  keywords:
+  - fashion
+  - worn
+  name: Bohemian Hat
+  value: 1.0
+  weight: 0.1
+- package:
+  - Bohemian top
+  - Bohemian bottoms
+  - Bohemian footwear
+  - Bohemian jacket
+  - Bohemian mirrorshades
+  - Bohemian jewelry
+  cost: 0
+  name: Bohemian outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Bohemian top
+  - Bohemian top
+  - Bohemian top
+  - Bohemian top
+  - Bohemian bottoms
+  - Bohemian bottoms
+  - Bohemian footwear
+  - Bohemian hat
+  cost: 0
+  name: Bohemian closet
+  weight: 0
+  sendto: Closet
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Bottoms
+  value: 10.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Top
+  value: 2.0
+  weight: 0.3
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Jacket
+  value: 10.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Footwear
+  value: 5.0
+  weight: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Jewelry
+  value: 85.0
+  weight: 0.03
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Glasses
+  value: 0
+  weight: 0.01
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Contact Lenses
+  aliases: Leisurewear Contacts
+  value: 0
+  weight: 0
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Leisurewear Hat
+  value: 5.0
+  weight: 0.1
+- package:
+  - Leisurewear top
+  - Leisurewear bottoms
+  - Leisurewear footwear
+  - Leisurewear jacket
+  - Leisurewear mirrorshades
+  - Leisurewear jewelry
+  cost: 0
+  name: Leisurewear outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Leisurewear top
+  - Leisurewear top
+  - Leisurewear top
+  - Leisurewear top
+  - Leisurewear bottoms
+  - Leisurewear bottoms
+  - Leisurewear footwear
+  - Leisurewear hat
+  cost: 0
+  name: Leisurewear closet
+  weight: 0
+  sendto: Closet
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Bottoms
+  value: 10.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Top
+  value: 2.0
+  weight: 0.3
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Jacket
+  value: 10.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Footwear
+  value: 10.0
+  weight: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Jewelry
+  value: 85.0
+  weight: 0.03
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Glasses
+  value: 0
+  weight: 0.01
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Contact Lenses
+  aliases: Nomad Leathers Contacts
+  value: 0
+  weight: 0
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Nomad Leathers Hat
+  value: 10.0
+  weight: 0.1
+- package:
+  - Nomad Leathers top
+  - Nomad Leathers bottoms
+  - Nomad Leathers footwear
+  - Nomad Leathers jacket
+  - Nomad Leathers mirrorshades
+  - Nomad Leathers jewelry
+  cost: 0
+  name: Nomad Leathers outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Nomad Leathers top
+  - Nomad Leathers top
+  - Nomad Leathers top
+  - Nomad Leathers top
+  - Nomad Leathers bottoms
+  - Nomad Leathers bottoms
+  - Nomad Leathers footwear
+  - Nomad Leathers hat
+  cost: 0
+  name: Nomad Leathers closet
+  weight: 0
+  sendto: Closet
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Bottoms
+  aliases: Asian Pop Bottoms
+  value: 10.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Top
+  aliases: Asian Pop Top
+  value: 2.0
+  weight: 0.3
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Jacket
+  aliases: Asian Pop Jacket
+  value: 10.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Footwear
+  aliases: Asian Pop Footwear
+  value: 10.0
+  weight: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Jewelry
+  aliases: Asian Pop Jewelry
+  value: 85.0
+  weight: 0.03
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Mirrorshades
+  aliases: Asian Pop Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Glasses
+  aliases: Asian Pop Glasses
+  value: 0
+  weight: 0.01
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Contact Lenses
+  aliases: Asia Pop Contacts, Asian Pop Contact Lenses,  Asian Pop Contacts
+  value: 0
+  weight: 0
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Asia Pop Hat
+  aliases: Asian Pop Hat
+  value: 10.0
+  weight: 0.1
+- package:
+  - Asia Pop top
+  - Asia Pop bottoms
+  - Asia Pop footwear
+  - Asia Pop jacket
+  - Asia Pop mirrorshades
+  - Asia Pop jewelry
+  cost: 0
+  name: Asia Pop outfit
+  aliases: Asian Pop outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Asia Pop top
+  - Asia Pop top
+  - Asia Pop top
+  - Asia Pop top
+  - Asia Pop bottoms
+  - Asia Pop bottoms
+  - Asia Pop footwear
+  - Asia Pop hat
+  cost: 0
+  name: Asia Pop closet
+  aliases: Asian Pop closet
+  weight: 0
+  sendto: Closet
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Bottoms
+  value: 10.0
+  weight: 0.35
+- cost: 20
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Top
+  value: 2.0
+  weight: 0.3
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Jacket
+  value: 10.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Footwear
+  value: 10.0
+  weight: 1
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Jewelry
+  value: 85.0
+  weight: 0.03
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Glasses
+  value: 0
+  weight: 0.01
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Contact Lenses
+  aliases: Urban Flash Contacts
+  value: 0
+  weight: 0
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Urban Flash Hat
+  value: 10.0
+  weight: 0.1
+- package:
+  - Urban Flash top
+  - Urban Flash bottoms
+  - Urban Flash footwear
+  - Urban Flash jacket
+  - Urban Flash mirrorshades
+  - Urban Flash jewelry
+  cost: 0
+  name: Urban Flash outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Urban Flash top
+  - Urban Flash top
+  - Urban Flash top
+  - Urban Flash top
+  - Urban Flash bottoms
+  - Urban Flash bottoms
+  - Urban Flash footwear
+  - Urban Flash hat
+  cost: 0
+  name: Urban Flash closet
+  weight: 0
+  sendto: Closet
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Bottoms
+  value: 50.0
+  weight: 0.35
+- cost: 50
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Top
+  value: 5.0
+  weight: 0.3
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Jacket
+  value: 50.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Footwear
+  value: 50.0
+  weight: 1
+- cost: 5000
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Jewelry
+  value: 4250.0
+  weight: 0.03
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Glasses
+  value: 0
+  weight: 0.01
+- cost: 100
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Contact Lenses
+  aliases: Businesswear Contacts
+  value: 0
+  weight: 0
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: Businesswear Hat
+  value: 50.0
+  weight: 0.1
+- package:
+  - Businesswear top
+  - Businesswear bottoms
+  - Businesswear footwear
+  - Businesswear jacket
+  - Businesswear mirrorshades
+  - Businesswear jewelry
+  cost: 0
+  name: Businesswear outfit
+  weight: 0
+  sendto: worn
+- package:
+  - Businesswear top
+  - Businesswear top
+  - Businesswear top
+  - Businesswear top
+  - Businesswear bottoms
+  - Businesswear bottoms
+  - Businesswear footwear
+  - Businesswear hat
+  cost: 0
+  name: Businesswear closet
+  weight: 0
+  sendto: Closet
+- cost: 1000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Bottoms
+  value: 100.0
+  weight: 0.35
+- cost: 500
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Top
+  value: 50.0
+  weight: 0.3
+- cost: 1000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Jacket
+  value: 100.0
+  weight: 1
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+- cost: 5000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Footwear
+  value: 500.0
+  weight: 1
+- cost: 50000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Jewelry
+  value: 42500.0
+  weight: 0.03
+- cost: 5000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Mirrorshades
+  value: 0
+  weight: 0.01
+- cost: 1000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Glasses
+  value: 0
+  weight: 0.01
+- cost: 1000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Contact Lenses
+  aliases: High Fashion Contacts
+  value: 0
+  weight: 0
+- cost: 5000
+  keywords:
+  - fashion
+  - worn
+  name: High Fashion Hat
+  value: 500.0
+  weight: 0.1
+- package:
+  - High Fashion top
+  - High Fashion bottoms
+  - High Fashion footwear
+  - High Fashion jacket
+  - High Fashion mirrorshades
+  - High Fashion jewelry
+  cost: 0
+  name: High Fashion style
+  weight: 0
+  sendto: worn
+- package:
+  - High Fashion top
+  - High Fashion top
+  - High Fashion top
+  - High Fashion top
+  - High Fashion bottoms
+  - High Fashion bottoms
+  - High Fashion footwear
+  - High Fashion hat
+  cost: 0
+  name: High Fashion style
+  weight: 0
+  sendto: Closet
+- cost: 500
+  keywords:
+  - worn
+  name: Superflash Jacket
+  value: 400.0
+  weight: 2
+  holds: 
+    - jacket lining 
+  max_container_size: 1
+  note: >
+    As an action, trigger a blinding light by completely using an
+    attached baattery pack. Everyone within 10m must make a DV15 
+    resist torture/drugs or suffer the damaged eye injury for the next minute.
+    No damage is done.
+
+

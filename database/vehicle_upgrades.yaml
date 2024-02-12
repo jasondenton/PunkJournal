@@ -1,0 +1,63 @@
+- name: Armored Chassis
+  upgrade_class: gGaAwW
+  moto: 5
+- name: Bulletproof Glass
+  keywords: vehicle upgrade, multiple
+  upgrade_class: gGaAwW
+- name: Seating Upgrade
+  keywords: vehicle upgrade, multiple, cycle limited
+  upgrade_class: gGaAwW  
+- name: Ejection Seats
+  keywords: vehicle upgrade, multiple, cycle limited
+  upgrade_class: gGaAwW  
+  note: Eject occupants 10m into the air. Parachute optional.
+- name: Communications Center
+  keywords: vehicle upgrade, multiple
+  upgrade_class: gGaAwW  
+  note: Includes a radio scanner, 6 encrypted radios, an audio recorder, and a homing tracer.
+- name: Security Upgrade
+  upgrade_class: gGaAwW
+  note: Vehicle has biometric locks and is invisible when parked.
+  moto: 5
+- name: NOS
+  upgrade_class: gGaAwW
+  note: Driver may use their action to take an additional move action. Usable {count} times per 24 hours.
+  keywords: vehicle upgrade, multiple, stackable
+- name: Smuggling Upgrade
+  keywords: vehicle upgrade, multiple, stackable, cycle limited
+  upgrade_class: gGaAwW
+  note: Vehicle has {count} large hiding space{plural} and {holsters} hidden holsters.
+- name: Heavy Chassis
+  keywords: vehicle upgrade, multiple
+  upgrade_class: GAW
+  note: Vehicle can tow up to 10 tons.
+- name: Hover Upgrade 
+  display_name: Hover Fans
+  upgrade_class: gGaAwW
+  moto: 5
+  note: Hovers over water at 24kph.
+- name: AV-4 Engine Upgrade 
+  display_name: AV Engine
+  upgrade_class: gG
+  moto: 7
+  note: Fly at 322kph, MOVE 40.
+- name: Combat Plow
+  upgrade_class: GW
+  note: Prevents damage to vehicle and its occupants when ramming. If boosted by NOS when ramming increase damage dealt by 2d6.
+- name: Enhanced Interface Plug Integration
+  upgrade_class: g 
+  moto: 5
+  note: Allows you to dodge attacks; requires REF 8.
+- name: Deployable Spike Strip
+  upgrade_class: G 
+  keywords: vehicle upgrade, multiple, stackable 
+  note: Drop as an action by the driver. DV17 for pursuers to avoid; 4d6 damage to vehicles weakspot. {{count}} uses.
+- name: Housing Capacity
+  upgrade_class: GAW
+  display_name: Kombi
+  note: Vehicle has basic living facilities, including bed, toilet, shower and microwave.
+- name: Vehicle Heavy Weapon Mount
+  upgrade_class: GAW 
+  moto: 5
+  max_container_size: 1
+  keywords: vehicle upgrade, heavy, multiple

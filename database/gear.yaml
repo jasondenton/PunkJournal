@@ -1,0 +1,415 @@
+- name: Agent
+  cost: 100
+  weight: 0.15
+  keywords: gear, tool
+  boost: agent
+- name: Airhypo
+  cost: 50
+  weight: 0.10
+  keywords: gear
+  card: Easy to use drug distribution platform which uses a quick burst of compressed air to force a drug through the skin. Allows user to use an action to administer a single dose of a desired drug to a willing target, or try to make a Melee Weapon Attack to administer a single dose to an unwilling target on a hit instead of dealing damage. Reloading the Airhypo with a dose of your desired drug is not an Action. 
+- name: Anti-Smog Breathing Mask
+  cost: 20
+  weight: 0.6
+  aliases: breathing mask, mask, smog mask
+  keywords: gear
+  card: Useful for filtering out toxins and smoke from the local environment. User is immune to the effects of toxic gasses, fumes, and all similar dangers that must be inhaled to affect the user.
+  note: Wearer is immune to effects of toxic gases, fumes, and similar dangers.
+- name: Audio Recorder
+  cost: 100
+  weight: 0.1
+  keywords: gear
+- name: Auto Level Dampening Ear Protectors
+  cost: 1000
+  weight: .25
+  aliases: ear protectors
+  keywords: gear
+  card: Compact ear protection. When worn, user is immune to deafness or other effects caused by dangerously loud noises, like those produced by a flashbang.
+  note: Wearer is immune to loud noises.
+- name: Binoculars
+  cost: 50
+  weight: 0.9
+  keywords: gear
+- name: Braindance Viewer
+  cost: 1000
+  weight: 0.6
+  keywords: gear
+  card: Allows the user to experience braindance content. Braindances are digital recordings of an experience which you view through the eyes of the actor. The experience includes all the subject's senses, and you feel every emotion felt, for better or worse.
+- name: Bug Detector
+  cost: 500
+  weight: 0.15
+  keywords: gear
+  card: Device beeps when user is within 2m/yds of a tap, bug, or other listening device.
+  note: Detect bugs up to 2m away.
+- name: Carryall
+  cost: 20
+  weight: 1
+  aliases: duffle bag, backpack
+  keywords: gear
+- name: Chemical Analyzer
+  cost: 1000
+  weight: 3
+  keywords: gear
+  card: Can test substances as an Action to find their precise chemical composition, identifying most substances instantly from a wide database of samples.
+  note: Compare chemical sample to a database of known samples.
+- name: Computer
+  cost: 50
+  weight: 1.5
+  keywords: gear
+- name: Cryopump
+  cost: 5000
+  weight: 7
+  keywords: gear
+  charges: 1
+  card: A Cryopump is a briefcase-sized tool containing a body bag hooked up to a powerful pump. Once willing/unconscious targets have been placed into the bag and hooked up to the pump as an Action, the pump forces a hyper-cooled chemical fluid into the bag, draining one of the Cryopump's charges per target put in stasis (one per person, if the Cryopump can accept multiple people). While in stasis, targets are unconscious and no longer roll any Death Saves for up to a week, as long as they remain inside the bag and the bag has at least 1 HP. A Character in a cryopump bag is considered to be behind a piece of cover that has 15 HP. The bag's transparent top and gloves molded into the lining allow the target to undergo surgery and be stabilized while in stasis, which is much less dangerous to the patient. A standard Cryopump has only 1 charge and can only hold a single roughly human sized target. Refueling a Cryopump costs 50eb (Costly) per charge. A Character who is not a Medtech cannot operate a Cryopump.
+  note: This cryopump has {charges} charge(s).
+- name: Cryopump Charge 
+  cost: 50 
+  weight: 0
+  keywords: service 
+- name: Cryotank
+  cost: 5000
+  keywords: stationary
+  weight: 100
+  keywords: gear
+  card: A Cryotank is a human-sized container which can hold a fully grown adult. Assuming the Medtech succeeds at a DV13 Medical Tech Check, the Cryotank keeps 1 person in stasis as long as desired. While in the Cryotank, they are consid- ered to be unconscious, but they heal at double the normal rate as long as they remain inside the tank and the tank has at least 1 HP. A Character in a Cryotank is considered to be behind a piece of cover that has 30 HP. A Character who is not a Medtech cannot operate a Cryotank.
+  note: Requires the Medtech Cryopump skill to use.
+- name: Disposable cell phone
+  aliases: 
+    - disposable cellphone
+    - cell phone
+    - cellphone
+    - burner phone
+  cost: 50
+  weight: 0.12
+  keywords: gear
+- name: Drum Synthesizer
+  cost: 500
+  aliases: drum machine
+  weight: 1.5
+  keywords: gear
+- name: Duct Tape
+  cost: 20
+  keywords: gear
+  weight: 1
+- name: Instrument
+  cost: 500
+  option: true
+  option_hint: Instrument name
+  keywords: gear
+  weight: 6
+- name: Flashlight
+  aliases: 
+    - flash light
+    - electric torch
+    - torch
+  cost: 20
+  weight: 0.5
+  keywords: gear
+- name: Food Stick
+  cost: 10
+  weight: 0.08
+  keywords: gear
+- name: Glow Paint
+  cost: 20
+  weight: 0.75
+  keywords: gear
+- name: Glow Stick
+  cost: 10
+  weight: 0.1
+  keywords: gear
+- name: Grapple Gun
+  cost: 100
+  weight: 3
+  keywords: gear
+  card: When wielded in a hand, user as an Action can fire a rocket propelled grapple that will 
+    attach securely to any "thick" cover up to 30m/yds away. Line can only support 200Kg,
+    and has 10 HP. The user negates the normal movement penalty for climbing when
+    they climb this line, and can retract the line without an Action, including
+    as they climb. When used as a grapple, user can't hold anything in the
+    hand used to wield the grapple gun. Ineffective as a weapon, and cannot
+    be used to make the Grab Action.
+  note: Has 30m range, holds up to 200kg.
+- name: Handcuffs
+  cost: 50
+  weight: 0.5
+  keywords: gear
+- name: Homing Tracer
+  cost: 500
+  weight: 0.015
+  keywords: gear
+  card: Device can follow a linked tracer up to 1-mile away. Comes with a free button sized linked tracer. Replacement linked tracers are 50eb.
+  note: 1 mile range.
+- name: Tracer Button
+  aliases: tracer, replacer tracer
+  cost: 50
+  weight: 0.005
+  keywords: gear
+- name: Inflatable Bed & Sleep-bag
+  cost: 20
+  weight: 1
+  aliases: sleeping bag, sleeping mat, Inflatable Bed and Sleep-bag
+  keywords: gear
+  name: Inflatable Bed and Sleep-bag
+  aliases: inflatable bed & sleep-bag
+- name: Kibble pack
+  cost: 10
+  aliases: kibble
+  weight: 0.5
+  keywords: gear
+- name: Linear Frame Beta
+  aliases: linear frame β (beta), linear frame β  
+  cost: 5000
+  weight: 60
+  keywords: worn, selfcarry, linear frame, gear
+  frame_level: 2
+- name: Linear Frame Sigma
+  aliases: linear frame ∑ (sigma), linear frame β 
+  cost: 1000
+  weight: 50
+  keywords: worn, selfcarry, linear frame, gear
+  frame_level: 1
+- name: Lock Picking Set
+  cost: 20
+  weight: 0.3
+  keywords: gear
+- name: Medscanner
+  cost: 1000
+  weight: 0.25
+  keywords: gear, tool
+  card: Scanner with external probes and contacts that diagnoses injury and illness, assisting user in medical emergencies not requiring Surgery. User adds +2 to their First Aid and Paramedic Skills.
+  boost: medscanner
+  note: +2 bonus to first aid and paramedic (included).
+- name: Medtech Bag
+  cost: 100
+  weight: 2
+  keywords: gear
+  note: Supplies for first aid.
+- name: Memory Chip
+  cost: 10
+  weight: 0.01
+  keywords: gear, chipware
+- name: MRE
+  cost: 10
+  weight: 0.25
+  keywords: gear
+- name: Personal Carepak
+  cost: 20
+  weight: 0.5
+  keywords: gear
+- name: Pocket Amplifier
+  cost: 50
+  aliases: pocket amp
+  weight: 2
+  keywords: gear
+- name: Radar Detector
+  cost: 500
+  weight: 0.25
+  keywords: gear
+- name: Radio Communicator
+  cost: 100
+  weight: 0.2
+  keywords: gear
+- name: Radio Scanner/Music Player
+  cost: 50
+  weight: 1.5
+  keywords: gear
+- name: Road Flare
+  cost: 10
+  aliases: flare
+  weight: 0.15
+  keywords: gear
+- name: Rope
+  aliases: Rope (180 ft.), Rope (60m), rope (60m/yd)
+  display_name: Rope (60m)
+  cost: 20
+  weight: 2
+  keywords: gear
+- name: Scrambler/Descrambler
+  cost: 500
+  weight: 0.15
+  keywords: gear
+  note: Encrypt your communications.
+- name: Smart Glasses
+  cost: 500
+  weight: 0.1
+  keywords: gear, treat_as_paired
+  holds:
+    - cybereye
+  max_container_size: 2
+  allowed_upgrades: 
+    - slots
+    - complexity
+- name: Smart Lens
+  cost: 500
+  weight: 0.0
+  keywords: gear
+  holds:
+    - cybereye
+  max_container_size: 1
+  allowed_upgrades: 
+    - slots
+    - complexity
+- name: Tech Bag
+  cost: 500
+  weight: 1.5
+  keywords: gear
+- name: Techscanner
+  cost: 1000
+  weight: 0.25
+  keywords: gear, tool
+  card: Scanner diagnoses a wide variety of machinery and electronics, assisting the user in repairs, or other technical work. User adds +2 to their Basic Tech, Cybertech, Land Vehicle Tech, Sea Vehicle Tech, Air Vehicle Tech, Electronics/Security Tech, and Weapons tech Skills. 
+  boost: techscanner 
+- name: Techtool
+  cost: 100
+  weight: 1
+  aliases: tech tool
+  keywords: gear
+  note: +2 bonus to some TECH skills (included).
+- name: Tent and Camping Equipment
+  cost: 50
+  aliases: tent, camping equipment, camping gear, Tent & Camping Equipment
+  weight: 3
+  keywords: gear
+- name: Vial of Biotoxin
+  cost: 500
+  weight: 0.1
+  aliases: biotoxin
+  keywords: gear
+  card: An entire vial of biotoxin can be smeared on any Light Melee Weapon as an Action. For the next 30 minutes after application, instead of dealing the weapon's typical damage, anyone meat hit by the biotoxin-coated Light Melee Weapon must instead attempt to beat a DV15 Resist Torture/Drugs Check. Anyone who fails is dealt 3d6 damage directly to their HP. Their armor is not ablated because it was not interacted with.
+- name: Vial of Poison
+  cost: 100
+  weight: 0.1
+  aliases: poison
+  keywords: gear
+  card: An entire vial of poison can be smeared on any Light Melee Weapon as an Action. For the next 30 minutes after application, instead of dealing the weapon's typical damage, anyone meat hit by the poisoned Light Melee Weapon must instead attempt to beat a DV13 Resist Torture/Drugs Check. Anyone who fails is dealt 2d6 damage directly to their HP. Their armor is not ablated because it was not interacted with.
+  note: Usable with light melee weapons, DV13 to resist or 2d6 points of damage.
+- name: Video Camera
+  cost: 100
+  aliases: camera
+  weight: 0.15
+  keywords: gear
+- name: Observation Camera
+  cost: 100
+  aliases: camera
+  weight: 0.15
+  keywords: gear
+- name: Virtuality Goggles
+  cost: 100
+  weight: 1
+  keywords: gear
+- name: Bullet Proof Shield
+  aliases: bulletproof shield
+  cost: 100
+  weight: 6.5
+  hp: 10
+  keywords: gear, shield
+- name: Radiation Suit
+  cost: 1000
+  weight: 5
+  sp: 0
+  keywords: worn, armor
+- name: Battleglove
+  aliases: battle glove
+  weight: 3
+  cost: 1000
+  max_container_size: 3
+  card: A heavy gauntlet covering the hand and forearm. Contains three option slots for Cyberarm or Cyberlimb options. When worn, the options stored in the glove's slots can be accessed. Putting on a Battleglove and taking one off is an Action. The cost to purchase and install a Cyberarm option into the Battleglove is the same cost as doing so in a Cyberarm. Any options stored in a Cyberarm or meat arm the Battleglove is being worn over are inaccessible while the Battleglove is being worn.
+  concealable: false
+  holds: 
+    - cyberarm
+  keywords: gear
+  allowed_upgrades: 
+    - slots
+    - complexity
+- name: Spare Cyberarm
+  cost: 600
+  weight: 3
+  holds: placeholder
+  keywords: gear
+- name: Cold-Weather Lining 
+  aliases:
+    - Cold Weather Lining
+  cost: 500
+  keywords: gear 
+  install_in: jacket lining
+  weight: 0.5
+  note: Protects against the cold.
+- name: Hot-Weather Lining
+  aliases:
+    - Hot Weather Lining
+  cost: 500
+  keywords: gear 
+  install_in: jacket lining
+  weight: 0.5
+  note: Protects against the heat and negates any increase in armor penalty due to heat.
+- name: Waterproof Weather Lining 
+  cost: 500
+  keywords: gear 
+  install_in: jacket lining
+  weight: 0.5
+  note: Protects armor from acid rain. The wearer gets +2 to resist the effects of blood rain.
+- name: Umbrella
+  cost: 10
+  weight: 1
+  note: When held, protects armor from acid rain. The wearer gets +2 to resist the effects of blood rain.
+- name: Mercurius Cyberchair
+  aliases:
+    - wheel chair
+  cost: 100
+  weight: 15
+  keywords: gear, selfcarry, wheelchair
+  allowed_upgrades: 
+    - complexity
+- name: Spider Cyberchair
+  aliases:
+    - Spider Chair
+  cost: 1000
+  weight: 25
+  keywords: gear, treat_as_paired, selfcarry, wheelchair
+  holds:
+    - cyberarm
+    - cyberleg
+  max_container_size: 4
+  allowed_upgrades: 
+    - slots
+    - complexity
+- name: Interface Cables
+  cost: 5
+  weight: 0.005
+  keywords: gear
+- name: Reusable Water Bottle
+  cost: 10
+  weight: 0.5
+  keywords: gear
+- name: Basic Kit
+  cost: 0
+  weight: 0
+  package: 
+    - carryall
+    - Anti-Smog Breathing Mask
+    - flashlight
+    - agent
+    - "light melee weapon: Combat Knife"
+    - Contraceptive Implant
+    - interface cables
+- name: Vagrant Kit
+  cost: 0
+  weight: 0
+  package: 
+    - carryall
+    - Anti-Smog Breathing Mask
+    - flashlight
+    - Inflatable Bed and Sleep-bag
+    - Personal Carepak
+    - "light melee weapon: Combat Knife"
+    - Contraceptive Implant
+    - agent
+    - interface cables
+    - reusable water bottle
+    - food stick 
+    - food stick
+    - food stick
+
+
+

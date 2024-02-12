@@ -1,0 +1,119 @@
+# NPC mode makes a character exempt from the usual rules about building a PC.
+# You may set their skills and role abilities as high as you wish. NPCs
+# have an unlimited budget for gear and cyberware. An NPCs empathy is 
+# taken as their final, post cyberware & therapy EMP. Adding cyberware
+# doees not reduce their empathy.
+
+"JIT" Williams
+npc
+title Short Order Fixer
+
+body 4
+move 6
+dex 4
+ref 6
+int 7
+cool 8
+emp 5
+tech 7
+will 7
+luck 7
+
+operator 6
+grease Japanese
+grease French
+grease Spanish
+
+language: streetslang 5
+language: English 4
+hand guns 7
+evasion 4
+brawling 4
+resist drugs/torture 4
+human perception 8
+perception 5
+Persuasion 8
+basic tech 3
+concentration 4
+conversation 6
+local expert: Pacifica 5
+bribery 6
+business 3
+streetwise 7
+trading 4
+Bureaucracy 5
+interrogation 4
+
+cyberaudio suite
+internal agent
+cybereye: left
+chyron: left
+neural link
+interface plugs: Neck
+interface plugs: wrist
+chipware socket
+toxin binders
+Cyberware Radio Scanner / Music Player
+Cyberware Scrambler Descrambler
+Enhanced Antibodies
+targeting scope: left
+
+excellent very heavy pistol
+smartgun link
+tag excellent very heavy pistol as gun1
+extended magazine
+attach extended magazine to gun1
+attach smartgun link to gun1
+
+buy 3 Smart Very Heavy Pistol Bullets
+kevlar
+==================
+
+/pagebreak/
+> "JIT" Williams is a slim Caucasian male
+> in his early 60s. He stands 5ft. 6in tall, with grey
+> eyes and white hair. His gaze is intense, and his 
+> English is inflected with a distinct New York accent.
+
+Mark "Just in Time" Williams is the man to see when you have a
+complex problem that must be solved in the next few hours.
+JIT specializes in assembling and equipping capable teams
+of problem solvers at a moment's notice. His services cost
+at least three times the usual cost for a mission without
+time constraints, due in advance. Once payment is made,
+a team will be in the field within 60 minutes.
+
+A typical assignment from JIT begins with an Edgerunner's agent
+beeping with a priority message. The message includes a description
+of the job, an indication of how much time is available to complete
+the mission, and an offered fee. The runner has three minutes to
+respond with In or Out. If they are in, additional directions
+immediately follow. Usually, this is a location to rendezvous with
+the rest of the team. But, given the nature of JIT's assignments,
+anything is possible. Once the entire team has been recruited,
+JIT will call with a briefing, delivered as the team is en route.
+JIT usually has a plan, but with the clock ticking the team will
+likely have to think on their feet and improvise in the face of
+unexpected challenges. A successful team earns twice the fee for
+a similar job without time constraints. A team that fails but
+demonstrates to the client that a serious effort was made 
+earns 20% of the fee, plus reasonable expenses.
+
+>>/center/**Using JIT in Play**/center/
+>>
+>> Use JIT as an employer when there needs to be a clock on the mission,
+>> or you need to take away the player characters ability to plan ahead.
+>> This can be useful when the mission objective would otherwise be
+>> easy to achieve, or present relatively little risk to the characters.
+>> It can also be used to raise the stakes and add tension to the job.
+>> 
+>> Missions from JIT should test the characters ability to improvise
+>> and innovate. Require that the characters act when information is
+>> incomplete. Force then to prioritize by threatening them from
+>> another angle, such as a a loved one in trouble elsewhere. Make
+>> them decide what is really important, and then sacrifice to
+>> demonstrate it.
+
+
+
+

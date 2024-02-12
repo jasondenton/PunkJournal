@@ -1,0 +1,18 @@
+/$ macro Just_Item(itm) -$/       
+/@itm.full_name|escape@/
+/$- endmacro $/
+
+/$ macro Cyber_OptList(itm) -$/
+/$set nsp=namespace(df=0)$/
+/$if itm.contents|length > 0$/
+ (/$for opt in itm.contents$/
+/$if nsp.df==1$/, /$endif$/
+/@Just_Item(opt)@//$set nsp.df=1$//$endfor$/)/$endif$/
+/$- endmacro $/
+
+/$ macro Cyberware_Item(itm) -$/
+/@Just_Item(itm)@//@Cyber_OptList(itm)@/
+/$- endmacro $/
+
+/$set ns=namespace(df=0)$/
+/$for locname, contents in cyberware.items()$//$for cw in contents$//$if locname=='Chipware'$//$continue$//$endif$//$if ns.df==1$/, /$else$/\textbf{Cyberware}: /$endif$//@Cyberware_Item(cw)@//$set ns.df=1$//$endfor$//$endfor$/

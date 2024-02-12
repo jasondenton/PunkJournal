@@ -1,0 +1,17 @@
+\raggedright
+/$from 'npc_weapon.template.tex' import FNFF_Weapon, FNFF_Unarmed $/
+\vspace*{8pt}
+\centerline{\textbf{Attacks}}
+\vspace*{-6pt}
+/$ for style in unarmed_fighting $/
+/@FNFF_Unarmed(style, needs_cn)@/\\/$ endfor $/
+/$ for weap in weapons $/
+/$if weap.subkind == 'melee'$//@FNFF_Weapon(weap, ammunition, needs_cn)@/
+
+/$endif$//$ endfor $/
+/$ for weap in weapons $/
+/$if weap.subkind != 'melee'$//@FNFF_Weapon(weap, ammunition, need_cn)@/
+
+/$endif$//$ endfor $/
+\justifying
+\vfill\null

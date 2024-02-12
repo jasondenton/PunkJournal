@@ -1,0 +1,98 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Punk Journal FAQ</title>
+	<meta description="Character Sheet Software for the game Cyberpunk RED, by R. Talsorian Games."/>
+	<meta keywords="Cyberpunk, RED"/>
+	<link rel="stylesheet" href="pjstyle.css">
+</head>
+
+<body>
+<h1>Punk Journal Frequently Asked Questions</h1>
+
+<h4 class="question">Who are the fashion police, and why are they messing with my character?</h4>
+
+<p>The Fashion Police are a globally franchised street gang that wander the streets in the time 
+of Red, harassing and robbing people they consider unfashionable.</p>
+
+<p>If a character does not spend all of their starting fashion allowance, the Fashion Police
+will mug them and take whatever funds they did not spend. They leave the victim
+with a formal written citation when they do this. In rare cases where someone has 
+spent their clothing budget on toys, the Fashion Police will become homicidal.</p>
+
+<p>It is difficult to avoid the Fashion Police entirely, and it is expected
+that most characters will show a ticket in their bank ledger. To avoid spending
+a character's fashion allowance on toys, it is recommended that you buy clothes
+and fashionware first.</p>
+
+<h4 class="question">How do I add gear not in the system to my character sheet?</h4>
+
+<p>The tiny, small, medium, large, very large, and extra large thing items can be added to a
+character's inventory with the found command. They cannot be bought since PJ doesn't know
+how much they cost, but you can use the cash command to debit your character's bank account.</p>
+
+<pre>
+found tiny thing: mystery chip       # mass .1g
+found small thing: tablet computer   # mass .5g
+found medium thing: wine bottle      # mass 1g
+found large thing: bowling ball      # mass 10g
+found very large thing: sand bag     # mass 20g
+found stationary thing: pool table   # mass 100g
+</pre>
+
+<h4 class="question">How do I add homebrew programs and hardware to my cyberdeck?</h4>
+<p>The homebrew progam and homebrew black-ice options allow you to add custom
+	software to a cyberdeck. The homebrew small, medium, and large hardware items
+	allow you to add customer hardware taking 1, 2 and 3 option slots respectively.
+	All of these items work in a fashion similar to the <i>thing</i> items for adding
+basic gear not in the system.</p>
+
+<pre>
+	buy excellent cyberdeck
+	tag cyberdeck as mydeck
+	found homebrew program: Zappy bolt
+	attach Zappy bolt to mydeck
+	found homebrew medium hardware: touchscreen
+	attach touchscreen to mydeck
+</pre>
+
+<h4 class="question">I see my skill chip in my chip library, but it is not
+showing up in the skills section.</h4>
+<p>Unlike other cyberware, skill chips must be slotted after they are purchased
+but before they are used. Use the <tt>slot</tt> command to place the chipware in
+an open chip socket.</p>
+
+<pre>
+buy pain editor
+slot pain editor
+</pre>
+
+<h4 class="question">How do I untag an item, or remove attachments?</h4>
+<h4 class="question">How do I remove a skill chip?</h4>
+
+<p>There are no commands to untag an item or remove it's attachments.
+	Likewise, there are no commands to remove a slotted skill chip.
+Just delete the tag and attach commands from the character record.</p>
+
+<h4 class="question">How can I create a Streetrat or Edgerunner character?</h4>
+
+<p>The software only supports complete builds. In most cases this is the most
+	advantgeous option for a player.</p>
+
+<h4 class="question">I want to roll for humanity loss, rather than take the average.</h4>
+<h4 class="question">I want to use the Techs ability to reduce the humanity loss on a 
+piece of cyberware.</h4>
+<p>Use the <tt>humanity</tt> command to adjust your humanity up 
+or down as appropriate before adding the cyberware.</p>
+
+<h4 class="question">How do I create NPCs and Goons that have more or less
+points for stats and skills than player characters?</h4>
+
+<p>Use NPC Mode, as described in the <a href="#manual" class="tablink">manual</a>.</p>
+
+</body>
+</html>
+
+

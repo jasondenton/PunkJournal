@@ -1,0 +1,9 @@
+/$from 'gear_macros.template.tex' import Inventory_Entry_Inline $/
+
+/$set ns=namespace(df=0)$/
+/$set banned=['weapon','armor','vehicles','cyberdeck' ,'basic ammo', 'fashion']$/
+/$for itm in carried_inventory$//$if not itm.keywords|has_intersect(banned)$//$if ns.df==1$/, /$else$/\textbf{Gear}: /$endif$//@Inventory_Entry_Inline(itm)@//$set ns.df=1$//$endif$//$endfor$/
+
+\par
+/$set ns=namespace(df=0)$/
+ /$ for piece in armor_pieces $//$if ns.df==1$/, /$else$/\textbf{Armor}: /$endif$//@piece.name@//$set ns.df=1$//$ endfor $/

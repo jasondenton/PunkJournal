@@ -1,0 +1,94 @@
+# Mook mode makes a character exempt from the usual rules about building a PC.
+# Mooks have an unlimited budget for gear and cyberware. A Mooks empathy is 
+# taken as their final, post cyberware & therapy EMP. Adding cyberware
+# doees not reduce their empathy.
+#
+# A mooks differs from an ordinary NPC in that their skill levels are interpreted
+# as the total of the STAT+SKILL, similar to how mooks are presented in the core
+# book. This lets you focus on the final numbers when designing them, and leave
+# the math to PJ.
+
+Militech Grunt
+title Cannon Fodder
+mook
+
+Body 5
+Move 4
+Reflexes 5
+Technique 4
+Intelligence 3
+Will 4
+Dexterity 5
+Empathy 5
+Cool 6
+Luck 0
+
+language: English 4
+local expert: North Oak 5
+
+Athletics 7
+Brawling 8
+Evasion 8
+Perception 7
+Autofire 8
+
+Drive Land Vehicle 6
+Endurance 10
+Gamble 7
+Handgun 7
+Heavy Weapons 6
+Melee Weapon 7
+Shoulder Arms 10
+Tactics 6
+Weaponstech 10
+
+Agent
+
+medium melee weapon: Combat Knife
+excellent medium pistol
+assault rifle
+buy 3 medium pistol bullets   
+buy 5 rifle bullets
+
+kevlar
+kevlar helmet
+
+==================================
+
+Militech Grunts are low-ranking enlisted men and women,
+usually in their first few years of service. They are
+young men and women recruited from across the NUSA.
+More than a few come from free states as well, lured by 
+Militech recruiters and the promise of a career that
+does not require skills or connections.
+
+Within sight of their commanding officers, Militech
+grunts are focused and professional. As part of a squad
+engaged in combat operations, they are cool and
+coordinated under fire. If they must hold a position as 
+casualties mount, they will not hesitate to dig in and call for
+re-enforcement. 
+
+Off duty, they are young enough to think
+they are invincible and trained enough to think they are
+dangerous. Hormone-fueled swagger and bravado can quickly get
+them into trouble when they are one leave and away from 
+authority figures. When reality catches up to them and they
+realize that they can in fact be hurt, they tend to beat
+a hasty retreat.
+
+Militech grunts do not carry their helmets or assault
+rifles off duty, but do often wear their combat fatigues.
+
+>> /center/**Using Grunts in Play**/center/
+>>
+>> Militech grunts are the cannon fodder of Militech and the NUSA
+>> military. They can be found patrolling North Oak as law enforcement,
+>> guarding military bases, or on the front lines of any conflict
+>> Militech is fighting. Use them whenever you need disposable
+>> army grunts.
+>>
+>> Off duty Militech grunts make good drunken hoodlums. Use them
+>> to start a bar fight when a quiet night of information gathering
+>> is going to smoothly. Alternatively, use them to suddenly a make
+>> a relaxing night of karaoke a serious affair.

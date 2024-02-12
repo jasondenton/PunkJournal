@@ -1,0 +1,117 @@
+- name: Leathers
+  aliases:
+    - leathers (body)
+    - leather (body)
+    - leather
+  cost: 20
+  weight: 3
+  sp: 4
+  keywords: worn, armor, body
+- name: Leathers Helmet
+  aliases: 
+    - leathers (head)
+    - leather helmet
+    - leather (head)
+  cost: 20
+  weight: 1
+  sp: 4
+  keywords: worn, armor, helmet
+- name: Kevlar
+  aliases: Kevlar (body)
+  cost: 50
+  weight: 3
+  sp: 7
+  keywords: worn, armor, body
+- name: Kevlar Helmet
+  aliases: Kevlar (head)
+  cost: 50
+  weight: 3
+  sp: 7
+  keywords: worn, armor, helmet
+- name: Light Armorjack
+  aliases: Light Armorjack (body)
+  cost: 100
+  weight: 4
+  sp: 11
+  keywords: worn, armor, body
+- name: Light Armorjack Helmet
+  aliases: Light Armorjack (head)
+  cost: 100
+  weight: 1
+  sp: 11
+  keywords: worn, armor, helmet
+- name: Bodyweight Suit
+  cost: 1000
+  weight: 3
+  sp: 11
+  keywords: worn, armor, helmet, body, runner suit
+  max_container_size: 2
+- name: Medium Armorjack
+  aliases: Medium Armorjack (body)
+  cost: 100
+  weight: 7
+  sp: 12
+  penalty: -2
+  keywords: worn, armor, body
+- name: Medium Armorjack Helmet
+  aliases: Medium Armorjack (head)
+  cost: 100
+  weight: 1
+  sp: 12
+  keywords: worn, armor, helmet
+- name: Heavy Armorjack
+  aliases: Heavy Armorjack (body)
+  cost: 500
+  weight: 10
+  sp: 13
+  penalty: -2
+  keywords: worn, armor, body
+- name: Heavy Armorjack Helmet
+  aliases: Heavy Armorjack (head)
+  cost: 500
+  weight: 2.5
+  sp: 13
+  keywords: worn, armor, helmet
+- name: Flak
+  aliases: Flak (body)
+  cost: 500
+  weight: 15
+  sp: 15
+  penalty: -4
+  keywords: worn, armor, body
+- name: Flak Helmet
+  aliases: Flak (head)
+  cost: 500
+  weight: 3
+  sp: 15
+  keywords: worn, armor, helmet
+- name: Metalgear
+  aliases: Metalgear (body)
+  cost: 5000
+  weight: 20
+  sp: 18
+  penalty: -4
+  keywords: worn, armor, body
+- name: Metalgear Helmet
+  aliases: Metalgear (head)
+  cost: 5000
+  weight: 3
+  sp: 18
+  keywords: worn, armor, body
+- name: Hide
+  cost: 0
+  weight: 0
+  sp: 3
+  keywords: natural, armor, body, helmet
+- name: Thick Hide
+  cost: 0
+  weight: 0
+  sp: 4
+  keywords: natural, armor, body, helmet
+- name: Bony Plates
+  cost: 0
+  weight: 0
+  sp: 7
+  keywords: worn, armor, body, helmet
+
+

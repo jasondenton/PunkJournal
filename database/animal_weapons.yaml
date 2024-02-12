@@ -1,0 +1,281 @@
+- name: Small Claws 
+  skill: brawl
+  cost: 0
+  damage_dice: 1
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Medium Claws 
+  skill: brawl
+  cost: 0
+  damage_dice: 2
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Large Claws 
+  skill: brawl
+  cost: 0
+  damage_dice: 3
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Very Large Claws 
+  skill: brawl
+  cost: 0
+  damage_dice: 4
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Massive Claws 
+  skill: brawl
+  cost: 0
+  damage_dice: 5
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Small Bite 
+  skill: brawl
+  cost: 0
+  damage_dice: 1
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Medium Bite 
+  skill: brawl
+  cost: 0
+  damage_dice: 2
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Large Bite 
+  skill: brawl
+  cost: 0
+  damage_dice: 3
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Very Large Bite 
+  skill: brawl
+  cost: 0
+  damage_dice: 4
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Massive Bite 
+  skill: brawl
+  cost: 0
+  damage_dice: 5
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Small Fists 
+  skill: brawl
+  cost: 0
+  damage_dice: 1
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Medium Fists 
+  skill: brawl
+  cost: 0
+  damage_dice: 2
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Large Fists 
+  skill: brawl
+  cost: 0
+  damage_dice: 3
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Very Large Fists 
+  skill: brawl
+  cost: 0
+  damage_dice: 4
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Massive Fists 
+  skill: brawl
+  cost: 0
+  damage_dice: 5
+  rof: 2
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Small Tail 
+  skill: brawl
+  cost: 0
+  damage_dice: 1
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Medium Tail 
+  skill: brawl
+  cost: 0
+  damage_dice: 2
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Large Tail 
+  skill: brawl
+  cost: 0
+  damage_dice: 3
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Very Large Tail 
+  skill: brawl
+  cost: 0
+  damage_dice: 4
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+- name: Massive Tail 
+  skill: brawl
+  cost: 0
+  damage_dice: 5
+  rof: 1
+  concealable: False
+  weight: 0
+  option: true
+  keywords: natural, nerf, weapon, melee
+  rename: '{option}'
+  option_hint: 'Natural Weapon name'
+  hands: 1
+  wkind: Natural
+  quality: standard
+

@@ -1,0 +1,379 @@
+Teamwork:
+  text: "You have {{teamsize}} team members who report directly to you.
+
+
+    {{housing}}
+
+
+    {{medical}}"
+  tier_map: "1,2,3,4,5,6,7,8,9,10"
+  tiers:
+    - housing: You must pay your own rent each month.
+      medical: ''
+      teamsize: 0 
+    - housing: You may live rent free in a corporate owned conapt.
+      medical: ''
+      teamsize: 0 
+    - housing: You may live rent free in a corporate owned conapt.
+      medical: ''
+      teamsize: 1
+    - housing: You may live rent free in a corporate owned conapt.
+      medical: ''
+      teamsize: 1
+    - housing: You may live rent free in a corporate owned conapt.
+      medical: ''
+      teamsize: 2
+    - housing: You may live rent free in a corporate owned conapt.
+      medical: You are provided with Trauma Team Silver coverage.
+      teamsize: 2
+    - housing: You may live rent free in house in the executive zone.
+      medical: You are provided with Trauma Team Silver coverage.
+      teamsize: 2
+    - housing: You may live rent free in house in the executive zone.
+      medical: You are provided with Trauma Team Executive coverage.
+      teamsize: 2
+    - housing: You may live rent free in house in the executive zone.
+      medical: You are provided with Trauma Team Executive coverage.
+      teamsize: 3
+    - housing: You may live rent free in a mansion in the executive zone, or a luxury penthouse in the corporate zone.
+      medical: You are provided with Trauma Team Executive coverage.
+      teamsize: 3
+Charismatic Impact:
+  text: "**Available Venues:** {{venues}}
+
+
+	  **Impact on Single Fan (DV8):** {{single}}
+
+
+
+	  **Impact on Small Groups (DV10):** {{small}}
+
+
+
+	  **Impact on Huge Groups (DV12):** {{huge}}"
+  tier_map: "1,1,2,2,3,3,4,4,5,6"
+  tiers:
+    - venues : Small dive bars.
+      single: The fan will do a small favor or buy you a drink.
+      small: There is a small group of fans who "heard you first".
+      huge: Someday... someday....
+    - venues : Popular clubs.
+      single: A fan might be convinced to do a favor for you or hook up.
+      small: A small group of fans will party with you, and bring drugs or booze.
+      huge: You can move merch at your shows.
+    - venues: Exclusive clubs.
+      single: You can convince a fan to help in a fight or commit a minor crime.
+      small: Attract an entourage of half-a-dozen fans.
+      huge: Fans will do favors in exchange for attention, and can be found in nearby cities.
+    - venues: Small concert halls.
+      single: A fan might risk their life for the rockerboy.
+      small: You can convince up to 6 people to help out in a fight.
+      huge: Your fans form clubs, and fight with other artists fan clubs online and sometimes in the street.
+    - venues: Large concert halls or national televised events.
+      single: Fans might be convinced to commit major crimes.
+      small: Groups of fans can be convinced to commit major crimes.
+      huge: Fan clubs begin to act like cults.
+    - venues: Huge stadiums and international broadcasts.
+      single: Fans will scarifice their lives for the rocker.
+      small: Half-a-dozen fans will act as body guards and risk their life for the rocker.
+      huge: Fan cults now act like a private army.
+Credibility:
+  tier_map: "1,1,2,2,3,3,4,4,5,6"
+  text:
+    "**Rumors:** Your information network may supply you with rumors a couple of times a week, as
+    determined by the GM. See page 151 of Cyberpunk RED for more details.
+
+
+    **Access/Sources:** {{access}}
+
+
+    **Audience:** {{audience}}
+
+
+    **Believability:** {{trust}}\\% chance that the audience believes the story.
+
+
+    **Impact:** {{impact}}"
+  tiers:
+    - access : Local neighborhood figures.
+      audience : One neighborhood.
+      trust : 20
+      impact : Small, incremental change.
+    - access : City wide leaders and small time politicians.
+      audience : Local screamsheet or data pool.
+      trust : 30
+      impact : Direct effect and immediate change; small time players get arrested.
+    - access : Top level city leaders and local celebrities.
+      audience : Column in city screamsheets or appearances on local TV stations on a regular basis.,
+      trust : 40
+      impact : Change all across the city. High level operators may go to jail or lose elections. New laws get passed.
+    - access : Highest elected city leaders or regional corporate head.
+      audience : Statewide audience. You are a minor celebrity.
+      trust : 50
+      impact : Change can affect multiple cities.
+    - access : State wide political office holders, corporate VP.
+      audience : Nationwide audience.
+      trust : 60
+      impact : Mid-sized government and corporations may loss power. News laws passed at the federal level.
+    - access : Major leaders and celebrities.
+      audience : Worldwide Audience. You are a major celebrity.
+      trust : 70
+      impact : World wide changes, including fall of governments and megacorps.
+Combat Awareness:
+  text: |-
+    You may split your Combat Awareness between six different areas, described below.
+    You may change how points are allocated at anytime when not in comba, when combat
+    begins, or as an action in combat.
+
+    - **Damage Deflection:** The first time you suffer damage each round you may reduce it by one point for every two points
+    you have in damage deflection.
+
+    - **Fumble Recovery:** If you put 4 points in Fumble Recovery you may ignore critical failures.
+
+    - **Initative Reaction:** Add your points in Initative Reaction to your initative roll.
+
+    - **Precision Attack:** For every 3 points in Precision Attack you may add 1 to your to hit rolls.
+
+    - **Spot Weakness:** Add your points in Spot Weakness to the damage the first time you hit in a round.
+    
+    - **Threat Detection:** Add your points in Threat Detection to any perception checks you make.
+Interface:
+  tier_map: "1,1,1,2,2,2,3,3,3,4"
+  text: 'You may take {{net_actions}} net actions each turn, instead of taking a meat space action.'
+  tiers:
+    - net_actions: 2
+    - net_actions: 3
+    - net_actions: 4
+    - net_actions: 5
+Operator:
+  tier_map: "1,1,2,2,3,3,4,4,5,6"
+  text: |-
+    **Contacts:** If you need assistance, {{contacts}} will take your call. Or they might call you.
+
+
+    **Grease:** {{grease}}
+
+
+    **Haggle:** You may make a contested skill check using Trading when haggling over the price of goods
+    or services. On a success, you may chose one of the following:
+    {%for h in haggle%}
+    - {{h}}
+    {%endfor%}  
+
+
+    **Sourcing:** You may always locate {{sourcing}} or cheaper items on a piece by piece basis.
+
+
+    {%if nightmarket %}
+    {{nightmarket}}
+    {%endif%}
+  tiers:
+    - sourcing: cheap and everyday
+      contacts: neighborhood leaders
+      grease: You can blend in with all the neighborhood gangs.
+    - sourcing: expensive
+      contacts: minor city leaders
+      grease: You can blend in with the local cultural groups for which you know the language.
+    - sourcing: expensive
+      contacts: significant city leaders
+      grease: You can blend in with the local cultural groups for which you know the language.
+    - sourcing: very expensive
+      contacts: top level city leaders
+      grease: You can blend in with the local cultural groups for which you know the language.
+    - sourcing: luxury
+      contacts: state leaders and corporate division heads
+      grease: You can blend in with government agencies and corporate divsions.
+    - sourcing: super luxury
+      contacts: major world leaders, A list celebrities, and heads of major corporations
+      grease: You can blend in with almost any group, even those that are highly specialized.  
+  nightmarket_tiers:
+    - "You may work with other capable fixers to setup a Night Market once a month. You
+    may locate super luxury items while at this market."
+    - " You may arrange a Midnight Market within the Night Market and attract top level criminal bosses."
+  haggle_tiers:
+    - Pay 10% less or get 10% more.
+    - Buy 5 get 1 free.
+    - Negotiate a 20% pay increase for a job.
+    - You may pay half now and half in a month when buying a Super Luxury item.
+    - REMOVE
+    - Get double pay for a dangerous job.
+Backup:
+  tier_map: "1,1,2,2,3,3,3,4,5,6"
+  text : |-
+    You may call for backup as an action. Roll a d10. If you roll equal to or less than
+    your Backup level help will arrive in d6 rounds. If there is no response, you may continue to
+    try each round until help responds./eop/
+    /vsp/
+    {% for help in helpers %}
+    {%if loop.index == 2%}
+    
+    *On a roll of 6 on the d6, your call is answered by:*/eop/
+    /vsp/
+    {%endif%}
+    **{{help.number}} {{help.name}}**/eol/
+    Combat Number: {{help.cn}} \ \ \ \ \ Body/Move: {{help.bdy}}/eol/
+    Armor SP: {{help.sp}} \ \ \ \ \ Hit Points: {{help.hp}}/eol/
+    Weapons: {{help.weapons }}/eop/
+    /vsp/
+    {% endfor %}
+  tiers:
+    - name: Renta-Cops
+      cn: 8
+      sp: 7
+      hp: 20
+      bdy: 4
+      number: 4
+      weapons: Heavy Pistol (3d6)
+    - name: Beat Cops
+      cn: 10
+      sp: 7
+      hp: 25
+      bdy: 5
+      number: 4
+      weapons: Heavy Pistols (3d6)
+    - name: Sheriff's Deputies
+      cn: 14
+      sp: 13
+      hp: 35
+      bdy: 4
+      number: 2
+      weapons: Heavy Pistol (3d6) and Assault Rifle (5d6, auto-fire 4)
+    - name: Recovery Marshals
+      cn: 16
+      sp: 15
+      hp: 50
+      bdy: 6
+      number: 1
+      weapons: Very Heavy Pistol (3d6), Assault Rifle (5d6, auto-fire 4), and Grenade Launcher (6d6)
+    - name: C-SWAT
+      cn: 15
+      sp: 18
+      hp: 35
+      bdy: 4
+      number: 2
+      weapons: Assault Rifle (5d6, auto-fire 4), and Rocket Launcher (8d6)
+    - name: Feds
+      cn: 14
+      sp: 11
+      hp: 35
+      bdy: 5
+      number: 2
+      weapons: Very Heavy Pistol (3d6) and Assault Rifle (5d6, auto-fire 4)
+
+Field Expertise:
+    text: |-
+      When not using other Maker skills, add your Field Experise to various tech skills.
+      This bonus is included in the provided skill totals for the relavent skills. As an 
+      action, jury-rig a broken item. Use the appropriate skill and add your Field
+      Expertise. If successful, the item is restored to full SP/HP for
+      {{value * 10}} minutes.
+
+Upgrade Expertise:
+    text: |-
+      Upgrade an item by making a skill check with the skill used to repair that
+      item. The upgrade costs as much as the original item. See page 148 for a 
+      list of what upgrades are possible.
+
+Fabrication Expertise:
+  text: |-
+    A successful check with Fabricate Expertise allows creation of a new item. Raw materials
+    cost one price category less than the item price. On failure,
+    lose half the time required to create the item, but not the raw materials.
+
+Invention Expertise:
+  text: |-
+    Invention Expertise allows the creation of plans for a new item, which can
+    be manufactored using Fabrication Expertise. The time and difficulty to create new items 
+    is based on their price. See page  148-149 of the core book for full rules on
+    inventing a new item.
+
+Maker:
+  text: |-
+    When using any of the Maker sub-skills, you make a skill check using the skill 
+    normally used to repair the type of item your are working on. Add your level in 
+    the appropriate sub-skill to the check. You may only add one maker sub-skill to
+    any given skill check.
+
+    /center/ **Maker Difficutly and Cost Table** /center/
+    /vsp/
+    
+    | Cost  |  DV  |  Time  | 
+    |:-----|-----:|----:|
+    | Cheap (10eb)  |  9  |  1 hour  |
+    | Everyday (20eb)  |  9  |  1 hour  |
+    | Costly (50eb)  |  13  |  6 hours  |
+    | Premium (100eb)  |  17  |  1 day  |
+    | Expensive (500eb)  |  21  |  1 week  |
+    | Very Expensive (1000eb)  |  24  |  2 weeks  |
+    | Luxury (5000eb)  |  29  |  1 month  |
+    | Super Luxury (10k eb)  |  29  |  1 month/10k eb |
+
+Medicine:
+  text: |-
+    Use of the Medicine role ability is dependent on its specialties.
+    
+Surgery:
+  text: |-
+    Surgery is a TECH skill. It is used to fixing the most serious injuries,
+    and for implanting and salvaging cyberware.
+
+Medical Tech:
+  text: |-
+    Medical Tech is the skill of operating and maintaining medical technology.
+    It is a TECH skill. 
+
+Pharmaceuticals:
+  recipies:
+    antibiotic: A dose of antibiotic allows a target who is already healing to heal an additonal 2HP/day for a week. May be taken once a week.
+    rapidetox: A dose of Rapidetox immediately ends the effects of a drug, posion, or intoxicant.
+    speedheal: Instantly restores BODY+WILL HP to the target. May be taken once per day.
+    stim: Allows a user to ignore penalties for being seriously wounded for 1 hour. May be taken once per day.
+    surge: Allows the user to forgo sleep for 24 hours. Usable once per week.
+    sedative: |-
+      A willing target falls asleep for 4 hours, during which anyone treating them
+      gets +2 to their surgery checks. An unwiling target must make a DV15 
+      Resist Torture/Drugs check for fall unconcious for 1 minute. They wake up
+      if they take damage or someone takes an action to wake them.
+    veritas: |-
+      Target must make a DV17 Resist Torture/Drugs check. On failure, they have a
+      -5 penalty to all Acting, Concentration, Conversation, Deduction, Human Perception,
+      and Persuasion checks for the next 10 minutes.
+
+  text: |-
+    At a cost of 200eb and one hour you may attempt to create {{value}} doses of
+    one of the following pharmaceuticals by making a DV 13 Medical Tech check.
+    These drugs may be administred with an airhypo. Dosing an unwilling target
+    requires an attack roll.
+
+    {%for f in known_recipies%}
+    - **{{f|capitalize}}:** {{recipies[f]}}/eol/{%endfor%}
+
+Cryosystems Operation:
+  text: |-
+    This ability enables you to use cryopumps and cryotanks. See the GEAR section
+    of the character sheet for the cyrogenic equipment your character has access to.
+    
+Moto:
+  text: |-
+    You have access to a pool of family vehicles. {{permission}} If a family vehicle
+    is destroyed while in your care, the family will return it to service. You will be
+    expected to pay 500eb and the repairs will take one week.
+  permission_values:
+    - You may only have one family vehicle in your possesion at a time.
+    - When leading your nomad family, you have immediate access all your vehicles.
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

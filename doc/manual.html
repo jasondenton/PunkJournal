@@ -1,0 +1,851 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Punk Journal Manual</title>
+	<meta description="Character Sheet Software for the game Cyberpunk RED, by R. Talsorian Games."/>
+	<meta keywords="Cyberpunk, RED"/>
+	<link rel="stylesheet" href="pjstyle.css">
+</head>
+
+<body>
+<h1>Punk Journal Operations Manual</h1>
+
+<p>Keep your character notes in a plain text file. Turn them into
+beautiful, detailed character sheets. Let the software do the math.</p>
+
+<p>Punk Journal allows you to use a small number of intuitive commands to build
+	and level up a character for <a href="https://www.drivethrurpg.com/product/333585?affiliate_id=33042">Cyberpunk RED</a>, and then produce a customized, detailed,
+	character sheet in PDF form. Almost anything you would want to do with your character
+can be reflected on the Punk Journal character sheet, if you know how to use the software.</p>
+
+<h2>Table of Contents</h2>
+<ol>
+	<li><a href="#manual_charfile">The Character File</a>
+		<ol>
+			<li><a href="#manual_cname">Character Name</a></li>
+			<li><a href="#manual_crole">Character Role</a></li>
+			<li><a href="#manual_comments">Comment Lines</a></li>
+			<li><a href="#manual_points">Assigning Points</a></li>
+			<li><a href="#manual_gear">Gearing Up</a></li>
+			<li><a href="#manual_sell">Getting Rid of Stuff</a></li>
+			<li><a href="#manual_cmd">Other Commands</a></li>
+			<li><a href="#manual_spec">Specialization Syntax</a></li>		
+			<li><a href="#manual_errors">Errors</a></li>
+			<li><a href="#manual_buildline">Initial Build Line</a></li>
+			<li><a href="#manual_notes">The Notes Section</a></li>
+		</ol>
+	</li>
+	<li><a href="#manual_locations">Locations</a>
+		<ol><li><a href="#manual_carried">The Carried Location</a></li>
+			<li><a href="#manual_worn">The Worn Location</a></li>
+			<li><a href="#manual_special_locations">Other Special Locations</a></li>
+		</ol>
+	</li>
+	<li><a href="#manual_customizing">Customizing Gear</a>
+		<ol><li><a href="#manual_tag">Tag</a></li>
+			<li><a href="#manual_attach">Attach</a></li>
+			<li><a href="#manual_upgrade">Upgrade</a></li>
+		</ol>
+	</li>
+	<li><a href="#manual_cyberware">Installing Cyberware</a></li>
+	<ol>
+		<li><a href="#manual_wildcard">Wildcard Locations</a></li>
+		<li><a href="#manual_armloc">Cyberarm Locations</a></li>
+		<li><a href="#manual_legloc">Cyberleg Locations</a></li>
+		<li><a href="#manual_eyeloc">Cybereye Locations</a></li>
+	</ol></li>
+	<li><a href="#manual_swapcyber">Swappable Cyberware</a>
+		<ol>
+			<li><a href="#manual_chipware">Chipware</a></li>
+			<li><a href="#manual_swaparm">Swappable Cyberarm</a></li>
+		</ol></li>
+	<li><a href="#manual_levelup">Jobs, Cash, and Leveling up</a></li>
+	<li><a href="#manual_rolespec">Role Specific Commands</a></li>
+	<li><a href="#manual_npc">NPC Mode</a>
+		<ol>
+			<li><a href="#manual_mook">Mook Mode</a></li>
+			<li><a href="#manual_animal">Animal Mode</a></li>
+		</ol></li>
+	<li><a href="#manual_api">API</a></li>
+</ol>
+
+<h2 id="manual_charfile">The Character File</h2>
+<p>Punk Journal character files must be plain text files. Plain text files are 
+	different from the files produced by Word Processors, like MS-Word or Pages.
+	Plain text files can be created with Notepad on Windows, or using TextEdit
+	on a Mac. If using TextEdit, you will need to select Format|Make Plain Text from
+	the menu to force the program to work with plain text.
+</p>
+
+<p>The character file describes a character, one line at a time. Each line is a seperate
+	command, which sets or changes some portion of the character. The first couple dozens
+	lines describes the initial build of the character. Later lines describe what happens
+to the character in play, gaining cash and IP, leveling up, and buying new gear.</p>
+
+<h3 id="manual_cname">Character Name</h3>
+<p>The first (non-comment) line of a character file is always the name of the character.</p>
+
+<h3 id="manual_crole">Character Role</h3>
+<p>A character may be assigned a starting role by entering the name of that role on 
+	a line by itself. A character may be leveled up using the <tt>improve</tt> command,
+and multi-classing is possible by using the <tt>improve</tt> command to raise the role 
+ability of the new class.</p>
+
+<h3 id="manual_comments">Comment Lines</h3>
+<p>Lines that starts with a <tt>#</tt> symbol are comments. Punk Journal
+will ignore these lines when creating your character. The example files use
+comment lines to explain what they are doing and why, and you can
+use comment lines to add reminders and explanations for yourself.
+Comments are not allowed in the notes section, such lines will be
+treated as part of your notes.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	# This character is for the Friday night game
+	Ms. Example
+	Media
+</pre>
+
+<strong>Example:</strong><br/>
+<pre>
+	sell very heavy pistol
+	drop kevlar helmet
+
+	remove cyberarm: left
+</pre>
+
+<h3 id="manual_points">Assigning Points</h3>
+<p>During character creation, points are assigned to stats and skills
+	by entering point assignment commands. A point assignment command
+	is the name of the stat or skill, followed by the number of points assigned to it.
+	You may use the standard abbreviations for stats, and the order in which
+	stats and skills are entered does not matter. But you should set 
+your character's starting empathy before buying any cyberware.</p>
+
+<p>If a entry for a particular stat is missing it will default to 6. Basic skills
+	default to 2 if they are not listed, other skills default to 0.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	body 5
+	ref 2
+	will 7
+	emp 5
+
+	brawl 2
+	handguns 6
+</pre>
+
+<h3 id="manual_gear">Gearing Up</h3>
+<p>Gear and cyberware can be added to the character sheet using the <tt>buy</tt>
+	and <tt>found</tt> commands. The first debits the characters bank account for the
+	item and throws an error if the character does not have sufficient cash; the later
+adds the item without cost. Just give the command, followed by the item to be added to
+the character sheet. When buying or finding gear you may also provide a number 
+between the command and the item to add multiply copies.</p>
+
+<p>Some items come in packs of more than 1 when purchased. For example: bullets come
+	in boxes of ten. When you buy such an item, you will get however many are in the pack.
+	But, when you use the <tt>found</tt> command, you will get only exactly the number you specify.</p>
+
+<p>If Punk Journal does not understand a command, it will attempt to interpret that
+	command as if it was the name of some piece of gear or cyberware. If it can find
+	a matching item in it's database, it will <tt>buy</tt> the item. This allows you 
+	to omit the word <tt>buy</tt>, and just list the gear your character is acquiring.
+</p>
+<strong>Example:</strong><br/>
+<pre>
+	buy very heavy pistol
+	buy neural link
+	buy 3 very heavy pistol bullets    #Buy 30 bullets (3 boxes)
+
+	found excellent medium pistol
+	found 25 medium pistol bullets     #Adds 25 bullets
+	found assault rifle
+
+	assault rifle					   #buy an assault rifle
+	cybereye: right
+	targeting scope: right
+</pre>
+
+<p>Both <tt>buy</tt> and <tt>found</tt> place (most) new gear in the <i>carried</i>
+location, explained below.</p>
+
+<h3 id="manual_sell">Getting Rid of Stuff</h3>
+<p>The <tt>drop</tt> command works like the <tt>found</tt> command, but in reverse.
+	It removes gear from the character sheet. The <tt>sell</tt> command sells
+	gear, if the character can get something for it. Both commands allow an optional number
+	of items to be specified. Both commands default to working with items in the carried location, but allow a <tt>from</tt> clause to specify some other location.</p>
+
+<p>Cyberware can be removed using the <tt>remove</tt> command. If you remove
+	a foundational piece of Cyberware, Punk Journal is smart enough to remove all
+dependent pieces and adjust maximum humanity accordingly. Note that if you remove
+a cyberarm, Punk Journal will attempt to retain those options that can be placed in a meat
+limb.</p>
+
+<h3 id="manual_cmd">Other Commands</h3>
+<p>A complete list of other commands and their syntax can be found in the 
+ <a href="#qref" class="tablink">Command Reference</a>.</p>
+
+<h3 id="manual_spec">Specialization Syntax</h3>
+<p>Certain skills, such as languages and martial arts, require a specialization
+to be given when they are taken. Melee Weapons, instruments, and other items
+needs to be marked with what specific kind of thing they are. Cyberware
+needs to be placed in the right body position. Specialization syntax
+supports all these needs.</p>
+
+<p>When additional information is needed about something that is being
+added to the character sheet, that information follows the base item or skill
+being operated on, separated from the item's name by a colon.</p>
+
+<p>Specialized items, such as melee weapons, take on the name of their 
+	specialization. They are no longer the base item, they are a new item
+	with the given name, which you must use if you need to refer to that item
+later in the character file. Specialized skills and cyberware are always 
+refered to in their specialized form.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	language: Russian
+	martial arts: karate 6
+	improve martial arts: karate
+
+	buy cyberarm: right
+	remove cyberarm: right
+
+	buy heavy melee weapon: sword
+	drop sword
+
+	found large thing: BFG
+	found small thing: ammo for BFG
+</pre>
+
+<p>See the section on <a href="#cyber_install">Installing Cyberware</a> for 
+a detailed explanation of what options are allowed for installing cyberware, and 
+how to get cyberware installed into unusual places.</p>
+
+<h3 id="manual_errors">Errors</h3>
+<p>If a command cannot be executed, it results in an error message.
+Sometimes errors are the result of mis-entering a command. Other times
+sometimes errors are the result of an illegal action, such as trying to
+buy an item when your character does not have enough cash to pay for it.</p>
+
+<p>Mistakes happen, and if your character file generates errors,
+you will see a list of those errors and the line numbers on which they occured
+Fix the errors to get a finished character sheet.</p>
+
+<h3 id="manual_buildline">Initial Build Line</h3>
+<p>Everything between the character's name and a line of dashes (<tt>------</tt>)
+	is the initial build; how the character was created before
+play begins. Character creation ends at the line of dashes, or when
+the end of file is reached. At this point, skill and stat point totals
+are checked to make sure they total correctly. Any unused portion of the
+character's starting fashion allowance is lost, and the date for subsequent
+logged events is set to 2045-01-01.</p>
+
+<h3 id="manual_notes">The Notes Section</h3>
+<p>
+If the character file contains a line of equal signs (<tt>======</tt>), anything 
+after this line is treated as character notes rather commands to build the character.
+Notes may be formatted using
+<a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown</a>.
+Footnotes and images are not allowed, but other Markdown notation is, including
+hyperlinks and tables.</p>
+
+<p>Punk Journal supports several small additions to standard Markdown, it help with
+	text formatting. The command sequence <tt>/eol/</tt> will for a line break where it
+	occurs. You may center a line of text by placing it within a pair of <tt>/center/</tt>
+tags.</p>
+
+<h2 id="manual_locations">Locations</h2>
+<p>Punk Journal organizes a character's inventory into locations, representing
+where there inventory is stored. This allow you to specify what gear a
+character is carrying, what they have stored safe at home, and what kind of 
+an arsenal they are building at their safe house. The <tt>move</tt> command
+allows you to move items between locations. When moving items between locations,
+you may specify anything you want as the location name, and new locations are created as
+items are moved into them. Create as many locations are you need to organize your
+inventory. Certain pre-defined locations, however, have special meanings.</p>
+
+<h3 id="manual_carried">The Carried Location</h3>
+<p>The <i>carried</i> location is the what most newly found or purchased
+items will end up. Only the gear in the carried location will apply a bonus
+to the character's skills. Only carried weapons will appear on the 
+<strong>Friday Night Firefight</strong> page as equipped for use. If no
+armor is in the <i>worn</i> location described below then carried armor
+will instead appear on the FNFF page. Only carried cyberdecks are displayed on 
+the <strong>Netrunning</strong> page. The <strong>Gear Notes</strong> section
+only displays notes for <i>carried</i> or <i>worn</i> items.</p>
+
+<h3 id="manual_worn">The Worn Location</h3>
+<p>The <i>worn</i> location may be used for items that can be worn, such as clothes
+	and armor. Worn items appear on the first page of the character sheet, in a special
+	descriptive block below the character's portrait (if any). Worn armor will appear
+	on teh FNFF page. Items in the <i>worn</i> location contribue to the character's 
+	carried mass.</p>
+
+ <p>The <tt>&lt;fasion&gt; outfit</tt>
+	packages automatically place their contents in the <i>worn</i> location,
+	but individual pieces of purchased clothing default to the <i>carried</i>
+	location. Use the <tt>move</tt> command to move clothing between the <i>closet</i>,
+	<i>carried</i>, and <i>worn</i> locations.</p>
+
+<p>Use the <i>worn</i> location as a way to separate a character's worn clothing from
+	the rest of their inventory, and prevent clothing from cluttering up the list
+of carried gear.</p>
+
+<h3 id="manual_special_locations">Other Special Locations</h3>
+
+<li><p>The <i>Home</i> location is the default location for 
+placing new stationary items when they are first purchased or found. Cryotanks
+are stationary.</p></li>
+
+<li><p>The <i>Closet</i> location is where items bought or found using the
+<tt>&lt;fasion&gt; closet</tt> packages end up. Like the name says, it is a place to store
+clothes you are not wearing. Do not use the closet to store current or former lovers.</p></li>
+
+<li><p>The <i>Cryolab</i> location is where MedTechs with at least 2 points in Cryosystems 
+	Operations can find the crytotank they are entitled to use. Personal cryotanks 
+	gained at higher levels are placed in the <i>Home</i> location.</p></li>
+
+<li><p>When aquired, new vehicles are placed in the <i>Garage</i>, 
+	<i>Marina</i> and <i>Hanger</i> locations, as appropriate. You are
+	free move vehicles from these locations to other places, but only vehicles in
+	these locations will be fully stated out on the <strong>Vehicles</strong> page.</p></li>
+</ul>
+
+
+<h2 id="manual_customizing">Customizing Gear</h2>
+
+<p>A big part of Cyberpunk is customizing a character's gear. The <tt>tag</tt> and
+<tt>attach</tt>, and <tt>upgrade</tt> commands allow for gear to be customized.</p>
+
+<h3 id="manual_tag">Tag</h3>
+<p>Tagging an item prepares that item for customization, and assigns a name to it
+	so it can be used in later commands without confusing it with other items of the
+	same basic type. When an item is tagged, the tag becomes the items name. When you
+	need to refer to that item in the future, always use the tag rather than the old name. 
+	A tag can be anything you want, but must not have spaces in it.</p>
+
+<p>It is possible to tag cyberware. When tagging limbs or eyes, you will need to specify
+	which body part using the same syntax used when initially installing the cyberware.</p>
+
+<p>Tags never appear on the character sheet. Tags are only for use in
+	the character file. The character sheet will refer to them as whatever 
+	the original item is.</p> 
+
+<h3 id="manual_attach">Attach</h3>
+<p>The most common way to modify gear is to install various upgrades. Guns, vehicles, and
+	cyberdecks can all be customized by adding the appropriate type of modifications to them.
+	Certain types of armor and cyberwear also allow for things to be installed in them. All of
+	these uses are covered by the <tt>attach</tt> command.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	buy 2 very heavy pistol
+	buy smartgun link
+	buy extended magazine
+	tag very heavy pistol as pistol1
+	attach smartun link to pistol1
+	tag very heavy pistol as pistol2
+	attach extended magazine to pistol2
+
+	tag cybedeck as mydeck
+	tag bodyweight suit as mysuit
+	attach ban hammer to mydeck
+	attach range extender to mysuit
+	attach mydeck to mysuit
+
+	buy cyberarm: left
+	tag cyberarm: left as leftarm
+	buy popup melee weapon: left
+	attach combat knife to leftarm
+</pre>
+
+<p>When you attach one item to another, if the first item cannot contain the second item
+	on its own, Punk Journal will search through the other modifications installed in the
+	first item trying to find a place to put the second. This means, for example, that 
+	if you install a Popup Ranged Weapon space into your cyberarm, and tag the cyberarm,
+	you may directly attach a pistol to the cyberarm. You do not need to tag the
+	Popup space.</p>
+
+<strong >Example:</strong><br/>
+<pre>
+	buy cyberarm: left
+	tag cyberarm: left as leftarm
+	buy popup melee weapon: left
+	attach combat knife to leftarm
+
+	tag compact groundcar as van
+	attach heavy chassis to van
+	attach vehicle heavy weapon mount to van
+	attach Tsunami Arms Helix to van
+</pre>
+
+<h3 id="manual_upgrade">Upgrade</h3>
+
+<p>The <tt>upgrade</tt> command allow you to apply the Tech's Upgrade Expertise role ability
+	to an item. The character does not need to have this ability themselves; after all,
+	a good tech knows that the best place to keep upgraded guns is in the hands of their
+	friends. The <tt>upgrade</tt> command does also not charge the charcter for the cost of
+	the upgrade. If you need to charge the character for the cost of the upgrade, use the
+	<tt>$upgrade</tt> command instead.</p> 
+
+<table>
+	<thead>
+		<tr>
+		<th>Upgrade Type</th>
+		<th >Effects</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td >Slots</td>
+		<td >Adds one slot for options to the weapon, cyberware, or gear.</td>
+		</tr>
+		<tr>
+		<td >Armor</td>
+		<td >Adds one point of SP to the given piece of armor.</td>
+		</tr>
+		<tr>
+		<td >Conceal</td>
+		<td >Allow the weapon to be concealed.</td>
+		</tr>
+		<tr>
+		<td >Quality</td>
+		<td >Improve the quality of a weapon.</td>
+		</tr>
+		<tr>
+		<td >Complexity</td>
+		<td >Simplify the item, making it easier to repair.</td>
+		</tr>
+	</tbody>
+</table>
+
+<strong>Example:</strong><br/>
+<pre>
+	tag cyberarm: left as leftarm
+	upgrade copmlexity on leftarm
+
+	tag chipsocket as csocket
+	upgrade slots on csocket
+
+	tag kevlar helmet as helm1
+	upgrade armor on helm1
+</pre>
+
+<h2 id="manual_cyberware">Installing Cyberware</h2>
+
+<p>When cyberware is added to the character sheet, through either the
+<tt>buy</tt> or <tt>found</tt> commands, Punk Journal needs to know where 
+exactly to install it. For many types of cyberware, there is only
+one place to install that item, so no additional information is needed.
+Some times must be installed in pairs; if you do not tell Punk Journal
+where to install these items it will attempt to install them into the usual
+place. But for some items, there are many possible ways for them to be installed,
+and PJ needs to know where to put them. When dealing with such cyberware,
+use the <a href="#manual_special">specialization syntax</a> to clarify where
+the item should go.</p>
+
+<p>If you later need to refer to a piece of cyberware, use the install location as 
+part of the name.</p>
+
+<p>If all you want to do is install a simple cyberlimb or cybereye, you can use
+	<tt>left</tt> or <tt>right</tt> to specify the location. If you have a tagged
+	item of the appropriate type, you may also use that tag as the location. The rest
+of this section explains how to specify more complex locations.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	buy cyberarm: left
+	buy cybereye: right
+	buy cyberleg: left
+</pre>
+
+<h3 id="manual_wildcard">Wildcard Locations</h3>
+<p>Some items, like interface plugs, can be installed any where. 
+The cyberware section of the of the gear tab shows these items with the <tt>? location</tt> option.
+Whatever location is chosen will be reflected on the character sheet.</p>
+
+<strong>Example:</strong><br/>
+<pre>
+	buy interface plugs: wrist
+	buy interface plugs: neck
+	buy light tattoo: tramp stamp
+	buy light tattoo: bicep
+</pre>
+
+<h3 id="manual_armloc">Cyberarm locations</h3>
+<p>With the right cyberware, a character can have more than two arms. The table below
+shows where cyberarms can be installed into.</p>
+
+<table>
+<tbody>
+<tr>
+<td >left</td>
+<td >Install into the left arm.</td>
+</tr>
+<tr>
+<td >right</td>
+<td >Install into the right arm.</td>
+</tr>
+<tr>
+<td >left borg</td>
+<td >Install on the left side of an artificial shoulder mount.</td>
+</tr>
+<tr>
+<td >right borg</td>
+<td >Install on the right side of an artificial shoulder mount.</td>
+</tr>
+<tr>
+<td >tagged item</td>
+<td >Battle Gloves and &lt;a href=“manual_sparearm”&gt;Spare Cyberarms&lt;/a&gt; can be tagged and used as installation locations.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Example:</strong><br/>
+<pre>
+	buy cyberarm: left borg arm
+	buy wolvers: mybattleglove
+</pre>
+
+<h3 id="manual_legloc">Cyberleg Locations</h3>
+<p>Cyber legs can be installed into either the <tt>left</tt> or <tt>right</tt>
+	position. Cyberleg options that must be installed in pairs are treated
+	as a single item with appropriate costs in cash and humanity. Such modifications
+	do not need a location; PJ understands that they must be installed in both legs.</p>
+
+<h3 id="manual_eyeloc">Cybereye Locations</h3>
+<p>Cybereyes and single eye options can be installed into any available cybereye.
+	They can also be installed into a tagged pair of Smart Glasses.</p>
+
+<strong>Single eye options</strong>
+<table>
+<tbody>
+<tr>
+<td >left or L</td>
+<td >Left eye.</td>
+</tr>
+<tr>
+<td >right or R</td>
+<td >Right eye.</td>
+</tr>
+<tr>
+<td >1-5</td>
+<td >One of the 5 positions in a multi-optic mount.</td>
+</tr>
+<tr>
+<td >left &lt;tagged item&gt;</td>
+<td >Left lens of a tagged pair of smart glasses.</td>
+</tr>
+<tr>
+<td >right &lt;tagged item&gt;</td>
+<td >Right lens of a tagged pair of smart glasses.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Example:</strong>
+<pre>
+buy cybereye: left
+buy cybereye: 3
+buy chyron: left glasses1
+</pre>
+
+<p>Punk Journal treats cybereye options that must be
+	installed in pairs as a single item, with an appropriate cost in cash
+	and humanity. If no location is given for these items,
+	PJ will attempt to install them into the left and right eyes. 
+	If a tagged pair of smart glasses is given as the location
+	is given it will attempt to install them both lenses. Characters 
+	with more than two cybereyes may install them into any two
+	eyes by using a two character pair as the location. Each character
+	of the pair must be <tt>L</tt>, <tt>R</tt> or a number
+	from <tt>1</tt> to <tt>5</tt>.</p>
+
+<strong>Paired Options</strong>
+<tbody>
+<tr>
+<td >xx</td>
+<td >Two positions, each of which may be l, r, or 1-5.</td>
+</tr>
+<tr>
+<td >tagged items</td>
+<td >Both lenses of tagged smart glasses.</td>
+</tr>
+</tbody>
+</table>
+
+<strong>Example:</strong>
+<pre>
+buy anti-dazzle
+buy virtuality: 24
+</pre>
+
+<h2 id="manual_swapcyber">Swappable Cyberware</h2>
+
+<h3 id="manual_chipware">Chipware</h3>
+<p>Because chipware is meant to be swapped in amd out, it is handled a differently
+than other cyberware. When first obtained, the character suffers the 
+expected current humanity loss, but maximum humanity is not adjusted.
+The chipware is placed in the characters <i>Chipware Library</i>, a 
+special cyberware slot representing the cyberware a character has previously
+tried and suffered the humanity loss for.</p>
+
+<p>Chipware in the library is not currently is not automatically installed
+and in use. The benefits it provides will not be reflected on the character
+sheet. To use it, you must use the <tt>slot</tt> command to insert the chip
+into an available chip socket. PJ will then adjust the character's maximum 
+humanity and reflect the benefits of the chip on the character sheet.</p>
+
+<p>Use the specializaiton syntax to designate which skill a skill chip contains.</p>
+
+<strong>Example:</strong>
+<pre>
+buy skill chip: accounting
+buy skill chip: martial arts: karate 
+slot skill chip: martial arts: karate
+</pre>
+
+<h3 id="manual_swaparm">Swappable Cyberarms</h3>
+<p>A cyberarm equipped with a quick change mount can be swapped with a similarly
+equipped spare cyberarm. Punk Journal enables this by providng a 
+<tt>swap</tt> command, for use with the <i>Spare Cyberarm</i> item.</p>
+
+<p>A Spare Cyberarm is a cyberarm with a quickchange mount, and when first obtained 
+the character takes the appropriate hit to current humanity for both items. The character
+is assumed to have worn it at least once as part of the installation process. Spare
+Cyberarms are show in the characters inventory, like other non-cyberware items.</p>
+
+<p>To make use of a spare cyberarm, it must first get tagged. Once tagged, you may install
+new cyberware into the spare by giving the tag name as the location for the installation.</p>
+
+<p>The <tt>swap</tt> command allows you to swap an existing cyberarm for one that
+has been tagged. This causes the currently installed cyberware to switch places
+with the the tagged arm. The old cyberarm becomes the new spare, with the same tag
+as the old spare. The spare becomes the arm in the given location.</p>
+
+<strong>Example:</strong>
+<pre>
+tag spare cyberarm as sparearm
+buy cyberarm medscanner: sparearm
+swap left arm for sparearm
+</pre>
+
+<h2 id="manual_levelup">Jobs, Cash, and Leveling up</h2>
+
+<p>When a character gets paid, you can use the <tt>$</tt> to add the cash
+	to the character sheet. Just start the line with an $ sign and an amount, followed
+	by a description of what the payment is for. This will adjust the character bank balance and
+add a line to their bank account ledger. If the character needs to pay for something, you can use a negative value.</p>
+
+<p>The <tt>session</tt> command allows for recording IP gained from play. The <tt>improve</tt>
+	command allows for spending those IP to raise your skills and role abilities. When 
+	improving role abilities, use the name of the role ability rather than the name of the role. Techs and
+	Medtechs also use the improve command to raise their role specialization when they raise
+their role ability.</p>
+
+<strong>Example:</strong>
+<pre>
+date 2045-02-01
+adventure 60 Red Chrome Cargo
+$2500 Red Chrome Cargo payment and loot
+-$1100 Rent for Feb.
+improve medicine
+improve surgery
+</pre>
+
+<h2 id="manual_rolespec">Role Specific Commands</h2>
+<p>The <tt>learn</tt> command allows for a Medtech to learn a pharmaceutical recipe, 
+	when they level up their <i>pharmaceuticals</i> role specialization. The <tt>make</tt>
+	command allows a tech to use their fabrication expertise to make an item, or a 
+	medtech to produce a batch of pharmaceuticals they know the recipe for. These items
+	will appear on the character sheet and the appropriate cost will be charged against
+their bank account.</p>
+
+<strong>Example:</strong>
+<pre>
+#for MedTechs
+learn speedheal
+make speedheal
+
+#For Techs
+make excellent heavy pistol
+</pre>
+
+<p>Fixers should make use of the <tt>grease</tt> command to add additional languages that
+	they qualify for based on their level of <i>operator</i>. They can also use the 
+	<tt>haggle</tt> command instead of the buy command. When you use haggle to buy more than
+	one item, Punk Journal will calculate the best price for getting that many of the item based on the characters level in <i>operator</i>, and apply the appropriate discount.</p>
+
+<strong>Example:</strong>
+<pre>
+grease Maori
+haggle 6 airhypo 		#buy 5, get one free
+</pre>
+
+<p>The <tt>moto</tt> command can be used by Nomads to select family vehicles and upgrades
+	for them. When selected, vehicles are added to the appropriate location in the character's inventory (garage, hanger, or marina). If a vehicle upgrade grants an additional
+	choice of an item, the moto command can be used to add that item to the character's
+	inventory as well. Upgrades can be installed into vehicles by <tt>tag</tt>ging the vehicles
+	and <tt>attach</tt>ing the upgrades.</p>
+
+<strong>Example:</strong>
+<pre>
+moto compact groundcar
+tag compact groundcar as myvan
+moto heavy chassis
+attach heavy chassis to myvan
+moto housing capacity
+attach housing capacity to myvan
+</pre>
+
+<h2 id="manual_npc">NPC Mode</h2>
+
+Punk Journal provides a special NPC mode for building NPCs that do not need to 
+follow the rules for building PCs. You can enable this mode by using the command
+<tt>npc</tt>. It is recommended that you place this command right after the character's name,
+but it can appear anywhere in the file. By default, NPCs will use a one-page, 
+portrait oriented character sheet. This sheet is designed to make it easy to run the NPC
+in combat and most other interactions, while being compact enough to provide all relevant
+information at a glance.
+
+<p>NPC differs from the regular Player Character mode as follows:</p>
+
+<ul>
+	<li>NPC may have more or less than 62 points in stats.</li>
+	<li>NPCs may have zero luck (although it defaults to 6, just like PCs).</li>
+	<li>NPCs do not lose Empathy for adding cyberware, see full explanation below.</li>
+	<li>NPCs may have any total number of points in skills.</li>
+	<li>An NPC's skills and role abilities may start as high as ten.</li>
+	<li>You may directly set an NPC's role abilities, without using one of the role commands to assign them an initial role.</li>
+	<li>NPCs have an unlimited budget to buy gear and cyberware.</li>
+	<li>NPCs have an unlimited IP budget, but should not need it since they can start skills and role abilities at any legal level.</li>
+	<li>NPCs default to being printed using a special one page NPC sheet.</li>
+	<li>NPCs printed using the PC sheet do not have logs.</li>
+</ul>
+
+	<p>In most cases, NPCs will have whatever Empathy they are assigned, and will
+		not lose empathy to getting Cyberware. This allows you to set the final empathy
+		value for the NPC rather then worrying about the match behind their cyberware.
+		Punk Journal does, however, enforce a maximum humanity check.
+		NPCs start with a maximum humanity of 80 (as if they had empathy 8). Each piece of
+		cyberware reduces this number as normal, and if the Empathy you give the
+		NPC is greater than allowed by their maximum humanity it will be reduced accordingly.</p>
+
+<h3 id="manual_mook">Mook Mode</h3>
+
+<p>Punk Journal also provides a special "Mook" mode enabled by the <tt>mook</tt> command.
+	Mooks are similar to NPCs, and follow the same build rules and default to using
+	the same one page character sheet. However, in mook mode, entries for the mook's skills
+	are taken as the total of the skill and its controlling stat, rather than just the skill
+	level. This allows you to build a mook in a fashion similar to how they are 
+	presented in the <a href="https://www.drivethrurpg.com/product/333585?affiliate_id=33042">
+	Cyberpunk RED Core Book</a>. Use mook mode when you want to give an NPC a particular
+total bonus to a skill check without having to worry about the math.</p>
+
+
+ <p><i>For example: If you know you want your goons to have a total +12 to hit
+ 	with the Handgun skill, you can just enter <tt>handgun 12</tt>, and let Punk
+ 	Journal do the math to work out what skill level they should have
+ 	given their reflexes.</i></p>
+
+<h3 id="manual_animal">Animal Mode</h3>
+
+	<p>Animal mode is enabled by using the <tt>animal</tt> command. Animal mode is similar
+		to npc mode, with the following differences.</p>
+
+	<ul>
+		<li>Animals may have stats from 0 to 999.</li>
+		<li>All skills, including basic skills, default to 0 for animals.</li>
+		<li>Animals get access to special "natural" weapons and armor, as explained below.</li>
+		<li>Animals suffer no maximum humanity loss, and are not subject to the
+		maximum humanity check that NPCS are.</li>
+		<li>Animals may be declared and built as mooks; but this is not the default.</li>
+		<ii>Animals may be given cyberware and gear just like NPCs.</ii>
+	</ul>
+
+	<p>Animals have access to four types of natural weapons, in five different sizes. 
+		All natural weapons use the <i>Brawl</i> skill to make attacks. Weapons are specified in
+		the form <tt>&lt;size&gt; &lt;type&gt;: &lt;name on sheet&gt;</tt>.</p>
+
+	<ul>
+		<li>The <i>Tail</i> weapon is ROF 1.</li>	
+		<li>The <i>Fists</i> weapon is ROF 2.</li>
+		<li>The <i>Bite</i> weapon is ROF 1, and ignores half the defenders armor.</li>
+		<li>The <i>Claws</i> weapon is ROF 2, and ignores half the defenders armor.</li>
+	 </ul>
+
+	 <ul>
+	 	<li><i>Small</i> natural weapons do 1d6 points of damage.</li>
+	 	<li><i>Medium</i> natural weapons do 1d6 points of damage.</li>
+	 	<li><i>Large</i> natural weapons do 1d6 points of damage.</li>
+	 	<li><i>Very Large</i> natural weapons do 1d6 points of damage.</li>
+	 	<li><i>Massive</i> natural weapons do 1d6 points of damage.</li>
+	 </ul>
+
+	 <ul>
+	 	<li><i>Hide</i> armor is SP 3.</li>
+	 	<li><i>Thick Hide</i> armor is SP 3.</li>
+	 	<li><i>Bony Plates</i> armor is SP 7.</li>
+	 </ul>
+
+<strong>Example:</strong>
+<pre>
+#Gorilla
+Large Fists: Punch     # 3d6, rof 2, not treated as a melee weapon for armor bypass
+                       # Add an attack called "Punch" to the character sheet.
+Medium Bite: Gnaw      # 2d6, rof 1, treated as a melee weapon for armor bypass
+                       # Adds an attack called Gnaw to the character sheet
+Hide                   # SP 3
+</pre>
+
+<h2 id="manual_api">API</h2>
+
+<p>Punk Journal exposes a single endpoint for external integrations.</p>
+
+<p><strong>Endpoint:</strong> https://www.rpgtools.info/cyberpunk/PunkJournal/character/json</p>
+
+<p><strong>Request:</strong> A POST call with a Punk Journal character record sent as the body of the POST message. Content-type must be set to <i>application/punkjournal</i>.</p>
+
+<p><strong>Responses:</strong> The response object is content-type: application/json.</p>
+
+<p><strong>Success:</strong> Status code 200 (OK). The body of the response contains a JSON
+	object the represents the fully built character. This is the object used to instantiate
+	the template that produces the complete character sheet PDF, including logs. Everything
+	present on the character sheet is represented in this object in some fashion. The contents
+	of the object are subject to change, but future changes are expected to be additive rather
+	than subtractive or transformational. A good way to understand how this object encodes a
+character is to submit the example characters and observer the results.</p>
+
+<p><strong>Illegal Character:</strong> When the submitted character is not a legal build, 
+	status code 422 (Unprocessable Entity) is returned. The body
+	of the response contains a list of JSON objects that describes the errors and the lines
+on which they appear.</p>
+
+<p><strong>Other problems:</strong> Other API errors resultin a 400 error and a message
+	refering the user to the documentation. If this is insufficent use the bug report tab
+to seek further assistance.</p>
+
+<strong>Example:</strong>
+<pre>
+curl -X POST --data-binary "@Mycharacter.txt"
+	-H "Content-Type: application/punkjournal"
+	https://app.rpgtools.info/punkjournal/character/json
+</pre>
+
+<p>Curl requires --data-binary to properly send line breaks when sending a text file. Punk Journal
+enforces the content-type, and will reject a request that does not properly set it to
+"application/punkjournal". <i>Mycharacter.txt</i> is a local file holding a valid Punk Journal
+character.</p>
+
+</body>
+</html>
+
+
+
+
+

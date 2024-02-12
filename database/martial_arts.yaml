@@ -1,0 +1,101 @@
+- name: __SHARE
+  moves:
+    - name: Recovery
+      note: |-
+        When you use the Get up action you may attempt a DV13 martial arts check.
+        If successful, you do not spend the action.
+- name: Brawling
+  moves:
+    - name: Grab
+      note: |-
+        Make an opposed Brawl check against the target. On success, take an object
+        from the target or graple them. Both parties suffer a -2 penalty to actions and 
+        may not use two-handed weapons. The grabbed party may not take a move action, 
+        and the grabbing party may drag them along when they move. The grabbed party
+        may take an action and repeat the check to break free.
+    - name: Choke
+      note: |-
+        Take an action to choke a target you have grabbed. The target
+        suffers {{Body}} points of damage. This may not reduce the target
+        below one hit point. If the target would be reduced below one hit point or 
+        if they are choked for three consecutive rounds they are rendered unconcious.
+        Damage from a choke ignores armor.
+
+    - name: Throw
+      note: |-
+        You may take an action to throw a gabbed target to the ground. They take
+        {{Body}} points of damage. Damage from a throw ignores armor.
+
+- name: Aikido
+  moves:
+    - name: Disarming Combination
+      note: |-
+        When you hit a target with both a Brawling attack and an Aikido attack in the same turn,
+        you may make an Aikido check against DV15. On a success, either take on object held
+        by the target or force them to drop it.
+    - name: Iron Grip
+      note: |-
+        When you already have a target grabbed, you may take an action to make an Aikido 
+        check against DV15. On success, they suffer a -2 cumulative penalty to break the 
+        grab. Until the grabble is broken, they may not make ranged attacks.
+
+- name: Karate
+  moves:
+    - name: Armor Breaking Combination
+      note: |-
+        When you hit a target with both a melee attack and a martial arts attack in the same
+        term you may attempt a DV15 Karate skill check to ablate all of the targets armor
+        by an additional 2 points.
+    - name: Bone Breaking Strike 
+      prerequisite:
+        - - Will
+          - 8
+      note: |-
+        Instead of 2 attacks, make a single attack. If that attack hits, in addition
+        to the usual damage the target suffers
+        the Broken Ribs critical injury. Alternatively, make a called shot at a -8 penalty and inflict the
+        Cracked Skull critical injury.
+- name: Judo
+  moves:
+    - name: Counter Throw
+      note: |-
+        If you have dodge all melee attacks aimed at you since your last turn, you may make
+        a DV15 Judo check to throw one enemy in range whose attack you dodged last turn.
+    - name: Grab Escape
+      note: |-
+        When you hit a target that has you grappled twice in the same turn you may make a DV15 
+        Judo check. On success, you break the grapple and one of their arms. You choose which
+        arm suffers the critical injury.
+- name: Taekwondo
+  moves:
+    - name: Pressure Point Strike
+      prerequisite: 
+      - - Will
+        - 8
+      note: |-
+        Instead of 2 attacks, make a single attack. If that attack hits, in addition
+        to the usual damage the target suffers
+        the Spinal Injury critical injury. Alternatively, make a called shot at a -8 penalty and inflict the
+        Brain Injury critical injury.
+    - name: Flying Kick
+      prerequisite: 
+      - - Move
+        - 8
+      note: |-
+        Instead of an attack and move this turn, move at least 4m and then make a jump kick
+        at a target up to 4m away. If you hit you deal normal martial arts damage and knock
+        the target prone. This may knock the target off a vehicle if the vehicle does not have
+        an enclosed cabin.
+
+
+
+
+
+
+
+
+
+
+
+
+

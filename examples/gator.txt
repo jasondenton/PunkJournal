@@ -1,0 +1,114 @@
+Night City Gator
+title BTRS-2308-2
+animal
+
+Body 20
+Move 5
+Reflexes 6 
+Technique 1
+Intelligence 3
+Will 7
+Dexterity 6
+Empathy 1
+Cool 8
+Luck 0
+
+Athletics 5
+Brawling 8
+Concentration 2
+Conversation 0
+Education 0
+Evasion 4
+First aid 0
+Human Perception 0
+Perception 6
+Persuasion 0
+Stealth 5
+Endurance 10
+Tactics 2
+Tracking 5
+Wilderness Survival 10
+
+Neural Link
+Kerenzikov Speedware
+Gills
+Enhanced Antibodies
+Radar / Sonar Implant
+Toxin Binders
+MultiOptic mount
+buy cybereye: 1
+buy cybereye:  2
+buy Low Light/Infrared/UV: 12
+buy Anti-Dazzle: 12
+buy cybereye: 3
+buy cybereye: 4
+buy Image Enhance: 34
+buy cybereye:  5
+buy Radiation Detector: 5
+
+large tail: Tail
+Very large bite: Bite
+thick hide
+=====
+
+- The Gator is 2m wide, 2m tall at the shoulder, and 12m long. It weighs 
+7 tons. If using minis use a 2x6 mini for the Gator.
+- The Gator lurks beneath the water, breathing through its cybernetic gills and using
+its cybernetic eyes to watch for prey.
+- The Gator flees when it is seriously wounded, or bites off a limb.
+- When the Gator scores a critical hit with a bite attack and gets at least one six
+on the damage dice, it causes a critical injury.
+- When the Gator causes a critical injury with its bite, use the table below to determine
+which critical injury it causes. 
+
+| d6 | Injury |
+|---: | :--- |
+| 1-2 | Dismembered Hand |
+| 3-4 | Dismembered Arm |
+| 5-6 | Dismembered Leg|
+
+----------------
+/pagebreak/
+
+Characters may make skills checks using the skills below to see what they know about
+the Gator. They learn every fact for which they beat the DC.
+
+/center/ **Local Expert: Anywhere in Night City** /center/
+- **DV 9**: A giant gator haunts Night City's sewers.
+- **DV 13**: My room-mate's cousin's dentist saw it once while on a drunken bender.
+- **DV 15:**: The Gator got mutated by the bomb. It's 35 ft. long, has 7 eyes and gills. 
+- **DV 17**: Rumors of the Gator pre-date the bomb. If the
+it existed, it burned to ash with the city center.
+
+/center/ **Education** /center/
+- **DV 9**: Alligators and Crocodiles are not native to southern California.
+- **DV 13**: Every city has rumors of pet gators flushed into the sewer. 
+Only Florida really has them.
+
+/center/ **Animal Handling** /center/
+- **DV 13**: Night City's winters are to cold for reptiles.
+- **DV 17**: Gators need to bask in the sun; if the NCG existed
+it would have been spotted out of the water.
+
+/center/ **Science: Biology** /center/
+- **DV 9**: No modern Crocodilian is as large as the NCG is supposed to be.
+- **DV 13**: The sewers do not provide enough calories to support a large predator.
+- **DV 15**: Pollutants accumulate in small animals, and get concentrated in apex
+predators. A gator in the sewers would be quickly poisoned with industrial pollutants.
+
+>> /center/ **Using the Night City Gator** /center/
+>>
+>> Use the Gator as a surprise the first time the character try to use
+>> the sewers to sneak around the city.
+>> After that, any plan that depends on going through the sewers will
+>> carry with it the risk of an encounter with the Gator.
+>>
+>> The Gator can appear in the bay. It has learned that small boats contain
+>> tasty meals, and are easily sunk.
+>>
+>> If a character is having trouble justifying a new cyberlimb, the
+>> Gator can be used to encourage a continued commitment to the cyberpunk
+>> lifestyle.
+
+---
+Crocodile image by [Aga Marlon](https://www.artstation.com/agamarlon).

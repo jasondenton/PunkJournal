@@ -1,0 +1,169 @@
+- keywords:
+  - vehicle
+  - personal
+  moto: 1
+  move: 20
+  name: Roadbike
+  cost: 20000
+  seats: 2
+  sdp: 35
+  speed: 161
+  upgrade_class: g
+  medium: ground
+- keywords:
+  - vehicle
+  - personal
+  moto: 7
+  move: 60
+  name: Superbike
+  cost: 100000
+  seats: 2
+  sdp: 35
+  speed: 483
+  upgrade_class: g
+  medium: ground
+- keywords:
+  - vehicle
+  moto: 1
+  move: 20
+  name: Compact Groundcar
+  cost: 30000
+  seats: 4
+  sdp: 50
+  speed: 161
+  upgrade_class: G
+  medium: ground
+- keywords:
+  - vehicle
+  moto: 5
+  move: 40
+  name: High Performance Groundcar
+  cost: 50000
+  seats: 4
+  sdp: 50
+  speed: 322
+  upgrade_class: G
+  medium: ground
+- keywords:
+  - vehicle
+  - heavy
+  moto: 9
+  move: 60
+  name: Super Groundcar
+  cost: 100000
+  seats: 2
+  sdp: 50
+  speed: 483
+  upgrade_class: G
+  medium: ground
+- keywords:
+  - vehicle
+  - personal
+  moto: 1
+  move: 20
+  name: Jetski
+  cost: 20000
+  seats: 2
+  sdp: 35
+  speed: 97
+  upgrade_class: w
+  medium: water
+- keywords:
+  - vehicle
+  moto: 5
+  move: 20
+  name: Speedboat
+  cost: 30000
+  seats: 4
+  sdp: 50
+  speed: 97
+  upgrade_class: W
+  medium: water
+- keywords:
+  - vehicle
+  - rooms
+  moto: 7
+  move: 10
+  name: Cabin Cruiser
+  cost: 30000
+  seats: 2
+  sdp: 60
+  speed: 24
+  upgrade_class: W
+  medium: water
+  option: true
+- keywords:
+  - vehicle
+  - rooms
+  moto: 9
+  move: 10
+  name: Yacht
+  cost: 50000
+  seats: 4
+  sdp: 100
+  speed: 24
+  upgrade_class: W
+  medium: water
+  option: true
+- keywords:
+  - vehicle
+  - personal
+  moto: 1
+  move: 20
+  name: Gyrocopter
+  cost: 20000
+  seats: 2
+  sdp: 35
+  speed: 161
+  upgrade_class: a
+  medium: air
+- keywords:
+  - vehicle
+  moto: 5
+  move: 40
+  name: Helicopter
+  cost: 40000
+  seats: 4
+  sdp: 60
+  speed: 322
+  upgrade_class: A
+  medium: air
+- keywords:
+  - vehicle
+  - heavy
+  moto: 7
+  move: 40
+  name: AV-4 Multipurpose Aerodyne
+  aliases: av-4
+  cost: 50000
+  seats: 6
+  sdp: 100
+  speed: 322
+  upgrade_class: A
+  medium: air
+- keywords:
+  - vehicle
+  moto: 9
+  move: 60
+  name: AV-9 Super Aerodyne
+  aliases: av-9
+  cost: 100000
+  seats: 2
+  sdp: 60
+  speed: 483
+  upgrade_class: A
+  medium: air
+- keywords:
+  - vehicle
+  - rooms
+  moto: 9
+  move: 20
+  name: Aerozep
+  aliases: zepplin, blimp
+  cost: 30000
+  seats: 2
+  sdp: 100
+  speed: 161
+  upgrade_class: A
+  medium: air
+  option: true

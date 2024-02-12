@@ -1,0 +1,172 @@
+Your charater's name here # <-- Replace this with your character's name
+Your character's role here <--- Replace with one of Solo, Netrunner, Media, Exec, Lawman, Rocker, Nomad, Tech, Medtech, Fixer
+
+# You have 62 points to spend on the ten stats below.
+# Legal values are from 2 to 8.
+Body 6
+Move 6
+Reflexes 6 
+Technique 6
+Intelligence 6
+Will 6
+Dexterity 6
+Empathy 6
+Cool 6
+Luck 6
+
+# You have 90 points to spend on skills. Skills below
+# that are already assigned a starting value must start
+# at least at that level, but can be raised. No skill
+# may start above 6.
+
+# Edit the next line to set your character's native language,
+# and the line after that to set your characters home neighboorhood.
+
+language: Character's native language 4
+local expert: Character's Home neighborhood 2
+
+# These skills are your basic skills, and they must start 
+# at least at 2.
+
+Language: Streetslang 2
+Athletics 2
+Brawling 2
+Concentration 2
+Conversation 6
+Education 2
+Evasion 6
+First aid 2
+Human Perception 6
+Perception 2
+Persuasion 2
+Stealth 2
+
+# These are non-basic skills, and can start at 0.
+# Remember, no skill may start above 6.
+Accounting 0
+Acting 0
+Air Vehicle Tech 0
+Animal Handling 0
+Archery 0
+Autofire 0
+Basic Tech 0
+Bribery 6
+Bureaucracy 0
+Business 0
+Composition 0
+Conceal/Reveal object 0
+Contortionist 0
+Criminology 0
+Cryptography 0
+Cybertech 0
+Dance 0
+Deduction 0
+Demolitions 0
+Drive Land Vehicle 0
+Electronics/Security Tech 0
+Endurance 0
+Forgery 0
+Gamble 0
+Handgun 6
+Heavy Weapons 0
+Interrogation 0
+Land Vehicle Tech 0
+Library Search 0
+Lip Reading 0
+Martial Arts: Karate 0 # Or Aikido, Judo, Taekwondo
+Melee Weapon 0
+Paint/Draw/Sculpt 0
+Paramedic 0
+Personal Grooming 0
+Photography/Film 0
+Pick Lock 6
+Pick Pocket 0
+Pilot Air Vehicle 0
+Pilot Sea Vehicle 0
+Play Instrument: Electric Guitar 0
+Resist Torture/Drugs 6
+Riding 0
+Science: Computer Science 0
+Sea Vehicle Tech 0
+Shoulder Arms 0
+Singing 0
+Streetwise 0
+Tactics 0
+Tracking 0
+Trading 0
+Wardrobe and Style 0
+Weaponstech 0
+Wilderness Survival 0
+
+# Lines without an explict command are treated as "buy" commands.
+# This lets you just list your starting gear.
+
+# It is recommend you buy your fashion ware first.
+# You may buy an outfit, or you may buy pieces seperately. 
+# You may also buy a "closet" to fill your character's closet 
+# with their chosen fashion.
+
+# Purchased outfits go to the 'worn' location. 
+# Worn items contribute to the total carried mass
+# but appear on the front page of the character sheet
+# in the description of worn clothes, rather than
+# in carried inventory.
+
+# Valid fashion types are : Bag Lady Chic, Gang Colors, Generic Chic, 
+# Bohemian, Leisurewear, Nomad Leathers, Asia Pop, Urban Flash, 
+# Businesswear, High Fashion
+
+buy generic chic outfit    # choose your own outfit
+buy asia pop closet        # choose your closet full of clothes
+
+# Example of changing out a piece of worn clothing for
+# another one.
+
+move generic chic jacket to closet
+buy urban flash jacket
+move urban flash jacker to worn
+
+# You will find complete gear, weapon, and cyberware lists under
+# the Gear/Cyberware tabs. Customize the list below for your
+# character.
+
+Agent
+Duct Tape
+Flashlight
+carryall
+
+# When buy melee weapons, you will need to speficy what the weapon
+# actually is.
+
+medium melee weapon: Combat Knife
+
+heavy pistol
+buy 3 heavy pistol bullets   #bullets come in boxes of ten, so this gets you 30 bullets
+
+# don't forget the armor
+kevlar
+kevlar helmet
+
+# Netrunners need a neural link and interace plugs
+neural link
+interface plugs: neck   # or interface plugs: wrist
+
+# Cyberware that is positional needs a "right" or "less"
+cyberarm: left
+
+cybereye: right
+targeting scope: right
+
+# The single line marks the end of the initial build.
+
+---------------------------------
+
+# Everything between the lines is for what happens in play.
+
+==================================
+
+This is the character notes section. You may use **Markdown**
+syntax here to format your notes.
+
+If you need help, check the 
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).

@@ -1,0 +1,241 @@
+- name: Poor Light Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 1
+  rof: 2
+  concealable: true
+  option: true
+  weight: 0.5
+  keywords: weapon, melee
+  rename: '{option}'
+  option_hint: 'Weapon name'
+  hands: 1
+  wkind: Light
+  quality: poor
+- name: Light Melee Weapon 
+  aliases: Standard Light Melee Weapon
+  skill: melee weapon
+  cost: 50
+  damage_dice: 1
+  rof: 2
+  concealable: true
+  option: true
+  weight: 0.5
+  keywords: weapon, melee
+  rename: '{option}'
+  option_hint: 'Weapon name'
+  hands: 1
+  wkind: Light
+  quality: standard
+- name: Excellent Light Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 1
+  rof: 2
+  concealable: true
+  option: true
+  weight: 0.5
+  keywords: weapon, melee
+  rename: '{option}'
+  option_hint: 'Weapon name'
+  hands: 1
+  wkind: Light
+  quality: excellent
+- name: Poor Medium Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 2
+  rof: 2
+  concealable: false
+  option: true
+  weight: 2
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 1
+  wkind: Medium
+  option_hint: 'Weapon name'
+  quality: poor
+- name: Medium Melee Weapon 
+  aliases: Standard Medium Melee Weapon
+  skill: melee weapon
+  cost: 50
+  damage_dice: 2
+  rof: 2
+  concealable: false
+  option: true
+  weight: 2
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 1
+  wkind: Medium
+  option_hint: 'Weapon name'
+  quality: standard
+- name: Excellent Medium Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 2
+  rof: 2
+  concealable: false
+  option: true
+  weight: 2
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 1
+  wkind: Medium
+  option_hint: 'Weapon name'
+  quality: excellent
+- name: Poor Heavy Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 3
+  rof: 2
+  concealable: false
+  option: true
+  weight: 4
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Heavy
+  option_hint: 'Weapon name'
+  quality: poor
+- name: Heavy Melee Weapon 
+  aliases: Standard Heavy Melee Weapon
+  skill: melee weapon
+  cost: 50
+  damage_dice: 3
+  rof: 2
+  concealable: false
+  option: true
+  weight: 4
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Heavy
+  option_hint: 'Weapon name'
+  quality: standard
+- name: Excellent Heavy Melee Weapon 
+  skill: melee weapon
+  cost: 50
+  damage_dice: 3
+  rof: 2
+  concealable: false
+  option: true
+  weight: 4
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Heavy
+  option_hint: 'Weapon name'
+  quality: excellent
+- name: Poor Very Heavy Melee Weapon
+  skill: melee weapon 
+  cost: 50
+  damage_dice: 4
+  rof: 1
+  concealable: false
+  weight: 6
+  option: true
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Very Heavy
+  option_hint: 'Weapon name'
+  quality: poor
+- name: Very Heavy Melee Weapon
+  aliases: Standard Very Heavy Melee Weapon
+  skill: melee weapon 
+  cost: 50
+  damage_dice: 4
+  rof: 1
+  concealable: false
+  weight: 6
+  option: true
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Very Heavy
+  option_hint: 'Weapon name'
+  quality: standard
+- name: Excellent Very Heavy Melee Weapon
+  skill: melee weapon 
+  cost: 50
+  damage_dice: 4
+  rof: 1
+  concealable: false
+  weight: 6
+  option: true
+  keywords: weapon, melee
+  rename: '{option}'
+  hands: 2
+  wkind: Very Heavy
+  option_hint: 'Weapon name'
+  quality: excellent
+- name: Kendachi mono-three 
+  skill: melee weapon 
+  cost: 5000
+  quality: excellent
+  damage_dice: 4
+  rof: 1
+  concealable: false
+  weight: 4
+  keywords: weapon, melee, sp11, exotic
+  hands: 2
+  note: 'Biometrically locked to owner.'
+  wkind: Very Heavy
+- name: Stun Baton 
+  skill: melee weapon
+  cost: 100
+  damage_dice: 2
+  rof: 2
+  concealable: false
+  weight: 3
+  weight: 2
+  keywords: weapon, melee, exotic, stun, noablate
+  hands: 1
+  card: A One-Handed Exotic Medium Melee Weapon. If damage dealt by it would reduce a target to under 1 HP, they are instead Unconscious at 1 HP. Damage dealt by this weapon cannot cause a Critical Injury and doesn't ablate armor.
+  wkind: Medium
+- name: Bayonet
+  cost: 100
+  weight: 0.4
+  install_in: shoulder arms mod
+  keywords: melee, weapon, ranged weapon attachment
+  skill: melee weapon
+  damage_dice: 1
+  rof: 2
+  concealable: false 
+  quality: standard
+  hands: 1
+  wkind: Light
+- name: Onboard Melee Weapon
+  skill: melee weapon 
+  cost: 1000
+  damage_dice: 4
+  rof: 1
+  concealable: false
+  weight: 12
+  option: true
+  keywords: weapon, melee, multiple, vehicle upgrade
+  rename: '{option}'
+  hands: 2
+  wkind: Very Heavy
+  install_in: vehicle
+  note: Driver may use an action to fire this weapon.
+  upgrade_class: gGwW
+  option_hint: 'Weapon name'
+- name: IMI Chainknife
+  aliases: Chainknife
+  skill: melee weapon
+  cost: 500
+  damage_dice: 2
+  rof: 1
+  concealable: false
+  weight: 4
+  weight: 2
+  keywords: weapon, melee
+  hands: 1
+  wkind: Medium
+  option_hint: 'Weapon name'
+  quality: standard
+  note: 
+    - Can be revved as an action, making it +1 to hit and +2d6 to damage.
+

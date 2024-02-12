@@ -1,0 +1,148 @@
+\RequirePackage[table, fixpdftex]{xcolor}
+\RequirePackage{tabularx}
+\RequirePackage{bookmark}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{graphicx}
+\RequirePackage{easyfig}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+
+\RequirePackage{fontspec}
+\RequirePackage[table, fixpdftex]{xcolor}
+
+\newfontfamily\amfontfamilyA[NFSSFamily=amfont_main]{Montserrat}
+\newfontfamily\amfontfamilyB[NFSSFamily=amfont_chapter]{Montserrat}
+\newfontfamily\amfontfamilyD[NFSSFamily=amfont_section]{Montserrat}
+\newfontfamily\amfontfamilyE[NFSSFamily=amfont_sidebar]{Inconsolata}
+\newfontfamily\amfontfamilyF[NFSSFamily=amfont_caption]{Montserrat}
+\newfontfamily\amfontFamilyG[NFSSFamily=amfont_mono]{Inconsolata}
+\setmainfont{Montserrat}
+\setsansfont{Montserrat}
+\setmonofont{Inconsolata}
+
+\definecolor{cyberred}{HTML}{DD3A35}
+\definecolor{money}{HTML}{DAEDDC}
+\definecolor{chrome}{HTML}{0033cc}
+\definecolor{color_boxtext}{HTML}{ebebfa}
+\definecolor{color_sidebar_border}{HTML}{DD3A35}
+\definecolor{color_sidebar_text}{HTML}{000000}
+\definecolor{blackice}{HTML}{59277d}
+\definecolor{color_tabledark}{HTML}{f7d6c5}
+
+\newenvironment{nscenter}
+ {\par\nopagebreak\centering}
+ {\par\vspace{-1.5mm}}
+
+\newcommand*{\cvalue}[1]{{\fontfamily{amfont_mono}\selectfont\textcolor{black}{#1}}}
+
+\newcommand*{\navtopic}[1]{\fontfamily{amfont_mono}\selectfont\textcolor{white}{#1}}
+\newcommand*{\currentnavtopic}[1]{\fontfamily{amfont_mono}\selectfont\colorbox{cyberred}{\textcolor{white}{#1}}}
+
+\newcommand*{\toppic}[1]{\includegraphics[height=2in]{#1}}
+
+\newcommand*{\chapterfont}{\fontfamily{amfont_chapter}\selectfont}
+\newcommand*{\sectionfont}{\fontfamily{amfont_section}\selectfont}
+\newcommand*{\sidebarfont}{\fontfamily{amfont_sidebar}\selectfont}
+\newcommand*{\monofont}{\fontfamily{amfont_mono}\selectfont}
+
+\newcommand*{\headline}[1]{\fontfamily{amfont_title}\LARGE\selectfont #1}
+
+%\titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+%titleeformat{〈command〉}[〈shape〉]{〈format〉}{〈label〉}{〈sep〉}{〈before〉}[〈after〉]
+%\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titleformat{\chapter}{\color{chapter_color}\LARGE\chapterfont}{}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{12pt}
+\titleformat{\section}{\color{cyberred}\sectionfont\Large}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{12pt}
+\titleformat{\subsection}{\color{cyberred}\sectionfont\large}{}{0em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{12pt}
+\titleformat{\subsubsection}{\color{cyberred}\sectionfont}{}{0em}{}
+
+%\newcounter{tblerows}
+%\expandafter\let\csname c@tblerows\endcsname\rownum
+
+% Table Environment
+\newcommand{\headercell}[1]{\multicolumn{1}{l}{\textbf{{#1}}}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{X}
+
+\newenvironment{bankblock}{
+  \rowcolors{2}{white}{money} % Alternate colors
+  \arrayrulecolor{money}
+\noindent\tabularx{\columnwidth}{lLrr}
+	\headercell{Date} & \headercell{Memo} & \headercell{Amount} & \headercell{Balance}\\ \hline
+}{\endtabularx}	
+
+\newenvironment{buildblock}{
+\noindent\tabularx{\columnwidth}{lLrr}
+	\headercell{Date} & \headercell{Memo} & \headercell{\small Amount} & \headercell{\small Available}\\ \hline
+}{\endtabularx}	
+
+\newenvironment{humanityblock}{
+	\tabularx{\columnwidth}{|lL|rr|rr|}
+	& & \multicolumn{2}{c|}{\textbf{Current} } & \multicolumn{2}{c|}{\textbf{Maximum} }\\
+	\headercell{Date} & \headercell{Event} & \headercell{Cost} & \headercell{HUM} &
+	\headercell{Cost} & \headercell{HUM}\\ \hline	
+%	\headercell{Date} & \headercell{Event} & \headercell{\makecell{Humanity\\Loss} } & \headercell{Humanity}
+%	& \headercell{\makecell{Max Hum.\\Loss} } & \headercell{\makecell{Max\\Humanity} }\\\ \hline
+}{\endtabularx}	
+
+\newenvironment{gearblock}[1]{
+				\noindent
+        \centerline{\bf #1}\\
+        \noindent
+	\tabularx{\columnwidth}{rLr}
+	\headercell{\#} & \headercell{Item} & \headercell{kg} \\ \hline
+}{\endtabularx}	
+
+\newtcolorbox{fixedsidebar}[1][]{
+	enhanced,
+	parbox=false,
+	colframe=color_sidebar_border,
+	colback=white,
+	colbacktitle=white,
+	coltitle=color_sidebar_text,
+	before skip=10pt plus 1pt,
+	fonttitle=\center\large\sidebarfont,
+	titlerule=0mm,
+	after={\vspace{7.5pt plus 1pt}},
+    #1
+}
+
+\newtcolorbox{sidebar}[1][]{
+  enhanced,
+  float,  
+  parbox=false,
+  colframe=color_sidebar_border,
+  colback=white,
+  colbacktitle=white,
+  coltitle=color_sidebar_text,
+  before skip=10pt plus 1pt,
+  fonttitle=\center\large\sidebarfont,
+  titlerule=0mm,
+  after={\vspace{7.5pt plus 1pt}},
+    #1
+}
+
+\newtcolorbox{boxtext}[1][]{
+	frame hidden,
+	parbox=false,
+	boxrule=0pt,
+	breakable,
+	enhanced,
+	%drop shadow,
+	before skip=10pt plus 1pt,
+	boxsep=0.25ex,
+	left=6pt,
+	right=6pt,
+	top=4pt,
+	colback=color_boxtext,
+	%colframe=gray,
+	arc=0mm,
+	%borderline west={1mm}{0 pt}{white},
+	after={\vspace{7.5pt plus 1pt}},
+	#1
+}

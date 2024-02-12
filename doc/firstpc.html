@@ -1,0 +1,149 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Punk Journal Manual</title>
+	<meta description="Character Sheet Software for the game Cyberpunk RED, by R. Talsorian Games."/>
+	<meta keywords="Cyberpunk, RED"/>
+	<link rel="stylesheet" href="pjstyle.css">
+</head>
+
+<body>
+<h2 id="first_character">Your First Punk Journal Character</h2>
+<ol>
+	<li><p>Open your favorite text editor. On Windows you can use Notepad.
+		On MacOS, you can use TextEdit but you will first need to
+		select Format|Make Plain Text.</p></li>
+
+	<li><p>On the first line of the file, enter your character's name.
+	On the second line, enter the character's role.</p>
+
+	<pre>
+		Ms. Example
+		Media</pre>
+	</li>
+
+	<li><p>On the next ten lines, enter your characters stats, one
+	stat per line. Just include the name of the stat followed by the
+	number of points you put into the stat.</p></li>
+
+	<li><p>Now, do the same thing to allocate your character's 
+		skill points. Be sure to put four points into your character's native language,
+		and two points into local expert for your character's home town.</p>
+
+	<p>Languages, local expert, martial arts, sciences, and play
+		instrument all require a specialization when they are learned.
+	You specify the specialization by giving the name of the skill, 
+	followed by the colon, followed by the specialization.</p>
+
+	<pre>
+		language: Mandarin 4
+		local expert: Beijing 2
+		brawling 4
+		handguns 6</pre>
+	</li>
+
+	<li><p><strong>Hint:</strong> If you wish, you may leave out
+		any basic skill that you choose to leave at the default value of 2.
+		Omitted stats will also default to 6.</p>
+	</li>
+
+	<li><p>Buy your character's starting gear and cyberware. Use the <tt>buy</tt>
+		command followed by the name of what you want to buy. Some cyberware
+		can be installed in multiple places, in these cases follow the name 
+		of the cyberware with a colon and then the location. Cyber-limbs and cyber-eyes
+		and be installed in either the left or right position, and interface
+		plugs and light tattoos can be installed anywhere.</p>
+
+	<pre>
+		buy agent
+		buy excellent medium pistol
+		buy medium pistol bullets
+		buy neural link
+		buy wolvers: right
+		buy cybereye: left
+		buy interface plugs: neck
+		buy light tattoo: tramp stamp</pre></li>
+
+	<li><p><strong>Hint:</strong> Do not forget to buy bullets for your
+	gun. Ammunition names follow the format <tt>[ammo-type] [gun type] [ammo-form]</tt>.
+	Ammo type is the special properties of the ammunition, such as armor-piercing
+	or expanding. Gun type is the type of gun, such as medium or very heavy or rifle.
+	Ammo-form is bullets, arrows, grenades, and so forth. Bullets come in boxes of 10.</p>
+
+	<pre>
+		buy armor-piercing heavy pistol bullets
+		buy rifle bullets</pre></li>
+
+	<li><p><strong>Hint:</strong>You can <tt>buy &lt;fashion&gt; outfit</tt>
+	to quickly give your character a top, bottoms, footwear, jacket, jewelry, and
+	mirror shades of the given type. You can also <tt>buy &lt;fashion&gt; closet</tt> 
+	to quickly purchase four tops, two bottoms, footwear, and a hat of the given type
+	and put it in the special <i>closet</i> location.</p>
+
+	<pre>
+		buy urban flash outfit
+		buy asia pop closet</pre></li>
+
+	<li><p><strong>Hint:</strong>You can <tt>buy basic kit</tt>
+	to quickly give your character an agent, a carryall, an anti-smog
+	breathing mask, a flashlight, an combat knife, interface cables,
+	and a contraceptive implant.</p></li>
+
+	<li><p>If you are playing a <strong>Fixer</strong>, use the <tt>grease</tt> command to give your
+	character the free language they get from their role ability.</p>
+
+	<pre>
+		grease French</pre></li>
+
+	<li><p>If you are playing a <strong>Tech</strong> or <strong>MedTech</strong> use the
+	<tt>improve</tt> command to allocate points to your role sub-skills. MedTechs can
+	use the learn command to add the formulas that each rank in pharmaceuticals grants.</p>
+
+	<strong>Techs</strong>
+	<pre>
+		improve field expertise
+		improve upgrade expertise</pre>
+
+	<strong>MedTechs</strong>
+	<pre>
+		improve Pharmaceuticals
+		learn speed heal
+		make speed heal   #pay to make a few doses</pre></li>
+
+	<li><p>If you are playing a <strong>Nomad</strong> use the <tt>moto</tt> command
+	to give your character a vehicle and some upgrades.</p>
+
+	<pre>
+		moto compact groundcar
+		moto heavy chassis
+		moto housing capacity</pre></li>	
+
+	<li><p>The <tt>tag</tt> command allows you to prepare an item for customization, and
+		the <tt>attach</tt> command allows you to add modifications to that item.
+		<strong>Netrunners</strong>
+		should tag their cyberdeck and attach any purchased hardware and software to it.
+		<strong>Nomads</strong> should tag their vehicle and attach their upgrades to it.</p>
+
+	<pre>
+		tag cyberdeck as deck1
+		attach sword to deck1
+		attach flak to deck1</pre></li>
+
+	<li><p>Draw a line of dashes (-----) under your initial character build. This
+		marks the point in the character file where the rules for character
+		creation are processed. As you gain loot and IP in play you will 
+	add those commands after this line.</p></li>
+
+	<li><p>Draw a line of equal signs (=====) on the line after that.
+		Anything you put after this mark will be placed into the 
+		notes section of the character sheet. 
+		You may use <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown 
+		syntax</a> for these notes.</p></li>
+
+	<li><p>Your Done! Save the file and upload it to Punk Journal to get your character sheet.</p></li>
+	</ol>
+
+</body>
+</html>

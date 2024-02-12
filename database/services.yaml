@@ -1,0 +1,13 @@
+- name: Standard Therapy
+  aliases: Therapy
+  cost: 500
+  value: 0
+  weight: 0
+  keywords: service, therapy
+  humanity: 2
+- name: Extreme Therapy
+  cost: 1000
+  value: 0
+  weight: 0
+  keywords: service, therapy
+  humanity: 4

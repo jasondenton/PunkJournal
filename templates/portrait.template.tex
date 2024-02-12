@@ -1,0 +1,23 @@
+/$from 'gear_macros.template.tex' import Inventory_Entry_Inline $/
+
+/$if portrait$/
+\includegraphics[width=\columnwidth]{/@portrait@/}
+/$else$/
+Need a character portrait? Try \href{artflow.ai}{Artflow.ai}.
+/$endif$/
+
+
+/$set ns=namespace(df=0)$/
+/$for locname, contents in cyberware.items()$//$for cw in contents$//$if not 'obvious' in cw.keywords$//$continue$//$endif$//$if ns.df==1$/, /$else$/\textbf{Obvious Cyberware}: /$endif$//@cw.get('full_name',cw.name)|escape@//$set ns.df=1$//$endfor$//$endfor$/
+
+
+/$if worn | length > 0$/
+\textbf{Wearing}:
+/$for itm in worn$//@Inventory_Entry_Inline(itm)@//$if not loop.last$/, /$endif$//$ endfor $/
+\vspace*{8pt}
+/$endif$/
+
+/$if visible_weapons | length > 0$/
+\textbf{Visible Weapons}:
+/$for w in visible_weapons$//@w@//$if not loop.last$/, /$endif$//$endfor$/
+/$endif$/

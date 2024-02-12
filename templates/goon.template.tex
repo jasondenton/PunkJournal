@@ -1,0 +1,85 @@
+\documentclass{article}[8pt]
+\usepackage[xetex, landscape, letterpaper, inner=0.5in, outer=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{cyberpunk}
+\usepackage{fancyhdr}
+\usepackage{makecell}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{multicol}
+
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0.2pt}
+\pagestyle{empty}
+\renewcommand{\columnseprulecolor}{\color{cyberred}}
+\hypersetup{
+  pdfcreator={xelatex},
+  pdfauthor={Punk Journal},
+  pdftitle={ /@name@/ },
+  pdfsubject={},
+  pdfkeywords={Cyberpunk, Cyberpunk RED},
+  bookmarks=false,
+  linkcolor=cyberred,
+  urlcolor=cyberred,
+  citecolor=black,
+  colorlinks=true,
+}
+%\setlength{\parskip}{0.5em}
+%\setlength{\parindent}{0em}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
+\begin{document}
+
+\begin{multicols*}{3}[\noindent {\Large \color{cyberred}/@name@/ \hfill /@role_summary@/ }]
+
+/$ include 'stats.template.tex'$/
+\vfill\null
+\columnbreak
+/$ include 'roles.template.tex' $/
+\vfill\null
+\columnbreak
+/$ include 'portrait.template.tex' $/
+
+\vfill\null
+\small
+%\renewcommand{\baselinestretch}{.5}
+\noindent\href{https://rpgtools.info/cyberpunk/journal}{Punk Journal} is unofficial content provided under the
+\href{https://rtalsoriangames.com/homebrew-content-policy/}{Homebrew Content Policy} of
+\href{https://talsorianstore.com/}{R. Talsorian Games} and is not approved or
+endorsed by \href{https://talsorianstore.com/}{R. Talsorian Games}. This content references materials
+that are the property of \href{https://talsorianstore.com/}{R. Talsorian Games} and its licensees.
+\normalsize
+\renewcommand{\baselinestretch}{1}
+\end{multicols*}
+
+\begin{multicols*}{3}
+/$ include 'cyberwear.template.tex'$/
+\vfill\null
+\columnbreak
+
+/$ include 'gear.template.tex'$/
+\vfill\null
+\columnbreak
+\end{multicols*}
+
+/$ include 'fnff.template.tex'$/
+
+/$ include 'netrunning.template.tex'$/
+
+/$ include 'vehicles.template.tex'$/
+
+/$ include 'notes.template.tex'$/
+
+/$if logs $/
+/$ include 'bank.template.tex'$/
+
+\begin{multicols*}{2}
+
+/$ include 'humanity.template.tex'$/
+\vfill\null
+\columnbreak
+
+/$ include 'buildlog.template.tex'$/
+\end{multicols*}
+/$endif$/
+\end{document}
+

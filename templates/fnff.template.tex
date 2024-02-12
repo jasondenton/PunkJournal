@@ -1,0 +1,106 @@
+/$from 'weapon.template.tex' import FNFF_Weapon $/
+
+/$ macro FNFF_Unarmed(style) -$/
+\begin{minipage}{\columnwidth}
+\noindent \textbf{ /@style.name@/ } +/@"%02d"|format(style.tohit)@///@style.damage@/d6, ROF 2\\
+/$if style.ap$/Ignores half the defender's armor./$endif$/
+\end{minipage}
+
+/$for move in style.moves$/
+\begin{minipage}{\columnwidth}
+\small
+\noindent \textit{ /@move.name@/ } - /@stats | inplace(move.note)@/
+\normalsize
+\end{minipage}
+
+/$endfor$/
+/$ endmacro -$/
+
+/$ macro FNFF_Ammo(ammo) -$/
+\begin{minipage}{\columnwidth}
+\noindent /@ammo.count@/\ \ \  \textbf{ /@ammo.name@/ }
+/$ for note in ammo.notes $/\\/@note@//$endfor$/
+\end{minipage}
+/$ endmacro -$/
+
+\begin{multicols*}{3}[\noindent {\Large \color{cyberred}{Friday Night Firefight}}]
+\noindent\textbf{LUCK}\ \ \ \ \  /$ for i in range(fnff_luck) $/O /$ endfor $/\hfill\\
+\noindent\textbf{Initiative} /@initiative@/+d10/$if init_note$/(/@init_note@/)/$endif$/\\
+/$if dodge_bullets > 0 $/\noindent\textbf{Dodge Bullets} /@dodge_bullets@/+d10 vs shooters to hit roll./$endif$/
+
+\begin{tabularx}{\linewidth}{|Lr|Lr|}
+\hline
+Athletics & \cvalue{/@skills.Athletics.effective@/} &
+Brawling  & \cvalue{/@skills.Brawling.effective@/}\\ \hline 
+Evasion   & \cvalue{/@skills.Evasion.effective@/} &
+Resist T/D & \cvalue{/@skills['Resist Torture/Drugs'].effective@/}\\ \hline 
+Endurance & \cvalue{/@skills.Evasion.effective@/} &
+Concentration & \cvalue{/@skills.Concentration.effective@/} \\ \hline
+\end{tabularx}
+\vspace*{8pt}
+
+\begin{tabularx}{\linewidth}{|l|l|C|l|}
+\hline
+\multicolumn{4}{|l|}{\textbf{Max Hitpoints: /@hitpoints@/ } }\\ \hline
+\makecell{Lightly\\Wounded} & \makecell{ /$for i in range(woundthreshold)$/O/$ if i % 5 == 4$/\\/$endif$//$endfor$/  } & No Penalty & \makecell{Stabilize\\DV 10}\\ \hline
+\makecell{Seriously\\Wounded} & \makecell{ /$for i in range(woundleft)$/O/$ if i % 5 == 4$/\\/$endif$//$endfor$/ }  & /$if cybermeta['pain editor']$/No Penalty/$else$/\makecell{-2 to \\actions}/$endif$/ & \makecell{Stabilize\\DV 13}\\ \hline
+\makecell{Mortally\\Wounded} & \multicolumn{3}{l|}{\makecell{-4 to actions\\-6 to MOVE\\Death Save at end of turn\\Stabalize DV 15} }\\ \hline
+\multicolumn{4}{|l|}{\textbf{Deathsave: Less than /@deathsave@/ on a d10} }\\ 
+\multicolumn{4}{|l|}{+ 1 per round after the first}\\ \hline
+\end{tabularx}
+
+/$if has_armor$/
+\vspace*{8pt}
+\begin{tabularx}{\columnwidth}{|Lc|}
+\hline
+/$if armor_penalty < 0 $/ \textbf{Armor Penalty} & 
+/@armor_penalty@/ to REF, DEX, MOV\\ \hline /$endif$/
+/$if head_armor.sp > 0 $/
+\textbf{Head} & SP: /@head_armor.sp@/\\ \hline
+\makecell[l]{ /$ for layer in head_armor.layers $/ /@layer@/\\/$ endfor $/ } &
+\makecell{ /$for i in range(head_armor.sp)$/O/$ if i % 7 == 6$/\\/$endif$//$endfor$/ }\\ \hline
+/$endif$/
+/$if body_armor.sp > 0 $/
+\textbf{Body} & SP: /@body_armor.sp@/\\ \hline
+\makecell[l]{ /$ for layer in body_armor.layers $/ /@layer@/\\/$ endfor $/ } &
+\makecell{ /$for i in range(body_armor.sp)$/O/$ if i % 7 == 6$/\\/$endif$//$endfor$/ }\\ \hline
+/$endif$/
+/$if shields|length >0$/
+\textbf{Shield} & HP: 10\\ \hline
+/$for s in shields$/
+/@s.name@/ & \makecell{OOOOO\\OOOOO} \\ \hline
+/$endfor$/
+/$endif$/
+\end{tabularx}
+/$endif$/
+\vspace*{8pt}
+%\vfill\null
+%\columnbreak
+
+\centerline{\textbf{Unarmed Combat} }
+/$ for style in unarmed_fighting $/
+/@FNFF_Unarmed(style)@/
+/$ endfor $/
+\vspace*{8pt}
+
+\centerline{\textbf{Melee Weapons} }
+/$ for weap in weapons $/
+/$if weap.subkind == 'melee'$//@FNFF_Weapon(weap)@//$endif$/
+/$ endfor $/
+\vspace*{8pt}
+
+\centerline{\textbf{Ranged Weapons} }
+/$ for weap in weapons $/
+/$if weap.subkind != 'melee'$//@FNFF_Weapon(weap)@//$endif$/
+/$ endfor $/
+
+\vspace*{8pt}
+\centerline{\textbf{Ammunition} }
+/$ for (knd, loads) in ammunition.items() $/
+/$ for ammo in ammunition[knd] $/
+/@FNFF_Ammo(ammo)@/
+/$ endfor $/
+/$ endfor $/
+
+\end{multicols*}
+\pagebreak

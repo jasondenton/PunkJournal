@@ -1,0 +1,48 @@
+/$ macro Just_Item(itm, offset) -$/       
+/$for x in range(0,offset)$/\ /$endfor$//@itm.name|make_hfit(15-offset)|escape@/\hfill
+/$- endmacro $/
+
+/$ macro Cyber_OptList(itm, offset) -$/
+/$for opt in itm.contents$/
+/@Cyberware_Item(opt, offset+3)@//$endfor$/
+/$- endmacro $/
+
+/$ macro Cyberware_Item(itm, offset) -$/
+/@Just_Item(itm, offset)@/\\/@Cyber_OptList(itm, offset)@/
+/$- endmacro $/
+
+/$ macro Cyberware_Notes(itm) -$/
+/$if itm.notes|length>0$/
+\begin{minipage}{\columnwidth}
+\noindent\textbf{ /@itm.name@/ }\ \  /$for n in itm.notes$//@n@/ /$endfor$/
+\end{minipage}
+/$endif$/
+/$- endmacro $/
+
+\centerline{\large CYBERWARE}
+\renewcommand{\columnseprulecolor}{\color{white}}
+\begin{multicols*}{2}
+\RaggedRight
+/$ for locname, contents in cyberware.items() $/
+/$ if contents|length > 0 $/ 
+\begin{minipage}{\columnwidth}
+\centerline{\textcolor{chrome}{ /@locname@/ }}
+/$ for cw in contents $/
+/@Cyberware_Item(cw,0)@/
+/$ endfor $/
+\end{minipage}
+/$ endif $/
+/$ endfor $/
+\justifying
+\vfill\null
+\end{multicols*}
+\renewcommand{\columnseprulecolor}{\color{cyberred}}
+
+\centerline{ Cyberware Notes}
+/$ for locname, contents in cyberware.items() $/
+/$ if contents|length > 0 $/ 
+/$ for cw in contents $/
+/@Cyberware_Notes(cw)@/
+/$ endfor $/
+/$ endif $/
+/$ endfor $/

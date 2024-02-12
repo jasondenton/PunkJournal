@@ -1,0 +1,37 @@
+/$ macro Software(sft) $/
+\begin{minipage}{\columnwidth}
+\noindent \textbf{/@sft.name@/} (\textit{/@sft.subkind@/})
+A/@sft.attack@/-D/@sft.defense@/-R/@sft.rez@/
+/$ if sft.subkind == 'Black Ice' $/
+P/@sft.perception@/ - S/@sft.speed@/
+/$endif$/\\
+/$for note in sft.notes $//@note|markdown@//$endfor$/
+\end{minipage}
+/$ endmacro $/
+
+/$ macro Hardware(hrd) $/
+\begin{minipage}{\columnwidth}
+\noindent \textbf{/@hrd.name@/:} /$for note in hrd.notes $//@note|markdown@//$endfor$/
+\end{minipage}
+/$ endmacro $/
+
+/$for r in roles$/
+/$if r.name == 'Interface' $/
+
+\vspace*{8pt}
+\par\begin{nscenter}\textbf{Netrunning}\end{nscenter}
+Interface +/@r.value@/ \hfill /@r.net_actions@/ Net Actions/Round
+/$endif$/
+/$endfor$/
+/$ if cyberdecks|length > 0 $/
+/$ for deck in cyberdecks $/
+\vspace*{6pt}
+\par\noindent\textbf{ /@deck.name@/ Cyberdeck}\\
+/$ for hrd in deck.hardware $/
+/@Hardware(hrd)@/
+/$endfor$/
+/$ for sft in deck.software $/
+/@Software(sft)@/
+/$endfor$/
+/$ endfor $/
+/$endif$/
