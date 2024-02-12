@@ -8,25 +8,22 @@ Punk Journal understands all of the rules for building Cyberpunk RED characters,
 ## Dependencies 
 To successfully run Punk Journal, you will need to satisfy the following dependencies.
 
-### System level dependencies 
-	- [XeLaTeX](https://www.tug.org/texlive/) : Used by Punk Journal to produce PDF character files.
-	- [Font: Montserrat](https://fonts.google.com/specimen/Montserrat)
-	- [Font: Inconsolata](https://fonts.google.com/specimen/Inconsolata)
+### System level dependencies
+- [XeLaTeX](https://www.tug.org/texlive/) : Used by Punk Journal to produce PDF character files.
+- [Font: Montserrat](https://fonts.google.com/specimen/Montserrat)
+- [Font: Inconsolata](https://fonts.google.com/specimen/Inconsolata)
 
-	XeLaTeX and the Montserrat and Inconsolata fonts should be installed at the system level.
-	XeLaTeX needs to be somewhere that the Punk Journal can find it on the system path. The fonts
-	needs to be installed where XeLaTeX can find them; usually it is sufficient to install them at
-	the operating system level with other fonts on the system.
+XeLaTeX and the Montserrat and Inconsolata fonts should be installed at the system level. XeLaTeX needs to be somewhere that the Punk Journal can find it on the system path. The fonts needs to be installed where XeLaTeX can find them; usually it is sufficient to install them at the operating system level with other fonts on the system.
 
 ### Python Dependencies 
-	- Python3
-	- PyYaml
-	- jinja2
-	- mistletoe
+- Python3
+- PyYaml
+- jinja2
+- mistletoe
 
-	You will need a working Python3 interpreter and tool chain (pip) on your system. Installing python3 is operating system dependent, and there may be multiple options depending on your system. Any solution that gives you python3, virtual environments, and a pip should be sufficient to run Punk Journal as delivered.
+You will need a working Python3 interpreter and tool chain (pip) on your system. Installing python3 is operating system dependent, and there may be multiple options depending on your system. Any solution that gives you python3, virtual environments, and a pip should be sufficient to run Punk Journal as delivered.
 
-	The script mkpyenv.sh will create a virtual environment under the (hidden) directory .venv and install the required python packages into it. The run script pjournal will automatically invoke mkpyenv.sh if it doesn't not find the virtual environment. If you are simply running Punk Journal you will likely not have to worry about dependencies on python packages.
+The script mkpyenv.sh will create a virtual environment under the (hidden) directory .venv and install the required python packages into it. The run script pjournal will automatically invoke mkpyenv.sh if it doesn't not find the virtual environment. If you are simply running Punk Journal you will likely not have to worry about dependencies on python packages.
 
 ## Legal
 Punk Journal is unofficial content provided under the [Homebrew Content Policy](https://rtalsoriangames.com/homebrew-content-policy/) of [R. Talsorian Games](https://talsorianstore.com/) and is not approved or endorsed by [R. Talsorian Games](https://talsorianstore.com/). This content references materials that are the property of [R. Talsorian Games](https://talsorianstore.com/) and its licensees.
